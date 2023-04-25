@@ -1,3 +1,4 @@
+// Thao tác với header
 window.addEventListener("load", function () {
   var wpAdminBar = document.getElementById("wpadminbar");
   if (wpAdminBar) {
@@ -11,6 +12,7 @@ window.addEventListener("load", function () {
   }
 });
 
+//Slider men-product
 $(document).ready(function () {
   $(".featured-products-list").slick({
     infinite: true,
@@ -24,5 +26,41 @@ $(document).ready(function () {
     cssEase: "linear", // Hiệu ứng chuyển động tuyến tính
     speed: 2000, // Tốc độ chuyển động (0.5 giây)
     swipeToSlide: true, // Cho phép vuốt để chuyển slide
+  });
+});
+
+// Pagination
+$(document).ready(function () {
+  $(".pagination .page").click(function () {
+    $(".pagination .page").removeClass("active");
+    $(this).addClass("active");
+  });
+
+  $(".pagination .prev").click(function () {
+    var prev = $(".pagination .active").prev();
+    if (prev.hasClass("page")) {
+      $(".pagination .active").removeClass("active");
+      prev.addClass("active");
+    }
+  });
+
+  $(".pagination .next").click(function () {
+    var next = $(".pagination .active").next();
+    if (next.hasClass("page")) {
+      $(".pagination .active").removeClass("active");
+      next.addClass("active");
+    }
+  });
+});
+
+//Sider-women
+$(document).ready(function () {
+  $(".slider-women__slides").slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    infinite: true,
+    initialSlide: 0,
+    prevArrow: $(".slider-women__arrow--prev"),
+    nextArrow: $(".slider-women__arrow--next"),
   });
 });

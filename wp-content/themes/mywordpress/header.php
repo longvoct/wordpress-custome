@@ -6,11 +6,15 @@
   <?php wp_head(); ?>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
     rel="stylesheet" />
-  <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/style.css" />
   <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/style.css" />
+  <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/reset.css" />
+  <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/style.css" />
+  <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/header-footer.css" />
+  <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/homepage.css" />
   <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/men.css" />
+  <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/women.css" />
   <!-- Thêm thư viện jQuery -->
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 
   <!-- Thêm thư viện Slick -->
   <link rel="stylesheet" type="text/css"
