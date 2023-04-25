@@ -74,6 +74,10 @@
   border: none;
   outline: none;
   cursor: pointer;
+  background-color: #fff;
+}
+.gallery__button:hover {
+  background-color: #f5f5f5;
 }
 
 .banner-product__image {

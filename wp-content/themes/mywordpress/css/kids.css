@@ -1,0 +1,24 @@
+.sologan {
+  display: flex;
+  align-items: center;
+}
+
+.sologan p {
+  font-family: "UTM Impact";
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 120%;
+  text-transform: uppercase;
+  color: #212121;
+  width: 428px;
+  margin-right: 35px;
+}
+.sologan .line {
+  width: 300px !important;
+  margin: 0 !important;
+}
+
+.sologan:nth-child(2) p {
+  width: 600px;
+  margin-left: 35px;
+}

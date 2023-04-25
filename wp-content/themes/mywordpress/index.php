@@ -1,11 +1,6 @@
 <?php get_header(); ?>
-<div class="landing-page">
-  <p style="margin-top: 70px"></p>
-  Hello world Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-  Voluptate error dignissimos adipisci, sint, illum a ut consequuntur facere
-  nobis assumenda asperiores necessitatibus voluptatibus eius animi
-  veritatis temporibus distinctio praesentium qui?
-  </p>
+<div class="landing-page" style="margin-top: 70px">
+  <img src="<?php bloginfo('template_directory'); ?>/images/banner-test.png" alt="" class="banner-test">
 </div>
 <div class="body-content">
   <div class="block">
@@ -65,7 +60,7 @@
         <h3 class="gallery__caption">Sneakers dành cho Nam</h3>
         <p class="gallery__desc">Phù hợp với nhiều sở thích và nhu cầu của phái nam, từ những mẫu cổ điển cho đến
           những kiểu mới nhất, đã sẵn sàng để bạn có thể mua sắm.</p>
-        <button class="gallery__button">Khám phá</button>
+        <a href="<?php bloginfo('url'); ?>/nam"><button class="gallery__button">Khám phá</button></a>
       </div>
     </div>
     <div class="gallery__item gallery__item--women">
@@ -75,7 +70,7 @@
         <h3 class="gallery__caption">Sneakers dành cho Nam</h3>
         <p class="gallery__desc">Phù hợp với nhiều sở thích và nhu cầu của phái nam, từ những mẫu cổ điển cho đến
           những kiểu mới nhất, đã sẵn sàng để bạn có thể mua sắm.</p>
-        <button class="gallery__button">Khám phá</button>
+        <a href="<?php bloginfo('url'); ?>/nu"><button class="gallery__button">Khám phá</button></a>
       </div>
     </div>
     <div class="gallery__item gallery__item--kids">
@@ -85,7 +80,7 @@
         <h3 class="gallery__caption">Sneakers dành cho Nam</h3>
         <p class="gallery__desc">Phù hợp với nhiều sở thích và nhu cầu của phái nam, từ những mẫu cổ điển cho đến
           những kiểu mới nhất, đã sẵn sàng để bạn có thể mua sắm.</p>
-        <button class="gallery__button">Khám phá</button>
+        <a href="<?php bloginfo('url'); ?>/nam"><button class="gallery__button">Khám phá</button></a>
       </div>
     </div>
   </div>
