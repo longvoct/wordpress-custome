@@ -35,6 +35,7 @@
       </a>
       <h3 class="product-list__name"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
       <p class="product-list__price"><?php echo $product->get_price_html(); ?></p>
+      <a href="<?php bloginfo('url'); ?>?add-to-cart=<?php the_ID(); ?>">Thêm vào giỏ</a>
       <span class="my-favorite">
         <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path

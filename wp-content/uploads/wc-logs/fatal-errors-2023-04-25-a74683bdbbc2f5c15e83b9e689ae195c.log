@@ -1,0 +1,40 @@
+2023-04-25T04:53:28+00:00 CRITICAL Uncaught Error: Call to undefined function setpostview() in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\page.php:6
+Stack trace:
+#0 C:\xampp\htdocs\mywordpress\wp-includes\template-loader.php(106): include()
+#1 C:\xampp\htdocs\mywordpress\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\mywordpress\index.php(17): require('C:\\xampp\\htdocs...')
+#3 {main}
+  thrown in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\page.php on line 6
+
+2023-04-25T04:53:35+00:00 CRITICAL Uncaught Error: Call to undefined function setpostview() in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\page.php:6
+Stack trace:
+#0 C:\xampp\htdocs\mywordpress\wp-includes\template-loader.php(106): include()
+#1 C:\xampp\htdocs\mywordpress\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\mywordpress\index.php(17): require('C:\\xampp\\htdocs...')
+#3 {main}
+  thrown in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\page.php on line 6
+
+2023-04-25T04:53:48+00:00 CRITICAL Uncaught Error: Call to undefined function setpostview() in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\page.php:6
+Stack trace:
+#0 C:\xampp\htdocs\mywordpress\wp-includes\template-loader.php(106): include()
+#1 C:\xampp\htdocs\mywordpress\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\mywordpress\index.php(17): require('C:\\xampp\\htdocs...')
+#3 {main}
+  thrown in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\page.php on line 6
+
+2023-04-25T04:54:23+00:00 CRITICAL Uncaught Error: Call to undefined function setpostview() in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\page.php:6
+Stack trace:
+#0 C:\xampp\htdocs\mywordpress\wp-includes\template-loader.php(106): include()
+#1 C:\xampp\htdocs\mywordpress\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\mywordpress\index.php(17): require('C:\\xampp\\htdocs...')
+#3 {main}
+  thrown in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\page.php on line 6
+
+2023-04-25T04:55:25+00:00 CRITICAL Uncaught Error: Call to undefined function setpostview() in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\page.php:6
+Stack trace:
+#0 C:\xampp\htdocs\mywordpress\wp-includes\template-loader.php(106): include()
+#1 C:\xampp\htdocs\mywordpress\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\mywordpress\index.php(17): require('C:\\xampp\\htdocs...')
+#3 {main}
+  thrown in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\page.php on line 6
+
