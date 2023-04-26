@@ -301,6 +301,11 @@ input[type="search"]::-ms-clear {
   font-weight: 300;
 }
 
-/* .single-content p {
-  height: 200px;
-} */
+.tinvwl-icon-heart:before {
+  font-size: 30px;
+}
+
+.tinv-wraper.woocommerce.tinv-wishlist.tinvwl-shortcode-add-to-cart.tinvwl-no-action
+  > a::before {
+  font-size: 25px;
+}
