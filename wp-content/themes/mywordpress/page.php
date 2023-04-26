@@ -8,7 +8,7 @@
       ?>
       <!-- <h1><php the_title(); ?></h1> -->
       <div class="single-content margin-head" style="width: 100% ;
-  height:120vh">
+  height:150vh">
         <?php the_content(); ?>
       </div>
     <?php endwhile; ?>
