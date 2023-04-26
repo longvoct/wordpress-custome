@@ -103,11 +103,16 @@ button.search-submi {
 }
 /* Footer */
 .footer {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  right: 0;
   margin-top: 150px;
   background-color: #111314;
   padding: 20px 100px;
   color: #fff;
   height: 350px;
+  margin-bottom: 0 !important;
 }
 .footer-top {
   margin-top: 45px;

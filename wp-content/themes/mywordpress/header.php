@@ -7,7 +7,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/style.css" />
-  <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/reset.css" />
+  <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/resetcss.css" />
   <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/styles.css" />
   <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/header-footer.css" />
   <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/main.css" />

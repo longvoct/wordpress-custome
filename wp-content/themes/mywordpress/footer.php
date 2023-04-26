@@ -1,4 +1,4 @@
-<footer class="footer">
+<div class="footer">
   <div class="footer-top">
     <span>Lorem ipsum dolor sit ame</span>
     <button>Button</button>
@@ -18,7 +18,7 @@
     </div>
   </div>
   <span>©2023 abcxyz. All rights reversed</span>
-</footer>
+</div>
 <script src="<?php bloginfo('template_directory'); ?>/js/index.js"></script>
 <?php wp_footer(); ?>
 </body>
