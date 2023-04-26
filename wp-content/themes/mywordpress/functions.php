@@ -29,7 +29,6 @@ function add_custom_currency_symbol($currency_symbol, $currency)
 }
 add_filter('woocommerce_currency_symbol', 'add_custom_currency_symbol', 10, 2);
 
-
 //custom thanh serch
 function custom_search_filter($query)
 {
