@@ -182,6 +182,8 @@ input[type="checkbox"]:checked {
 }
 .slick-dots {
   bottom: -45px !important;
+  opacity: none;
+  visibility: hidden;
 }
 
 .slick-dots li {
