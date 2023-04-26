@@ -16,7 +16,7 @@ function register_my_menu()
 add_action('init', 'register_my_menu');
 
 //Sử dụng bộ công cụ gõ cũ
-add_filter('use_block_editor_for_post', '__return_false');
+// add_filter('use_block_editor_for_post', '__return_false');
 
 // Thay đổi ký hiệu tiền tệ trong WooCommerce thành "CA$"
 function add_custom_currency_symbol($currency_symbol, $currency)
