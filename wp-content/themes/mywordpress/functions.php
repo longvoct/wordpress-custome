@@ -1,4 +1,5 @@
 <?php
+//Apply Woocommerce cho dự án
 function my_custom_wc_theme_support()
 {
   add_theme_support('woocommerce');
@@ -6,7 +7,7 @@ function my_custom_wc_theme_support()
   add_theme_support('wc-product-gallery-slider');
 }
 add_action('after_setup_theme', 'my_custom_wc_theme_support');
-
+//Khởi tạo menu
 function register_my_menu()
 {
   register_nav_menu('header-menu', __('Menu chính'));
@@ -16,7 +17,6 @@ add_action('init', 'register_my_menu');
 
 add_filter('use_block_editor_for_post', '__return_false');
 
-//currency
 // Thay đổi ký hiệu tiền tệ trong WooCommerce thành "CA$"
 function add_custom_currency_symbol($currency_symbol, $currency)
 {
@@ -29,6 +29,8 @@ function add_custom_currency_symbol($currency_symbol, $currency)
 }
 add_filter('woocommerce_currency_symbol', 'add_custom_currency_symbol', 10, 2);
 
+
+//custom thanh serch
 function custom_search_filter($query)
 {
   if ($query->is_search && !is_admin()) {
