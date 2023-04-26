@@ -7,9 +7,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/style.css" />
   <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/reset.css" />
-  <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/styles.css" />
-  <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/header-footer.css" />
-  <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/homepage.css" />
+  <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/style.css" />
+  <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/head-foot.css" />
+  <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/main.css" />
   <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/men.css" />
   <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/women.css" />
   <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/kids.css" />
@@ -74,14 +74,26 @@
           </svg>
         </a>
       </div>
-      <div class="input-wrapper">
-        <input type="text" placeholder="Tìm kiếm sản phẩm" class="input-search" />
-        <span class="icon-header icon-search">
+      <form role="search" method="get" class="search-form input-wrapper" action="<?php echo esc_url(home_url('/')); ?>">
+        <input type="search" class="input-search" placeholder="<?php echo esc_attr_x('Search &hellip;', 'placeholder'); ?>" value="<?php echo get_search_query(); ?>" name="s" />
+        <button type="submit" class="search-submit icon-header icon-search">
           <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M8.50385 14.7577C11.9578 14.7577 14.7577 11.9578 14.7577 8.50385C14.7577 5.04994 11.9578 2.25 8.50385 2.25C5.04994 2.25 2.25 5.04994 2.25 8.50385C2.25 11.9578 5.04994 14.7577 8.50385 14.7577Z" stroke="#212121" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
             <path d="M15.75 15.75L13.5 13.5" stroke="#212121" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
           </svg>
+        </button>
+      </form>
+      <!-- <div class="input-wrapper">
+        <input type="text" placeholder="Tìm kiếm sản phẩm" class="input-search" />
+        <span class="icon-header icon-search">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M8.50385 14.7577C11.9578 14.7577 14.7577 11.9578 14.7577 8.50385C14.7577 5.04994 11.9578 2.25 8.50385 2.25C5.04994 2.25 2.25 5.04994 2.25 8.50385C2.25 11.9578 5.04994 14.7577 8.50385 14.7577Z"
+              stroke="#212121" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M15.75 15.75L13.5 13.5" stroke="#212121" stroke-width="1.5" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
         </span>
-      </div>
+      </div> -->
     </div>
   </div>

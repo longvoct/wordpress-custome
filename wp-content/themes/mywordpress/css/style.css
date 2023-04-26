@@ -278,3 +278,17 @@ input[type="checkbox"]:checked {
 .blue {
   background-color: #34b4fc;
 }
+
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  display: none;
+}
+
+input[type="search"]::-moz-search-cancel-button {
+  -moz-appearance: none;
+  display: none;
+}
+
+input[type="search"]::-ms-clear {
+  display: none;
+}

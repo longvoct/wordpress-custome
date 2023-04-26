@@ -84,16 +84,23 @@
   font-weight: 300;
   width: 100%;
 }
+button.search-submi {
+  background: none;
+  border: none;
+}
+
 .icon-header {
   cursor: pointer;
+  border: none;
 }
 .icon-header.icon-search {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   right: 16px;
+  background: none;
+  border: none;
 }
-
 /* Footer */
 .footer {
   margin-top: 150px;

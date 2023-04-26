@@ -28,3 +28,12 @@ function add_custom_currency_symbol($currency_symbol, $currency)
   return $currency_symbol;
 }
 add_filter('woocommerce_currency_symbol', 'add_custom_currency_symbol', 10, 2);
+
+function custom_search_filter($query)
+{
+  if ($query->is_search && !is_admin()) {
+    $query->set('post_type', array('post', 'product'));
+  }
+  return $query;
+}
+add_filter('pre_get_posts', 'custom_search_filter');
