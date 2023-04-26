@@ -1,4 +1,5 @@
 <?php get_header(); ?>
+<?php get_template_part('./components/breadcrumb'); ?>
 <div id="content">
   <?php if (have_posts()) : ?>
     <?php while (have_posts()) : the_post(); ?>

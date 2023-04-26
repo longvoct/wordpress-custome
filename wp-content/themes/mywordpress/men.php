@@ -3,9 +3,10 @@
 Template Name: men
 */ ?>
 <?php get_header(); ?>
-<div class="featured-men body-content">
+<?php get_template_part('./components/breadcrumb'); ?>
+<div class="body-content margin-head">
   <h2 class="product-heading">SẢN PHẨM NỔI BẬT</h2>
-  <div class="featured-products-list">
+  <div class=" featured-products-list">
     <div class="featured-product-item"><img class="featured-product-img" src="<?php bloginfo('template_directory'); ?>/images/men/men-1.jpg" alt=""></div>
     <div class="featured-product-item"><img class="featured-product-img" src="<?php bloginfo('template_directory'); ?>/images/men/men-2.jpg" alt=""></div>
     <div class="featured-product-item"><img class="featured-product-img" src="<?php bloginfo('template_directory'); ?>/images/men/men-3.jpg" alt=""></div>

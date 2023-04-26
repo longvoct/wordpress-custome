@@ -28,8 +28,8 @@
     <?php global $wp_query;
     $wp_query->in_the_loop = true; ?>
     <?php while ($getposts->have_posts()) : $getposts->the_post(); ?>
-    <?php global $product; ?>
-    <?php get_template_part('product'); ?>
+      <?php global $product; ?>
+      <?php get_template_part('product'); ?>
     <?php endwhile;
     wp_reset_postdata(); ?>
     <!-- <div class="product-list__item">
@@ -53,13 +53,12 @@
       </div>
     </div>
     <div class="gallery__item gallery__item--women">
-      <img class="gallery__item-image" src="<?php bloginfo('template_directory'); ?>/images/women.png"
-        alt="men-product">
+      <img class="gallery__item-image" src="<?php bloginfo('template_directory'); ?>/images/women.png" alt="men-product">
       <div class="gallery__opacity"></div>
       <div class="gallery__content">
-        <h3 class="gallery__caption">Sneakers dành cho Nam</h3>
-        <p class="gallery__desc">Phù hợp với nhiều sở thích và nhu cầu của phái nam, từ những mẫu cổ điển cho đến
-          những kiểu mới nhất, đã sẵn sàng để bạn có thể mua sắm.</p>
+        <h3 class="gallery__caption">Sneakers dành cho Nữ</h3>
+        <p class="gallery__desc">Tôn vinh vóc dáng xinh đẹp của phái nữ với các mẫu thiết kế giày dép thời trang và hiện
+          đại. Tự hào cung cấp những sản phẩm chất lượng nhất.</p>
         <a href="<?php bloginfo('url'); ?>/nu"><button class="gallery__button">Khám phá</button></a>
       </div>
     </div>
@@ -67,9 +66,9 @@
       <img class="gallery__item-image" src="<?php bloginfo('template_directory'); ?>/images/kids.png" alt="men-product">
       <div class="gallery__opacity"></div>
       <div class="gallery__content">
-        <h3 class="gallery__caption">Sneakers dành cho Nam</h3>
-        <p class="gallery__desc">Phù hợp với nhiều sở thích và nhu cầu của phái nam, từ những mẫu cổ điển cho đến
-          những kiểu mới nhất, đã sẵn sàng để bạn có thể mua sắm.</p>
+        <h3 class="gallery__caption">Sneakers cho trẻ em</h3>
+        <p class="gallery__desc">Cung cấp những sản phẩm với chất liệu mềm mại, thiết kế êm ái và độ bền cao. Mang lại
+          cảm giác thoải mái và tự tin khi hoạt động.</p>
         <a href="<?php bloginfo('url'); ?>/nam"><button class="gallery__button">Khám phá</button></a>
       </div>
     </div>
@@ -92,7 +91,7 @@
         $products->the_post();
         global $product;
     ?>
-    <?php get_template_part('product'); ?>
+        <?php get_template_part('product'); ?>
     <?php
       }
       wp_reset_postdata();
@@ -104,8 +103,7 @@
   </div>
   <!-- Banner-product -->
   <div class="banner-product">
-    <img class="banner-product__image" src="<?php bloginfo('template_directory'); ?>/images/banner-product-title.png"
-      alt="Product Image">
+    <img class="banner-product__image" src="<?php bloginfo('template_directory'); ?>/images/banner-product-title.png" alt="Product Image">
   </div>
 </div>
 <?php get_footer() ?>

@@ -3,8 +3,8 @@
 Template Name: women
 */ ?>
 <?php get_header(); ?>
-
-<div class="women-content body-content" style="margin-top: 120px;">
+<?php get_template_part('./components/breadcrumb'); ?>
+<div class="women-content body-content margin-head">
   <div>
     <h3 class="block__title" style="text-align: left; margin-bottom: 15px;">Haretra ultrices varius placerat</h3>
     <span class="block__text">Lorem ipsum dolor sit amet consectetur. Sit non habitasse eu sed. Turpis erat sed

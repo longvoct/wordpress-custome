@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-
+<?php get_template_part('./components/breadcrumb'); ?>
 <div class="body-content" style="margin-top: 120px;">
   <h2>Search Results for "<?php echo get_search_query(); ?>"</h2>
 

@@ -25,7 +25,7 @@
 }
 
 .product-heading {
-  margin-top: 80px;
+  margin-top: 60px;
   font-family: "UTM Impact";
   font-weight: 400;
   font-size: 24px;
@@ -291,4 +291,8 @@ input[type="search"]::-moz-search-cancel-button {
 
 input[type="search"]::-ms-clear {
   display: none;
+}
+
+.margin-head {
+  margin-top: 30px;
 }

@@ -8,10 +8,10 @@
     rel="stylesheet" />
   <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/style.css" />
   <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/reset.css" />
-  <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/style.css" />
+  <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/styles.css" />
   <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/head-foot.css" />
   <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/main.css" />
-  <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/men.css" />
+  <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/menstyle.css" />
   <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/women.css" />
   <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/kids.css" />
   <!-- Thêm thư viện jQuery -->

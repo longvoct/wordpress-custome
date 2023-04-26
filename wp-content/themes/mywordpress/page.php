@@ -1,11 +1,13 @@
 <?php get_header(); ?>
-<div id="content">
+<?php get_template_part('./components/breadcrumb'); ?>
+
+<div id="content" class="body-content">
   <?php if (have_posts()) : ?>
     <?php while (have_posts()) : the_post(); ?>
       <?php // Thực hiện các hành động cần thiết trước khi hiển thị nội dung bài viết 
       ?>
-      <h1><?php the_title(); ?></h1>
-      <div class="single-content body-content" style="margin-top:80px;  width: 100% ;
+      <!-- <h1><php the_title(); ?></h1> -->
+      <div class="single-content margin-head" style="width: 100% ;
   height:120vh">
         <?php the_content(); ?>
       </div>
