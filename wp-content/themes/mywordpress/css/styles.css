@@ -177,23 +177,6 @@ input[type="checkbox"]:checked {
   font-weight: 300;
 }
 
-.slick-slide {
-  margin-right: 20px !important;
-}
-.slick-dots {
-  bottom: -45px !important;
-  opacity: none;
-  visibility: hidden;
-}
-
-.slick-dots li {
-  margin: 0 0 !important;
-}
-
-.slick-dots li button:before {
-  font-size: 8px !important;
-}
-
 .line {
   margin-top: 40px;
   height: 1px;

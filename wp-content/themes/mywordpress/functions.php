@@ -7,6 +7,7 @@ function my_custom_wc_theme_support()
   add_theme_support('wc-product-gallery-slider');
 }
 add_action('after_setup_theme', 'my_custom_wc_theme_support');
+
 //Khởi tạo menu
 function register_my_menu()
 {
@@ -41,20 +42,21 @@ function custom_search_filter($query)
 add_filter('pre_get_posts', 'custom_search_filter');
 
 
-//Tùy biến dialog
-function myproject_ti_woocommerce_wishlist_template($template, $template_name, $template_path)
-{
-  if ($template_name == 'dialog_box/ti-addedtowishlist-dialogbox.php') {
-    $template = get_stylesheet_directory() . '/ti-woocommerce-wishlist/templates/dialog_box/my-addedtowishlist-dialogbox.php';
-  }
-  return $template;
-}
-
-add_filter('woocommerce_locate_template', 'myproject_ti_woocommerce_wishlist_template', 10, 3);
-
-add_filter('tinvwl_icon_name', 'myproject_ti_wishlist_icon_name');
-function myproject_ti_wishlist_icon_name($icon_name)
-{
-  $icon_name = 'fa fa-heart'; // Thay đổi tên của icon thành "fa fa-heart"
-  return $icon_name;
-}
+//Tạo Slider
+// function create_slider_post_type()
+// {
+//   register_post_type(
+//     'slider',
+//     array(
+//       'labels' => array(
+//         'name' => __('Slider'),
+//         'singular_name' => __('Slider')
+//       ),
+//       'public' => true,
+//       'has_archive' => true,
+//       'supports' => array('title', 'editor', 'thumbnail'),
+//       'menu_icon' => 'dashicons-format-gallery',
+//     )
+//   );
+// }
+// add_action('init', 'create_slider_post_type');

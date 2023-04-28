@@ -63,6 +63,18 @@ $(document).ready(function () {
   });
 });
 
+//Sider-women
+$(document).ready(function () {
+  $(".slider-women__slides").slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    infinite: true,
+    initialSlide: 0,
+    prevArrow: $(".slider-women__arrow--prev"),
+    nextArrow: $(".slider-women__arrow--next"),
+  });
+});
+
 // Pagination
 $(document).ready(function () {
   $(".pagination .page").click(function () {
@@ -84,17 +96,5 @@ $(document).ready(function () {
       $(".pagination .active").removeClass("active");
       next.addClass("active");
     }
-  });
-});
-
-//Sider-women
-$(document).ready(function () {
-  $(".slider-women__slides").slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    infinite: true,
-    initialSlide: 0,
-    prevArrow: $(".slider-women__arrow--prev"),
-    nextArrow: $(".slider-women__arrow--next"),
   });
 });

@@ -1,7 +1,9 @@
 <?php get_header(); ?>
 <div class="landing-page" style="margin-top: 70px">
   <img src="<?php bloginfo('template_directory'); ?>/images/banner-test.png" alt="" class="banner-test">
+  <!-- <php get_template_part('slider'); ?> -->
 </div>
+
 <div class="body-content">
   <div class="block">
     <h3 class="block__title">Haretra ultrices varius placerat</h3>
@@ -28,8 +30,8 @@
     <?php global $wp_query;
     $wp_query->in_the_loop = true; ?>
     <?php while ($getposts->have_posts()) : $getposts->the_post(); ?>
-      <?php global $product; ?>
-      <?php get_template_part('product'); ?>
+    <?php global $product; ?>
+    <?php get_template_part('product'); ?>
     <?php endwhile;
     wp_reset_postdata(); ?>
     <!-- <div class="product-list__item">
@@ -53,7 +55,8 @@
       </div>
     </div>
     <div class="gallery__item gallery__item--women">
-      <img class="gallery__item-image" src="<?php bloginfo('template_directory'); ?>/images/women.png" alt="men-product">
+      <img class="gallery__item-image" src="<?php bloginfo('template_directory'); ?>/images/women.png"
+        alt="men-product">
       <div class="gallery__opacity"></div>
       <div class="gallery__content">
         <h3 class="gallery__caption">Sneakers dành cho Nữ</h3>
@@ -91,7 +94,7 @@
         $products->the_post();
         global $product;
     ?>
-        <?php get_template_part('product'); ?>
+    <?php get_template_part('product'); ?>
     <?php
       }
       wp_reset_postdata();
@@ -103,7 +106,8 @@
   </div>
   <!-- Banner-product -->
   <div class="banner-product">
-    <img class="banner-product__image" src="<?php bloginfo('template_directory'); ?>/images/banner-product-title.png" alt="Product Image">
+    <img class="banner-product__image" src="<?php bloginfo('template_directory'); ?>/images/banner-product-title.png"
+      alt="Product Image">
   </div>
 </div>
 <?php get_footer() ?>

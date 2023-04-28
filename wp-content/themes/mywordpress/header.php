@@ -9,9 +9,10 @@
   <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/style.css" />
   <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/resetcss.css" />
   <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/styles.css" />
+  <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/slider.css" />
   <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/header-footer.css" />
   <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/main.css" />
-  <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/menstyle.css" />
+  <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/men.css" />
   <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/women.css" />
   <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/kids.css" />
   <!-- Thêm thư viện jQuery -->
