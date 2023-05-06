@@ -1,0 +1,62 @@
+2023-05-05T18:14:44+00:00 CRITICAL Uncaught Error: Call to undefined function wc_get_product_term_list() in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\functions.php:69
+Stack trace:
+#0 C:\xampp\htdocs\mywordpress\wp-includes\class-wp-hook.php(308): custom_product_color('')
+#1 C:\xampp\htdocs\mywordpress\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters(NULL, Array)
+#2 C:\xampp\htdocs\mywordpress\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#3 C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\woocommerce\content-single-product.php(60): do_action('woocommerce_sin...')
+#4 C:\xampp\htdocs\mywordpress\wp-includes\template.php(785): require('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\mywordpress\wp-content\plugins\woocommerce\includes\wc-core-functions.php(284): load_template('C:\\xampp\\htdocs...', false)
+#6 C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\woocommerce\single-product.php(37): wc_get_template_part('content', 'single-product')
+#7 C:\xampp\htdocs\mywordpress\wp-includes\template-loader.php(106): include('C:\\xampp\\htdocs...')
+#8 C:\xampp\htdocs\mywordpress\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#9 C:\xampp\htdocs\mywordpress\index.php(17): require('C:\\xampp\\htdocs...')
+#10 {main}
+  thrown in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\functions.php on line 69
+
+2023-05-05T18:15:02+00:00 CRITICAL Uncaught Error: Call to undefined function wc_get_product_term_list() in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\functions.php:69
+Stack trace:
+#0 C:\xampp\htdocs\mywordpress\wp-includes\class-wp-hook.php(308): custom_product_color('')
+#1 C:\xampp\htdocs\mywordpress\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters(NULL, Array)
+#2 C:\xampp\htdocs\mywordpress\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#3 C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\woocommerce\content-single-product.php(60): do_action('woocommerce_sin...')
+#4 C:\xampp\htdocs\mywordpress\wp-includes\template.php(785): require('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\mywordpress\wp-content\plugins\woocommerce\includes\wc-core-functions.php(284): load_template('C:\\xampp\\htdocs...', false)
+#6 C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\woocommerce\single-product.php(37): wc_get_template_part('content', 'single-product')
+#7 C:\xampp\htdocs\mywordpress\wp-includes\template-loader.php(106): include('C:\\xampp\\htdocs...')
+#8 C:\xampp\htdocs\mywordpress\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#9 C:\xampp\htdocs\mywordpress\index.php(17): require('C:\\xampp\\htdocs...')
+#10 {main}
+  thrown in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\functions.php on line 69
+
+2023-05-05T18:15:27+00:00 CRITICAL Uncaught Error: Call to undefined function wc_get_product_term_list() in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\functions.php:69
+Stack trace:
+#0 C:\xampp\htdocs\mywordpress\wp-includes\class-wp-hook.php(308): custom_product_color('')
+#1 C:\xampp\htdocs\mywordpress\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters(NULL, Array)
+#2 C:\xampp\htdocs\mywordpress\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#3 C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\woocommerce\content-single-product.php(60): do_action('woocommerce_sin...')
+#4 C:\xampp\htdocs\mywordpress\wp-includes\template.php(785): require('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\mywordpress\wp-content\plugins\woocommerce\includes\wc-core-functions.php(284): load_template('C:\\xampp\\htdocs...', false)
+#6 C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\woocommerce\single-product.php(37): wc_get_template_part('content', 'single-product')
+#7 C:\xampp\htdocs\mywordpress\wp-includes\template-loader.php(106): include('C:\\xampp\\htdocs...')
+#8 C:\xampp\htdocs\mywordpress\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#9 C:\xampp\htdocs\mywordpress\index.php(17): require('C:\\xampp\\htdocs...')
+#10 {main}
+  thrown in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\functions.php on line 69
+
+2023-05-05T18:16:51+00:00 CRITICAL Uncaught Error: Call to a member function get_sku() on null in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\woocommerce\single-product\meta.php:28
+Stack trace:
+#0 C:\xampp\htdocs\mywordpress\wp-content\plugins\woocommerce\includes\wc-core-functions.php(345): include()
+#1 C:\xampp\htdocs\mywordpress\wp-content\plugins\woocommerce\includes\wc-template-functions.php(1665): wc_get_template('single-product/...')
+#2 C:\xampp\htdocs\mywordpress\wp-includes\class-wp-hook.php(308): woocommerce_template_single_meta('')
+#3 C:\xampp\htdocs\mywordpress\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters(NULL, Array)
+#4 C:\xampp\htdocs\mywordpress\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#5 C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\woocommerce\content-single-product.php(60): do_action('woocommerce_sin...')
+#6 C:\xampp\htdocs\mywordpress\wp-includes\template.php(785): require('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\mywordpress\wp-content\plugins\woocommerce\includes\wc-core-functions.php(284): load_template('C:\\xampp\\htdocs...', false)
+#8 C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\woocommerce\single-product.php(37): wc_get_template_part('content', 'single-product')
+#9 C:\xampp\htdocs\mywordpress\wp-includes\template-loader.php(106): include('C:\\xampp\\htdocs...')
+#10 C:\xampp\htdocs\mywordpress\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#11 C:\xampp\htdocs\mywordpress\index.php(17): require('C:\\xampp\\htdocs...')
+#12 {main}
+  thrown in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\woocommerce\single-product\meta.php on line 28
+

@@ -46,27 +46,31 @@ Template Name: men
 <div class="flex-content">
   <div class="flex-3">
     <div class="shoe-type">
-      <span class="tag-type">Loại giày</span>
+      <span class="tag-type">Phong cách giày</span>
       <div class="shoe-type_checkbox">
         <input type="checkbox" name="Chuck Taylor All Star" id="Chuck Taylor All Star">
-        <label for="Chuck Taylor All Star">Chuck Taylor All Star</label>
+        <label for="Chuck Taylor All Star">
+          High Tops</label>
       </div>
       <div class="shoe-type_checkbox">
         <input type="checkbox" name="Chuck Taylor II" id="Chuck Taylor II">
-        <label for="Chuck Taylor II">Chuck Taylor II</label>
+        <label for="Chuck Taylor II">
+          Mid Tops</label>
       </div>
       <div class="shoe-type_checkbox">
         <input type="checkbox" name="Jack Purcell" id="Jack Purcell">
-        <label for="Jack Purcell">Jack Purcell</label>
+        <label for="Jack Purcell">
+          Platform</label>
       </div>
       <div class="shoe-type_checkbox">
         <input type="checkbox" name="One Star" id="One Star">
-        <label for="One Star">One Star</label>
+        <label for="One Star">
+          Slip</label>
       </div>
-      <div class="shoe-type_checkbox">
+      <!-- <div class="shoe-type_checkbox">
         <input type="checkbox" name="Chuck 70" id="Chuck 70">
         <label for="Chuck 70">Chuck 70</label>
-      </div>
+      </div> -->
     </div>
     <div class="size-type">
       <span class="tag-type">Kích cỡ</span>

@@ -9,8 +9,9 @@
   <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/style.css" />
   <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/resetcss.css" />
   <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/styles.css" />
-  <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/slider.css" />
+  <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/sliderbanner.css" />
   <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/header-footer.css" />
+  <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/product_detail.css" />
   <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/main.css" />
   <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/men.css" />
   <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/women.css" />
@@ -25,6 +26,7 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js">
   </script>
+  <script src="<?php bloginfo('template_directory'); ?>/js/index.js"></script>
 </head>
 
 <body>

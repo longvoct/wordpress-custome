@@ -27,40 +27,15 @@ $(document).ready(function () {
     speed: 2000, // Tốc độ chuyển động (0.5 giây)
     swipeToSlide: true, // Cho phép vuốt để chuyển slide
   });
-  slider.on("mouseenter", function () {
-    slider.slick("slickSetOption", "autoplaySpeed", 5000, true);
-    slider.slick("slickSetOption", "speed", 500, true);
-  });
+  // slider.on("mouseenter", function () {
+  //   slider.slick("slickSetOption", "autoplaySpeed", 5000, true);
+  //   slider.slick("slickSetOption", "speed", 500, true);
+  // });
 
-  slider.on("mouseleave", function () {
-    slider.slick("slickSetOption", "autoplaySpeed", 2000, true);
-    slider.slick("slickSetOption", "speed", 2000, true);
-  });
-});
-
-$(document).ready(function () {
-  $(".featured-products-list.two").slick({
-    infinite: true,
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    dots: true,
-    autoplay: true,
-    autoplaySpeed: 1000,
-    // draggable: false,
-    useTransform: true, // Sử dụng CSS3 transform
-    cssEase: "linear", // Hiệu ứng chuyển động tuyến tính
-    speed: 2000, // Tốc độ chuyển động (0.5 giây)
-    swipeToSlide: true, // Cho phép vuốt để chuyển slide
-  });
-  slider.on("mouseenter", function () {
-    slider.slick("slickSetOption", "autoplaySpeed", 5000, true);
-    slider.slick("slickSetOption", "speed", 500, true);
-  });
-
-  slider.on("mouseleave", function () {
-    slider.slick("slickSetOption", "autoplaySpeed", 2000, true);
-    slider.slick("slickSetOption", "speed", 2000, true);
-  });
+  // slider.on("mouseleave", function () {
+  //   slider.slick("slickSetOption", "autoplaySpeed", 2000, true);
+  //   slider.slick("slickSetOption", "speed", 2000, true);
+  // });
 });
 
 //Sider-women

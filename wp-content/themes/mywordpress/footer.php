@@ -19,7 +19,7 @@
   </div>
   <span>©2023 abcxyz. All rights reversed</span>
 </div>
-<script src="<?php bloginfo('template_directory'); ?>/js/index.js"></script>
+<script src="<?php bloginfo('template_directory'); ?>/js/main.js"></script>
 <?php wp_footer(); ?>
 </body>
 
