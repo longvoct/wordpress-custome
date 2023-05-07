@@ -152,6 +152,10 @@ jQuery(function ($) {
 
     // Trigger change event
     $qty.trigger("change");
+    $("[name=update_cart]").prop({
+      disabled: false,
+      "aria-disabled": false,
+    });
   });
 });
 
@@ -171,3 +175,5 @@ $(document).ready(function () {
     },
   });
 });
+
+//Fixbug for Update Cart when adding quantify products

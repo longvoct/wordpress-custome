@@ -229,6 +229,7 @@ tr:nth-child(2) {
 
 .reset_variations {
   display: none !important;
+  color: #f12424;
 }
 
 .additional_information_tab {

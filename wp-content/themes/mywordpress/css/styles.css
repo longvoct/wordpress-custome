@@ -294,3 +294,17 @@ input[type="search"]::-ms-clear {
   > a::before {
   font-size: 25px;
 }
+
+.woocommerce-message {
+  margin-top: 5px;
+  border-top-color: #5a13c4 !important;
+}
+
+.woocommerce-message:before {
+  content: "\e015";
+  color: #5a13c4 !important;
+}
+
+.woocommerce a.remove {
+  color: #d6d6d6 !important;
+}
