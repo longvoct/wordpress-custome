@@ -155,3 +155,12 @@ function my_woocommerce_review_before_comment_meta($comment)
 }
 
 add_action('woocommerce_review_before_comment_meta', 'my_woocommerce_review_before_comment_meta');
+
+
+//Custome nút trở về --> Cấu hình trở về trang cửa hàng
+function store_mall_wc_empty_cart_redirect_url()
+{
+  $url = 'http://mywordpress.vn/cua-hang'; // change this link to your need
+  return esc_url($url);
+}
+add_filter('woocommerce_return_to_shop_redirect', 'store_mall_wc_empty_cart_redirect_url');
