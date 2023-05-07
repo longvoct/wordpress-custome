@@ -269,8 +269,7 @@ input[type="radio"] {
   gap: 7px;
 }
 
-.comment-reply-title,
-.comment-form-comment label {
+.comment-reply-title {
   display: none;
 }
 
@@ -292,6 +291,13 @@ input[type="radio"] {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.comment-form-comment label {
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 150%;
+  letter-spacing: 0.02em;
 }
 
 .commentlist li {
@@ -334,6 +340,9 @@ time.woocommerce-review__published-date {
 
 p.comment-form-comment {
   margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 textarea#comment {
@@ -341,15 +350,16 @@ textarea#comment {
   border: none;
   outline: none;
   border-radius: 8px;
-  width: 100%;
+  width: calc(100% - 350px);
   resize: none;
   height: 160px;
   padding: 25px;
+  margin-top: 15px;
 }
 
 input#submit {
-  margin-top: 24px;
-  padding: 15px 30px;
+  margin-top: 30px;
+  padding: 12px 25px;
   text-align: end;
   outline: none;
   border: none;
@@ -359,4 +369,10 @@ input#submit {
 }
 p.form-submit {
   display: flex;
+}
+
+.tinv-wishlist
+  .tinvwl_add_to_wishlist_button.tinvwl-icon-heart-plus.no-txt:before,
+.tinv-wishlist .tinvwl_add_to_wishlist_button.tinvwl-icon-heart.no-txt:before {
+  font-size: 25px;
 }
