@@ -1,0 +1,136 @@
+2023-05-07T07:24:53+00:00 CRITICAL syntax error, unexpected token ";", expecting ")" in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\woocommerce\single-product-reviews.php on line 34
+
+2023-05-07T07:35:36+00:00 CRITICAL Uncaught Error: Undefined constant "people" in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\functions.php:146
+Stack trace:
+#0 C:\xampp\htdocs\mywordpress\wp-includes\class-wp-hook.php(310): custom_avatar('<img alt='' src...', Object(WP_Comment), 60, 'mm', '')
+#1 C:\xampp\htdocs\mywordpress\wp-includes\plugin.php(205): WP_Hook->apply_filters('<img alt='' src...', Array)
+#2 C:\xampp\htdocs\mywordpress\wp-includes\pluggable.php(2944): apply_filters('get_avatar', '<img alt='' src...', Object(WP_Comment), 60, 'mm', '', Array)
+#3 C:\xampp\htdocs\mywordpress\wp-content\plugins\woocommerce\includes\wc-template-functions.php(1982): get_avatar(Object(WP_Comment), '60', '')
+#4 C:\xampp\htdocs\mywordpress\wp-includes\class-wp-hook.php(308): woocommerce_review_display_gravatar(Object(WP_Comment))
+#5 C:\xampp\htdocs\mywordpress\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#6 C:\xampp\htdocs\mywordpress\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#7 C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\woocommerce\single-product\review.php(34): do_action('woocommerce_rev...', Object(WP_Comment))
+#8 C:\xampp\htdocs\mywordpress\wp-content\plugins\woocommerce\includes\wc-core-functions.php(345): include('C:\\xampp\\htdocs...')
+#9 C:\xampp\htdocs\mywordpress\wp-content\plugins\woocommerce\includes\wc-template-functions.php(1968): wc_get_template('single-product/...', Array)
+#10 C:\xampp\htdocs\mywordpress\wp-includes\class-walker-comment.php(184): woocommerce_comments(Object(WP_Comment), Array, 1)
+#11 C:\xampp\htdocs\mywordpress\wp-includes\class-wp-walker.php(147): Walker_Comment->start_el('', Object(WP_Comment), 1, Array)
+#12 C:\xampp\htdocs\mywordpress\wp-includes\class-walker-comment.php(139): Walker->display_element(Object(WP_Comment), Array, '5', 0, Array, '')
+#13 C:\xampp\htdocs\mywordpress\wp-includes\class-wp-walker.php(390): Walker_Comment->display_element(Object(WP_Comment), Array, '5', 0, Array, '')
+#14 C:\xampp\htdocs\mywordpress\wp-includes\comment-template.php(2346): Walker->paged_walk(Array, '5', 0, 0, Array)
+#15 C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\woocommerce\single-product-reviews.php(45): wp_list_comments(Array)
+#16 C:\xampp\htdocs\mywordpress\wp-includes\comment-template.php(1591): require('C:\\xampp\\htdocs...')
+#17 C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\woocommerce\single-product\tabs\tabs.php(50): comments_template('reviews', Array)
+#18 C:\xampp\htdocs\mywordpress\wp-content\plugins\woocommerce\includes\wc-core-functions.php(345): include('C:\\xampp\\htdocs...')
+#19 C:\xampp\htdocs\mywordpress\wp-content\plugins\woocommerce\includes\wc-template-functions.php(1618): wc_get_template('single-product/...')
+#20 C:\xampp\htdocs\mywordpress\wp-includes\class-wp-hook.php(308): woocommerce_output_product_data_tabs('')
+#21 C:\xampp\htdocs\mywordpress\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#22 C:\xampp\htdocs\mywordpress\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#23 C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\woocommerce\content-single-product.php(73): do_action('woocommerce_aft...')
+#24 C:\xampp\htdocs\mywordpress\wp-includes\template.php(785): require('C:\\xampp\\htdocs...')
+#25 C:\xampp\htdocs\mywordpress\wp-content\plugins\woocommerce\includes\wc-core-functions.php(284): load_template('C:\\xampp\\htdocs...', false)
+#26 C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\woocommerce\single-product.php(38): wc_get_template_part('content', 'single-product')
+#27 C:\xampp\htdocs\mywordpress\wp-includes\template-loader.php(106): include('C:\\xampp\\htdocs...')
+#28 C:\xampp\htdocs\mywordpress\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#29 C:\xampp\htdocs\mywordpress\index.php(17): require('C:\\xampp\\htdocs...')
+#30 {main}
+  thrown in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\functions.php on line 146
+
+2023-05-07T07:35:40+00:00 CRITICAL Uncaught Error: Undefined constant "people" in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\functions.php:146
+Stack trace:
+#0 C:\xampp\htdocs\mywordpress\wp-includes\class-wp-hook.php(310): custom_avatar('<img alt='' src...', 1, 64, 'mm', '')
+#1 C:\xampp\htdocs\mywordpress\wp-includes\plugin.php(205): WP_Hook->apply_filters('<img alt='' src...', Array)
+#2 C:\xampp\htdocs\mywordpress\wp-includes\pluggable.php(2944): apply_filters('get_avatar', '<img alt='' src...', 1, 64, 'mm', '', Array)
+#3 C:\xampp\htdocs\mywordpress\wp-includes\admin-bar.php(296): get_avatar(1, 64)
+#4 C:\xampp\htdocs\mywordpress\wp-includes\class-wp-hook.php(308): wp_admin_bar_my_account_menu(Object(WP_Admin_Bar))
+#5 C:\xampp\htdocs\mywordpress\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#6 C:\xampp\htdocs\mywordpress\wp-includes\plugin.php(565): WP_Hook->do_action(Array)
+#7 C:\xampp\htdocs\mywordpress\wp-includes\admin-bar.php(95): do_action_ref_array('admin_bar_menu', Array)
+#8 C:\xampp\htdocs\mywordpress\wp-includes\class-wp-hook.php(308): wp_admin_bar_render('')
+#9 C:\xampp\htdocs\mywordpress\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters(NULL, Array)
+#10 C:\xampp\htdocs\mywordpress\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#11 C:\xampp\htdocs\mywordpress\wp-includes\general-template.php(3065): do_action('wp_footer')
+#12 C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\footer.php(23): wp_footer()
+#13 C:\xampp\htdocs\mywordpress\wp-includes\template.php(783): require_once('C:\\xampp\\htdocs...')
+#14 C:\xampp\htdocs\mywordpress\wp-includes\template.php(718): load_template('C:\\xampp\\htdocs...', true, Array)
+#15 C:\xampp\htdocs\mywordpress\wp-includes\general-template.php(92): locate_template(Array, true, true, Array)
+#16 C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\index.php(111): get_footer()
+#17 C:\xampp\htdocs\mywordpress\wp-includes\template-loader.php(106): include('C:\\xampp\\htdocs...')
+#18 C:\xampp\htdocs\mywordpress\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#19 C:\xampp\htdocs\mywordpress\index.php(17): require('C:\\xampp\\htdocs...')
+#20 {main}
+  thrown in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\functions.php on line 146
+
+2023-05-07T10:01:17+00:00 CRITICAL Cannot redeclare wc_get_rating_html() (previously declared in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\functions.php:144) in C:\xampp\htdocs\mywordpress\wp-content\plugins\woocommerce\includes\wc-template-functions.php on line 3602
+
+2023-05-07T10:01:19+00:00 CRITICAL Cannot redeclare wc_get_rating_html() (previously declared in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\functions.php:144) in C:\xampp\htdocs\mywordpress\wp-content\plugins\woocommerce\includes\wc-template-functions.php on line 3602
+
+2023-05-07T10:02:36+00:00 CRITICAL Cannot redeclare wc_get_rating_html() (previously declared in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\functions.php:145) in C:\xampp\htdocs\mywordpress\wp-content\plugins\woocommerce\includes\wc-template-functions.php on line 3602
+
+2023-05-07T10:02:38+00:00 CRITICAL Cannot redeclare wc_get_rating_html() (previously declared in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\functions.php:145) in C:\xampp\htdocs\mywordpress\wp-content\plugins\woocommerce\includes\wc-template-functions.php on line 3602
+
+2023-05-07T10:02:42+00:00 CRITICAL Cannot redeclare wc_get_rating_html() (previously declared in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\functions.php:145) in C:\xampp\htdocs\mywordpress\wp-content\plugins\woocommerce\includes\wc-template-functions.php on line 3602
+
+2023-05-07T10:02:45+00:00 CRITICAL Cannot redeclare wc_get_rating_html() (previously declared in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\functions.php:145) in C:\xampp\htdocs\mywordpress\wp-content\plugins\woocommerce\includes\wc-template-functions.php on line 3602
+
+2023-05-07T10:29:25+00:00 CRITICAL Uncaught Error: Call to undefined function my_get_review_rating() in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\functions.php:126
+Stack trace:
+#0 C:\xampp\htdocs\mywordpress\wp-includes\class-wp-hook.php(308): my_woocommerce_review_before_comment_meta(Object(WP_Comment))
+#1 C:\xampp\htdocs\mywordpress\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters(NULL, Array)
+#2 C:\xampp\htdocs\mywordpress\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#3 C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\woocommerce\single-product\review.php(55): do_action('woocommerce_rev...', Object(WP_Comment))
+#4 C:\xampp\htdocs\mywordpress\wp-content\plugins\woocommerce\includes\wc-core-functions.php(345): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\mywordpress\wp-content\plugins\woocommerce\includes\wc-template-functions.php(1968): wc_get_template('single-product/...', Array)
+#6 C:\xampp\htdocs\mywordpress\wp-includes\class-walker-comment.php(184): woocommerce_comments(Object(WP_Comment), Array, 1)
+#7 C:\xampp\htdocs\mywordpress\wp-includes\class-wp-walker.php(147): Walker_Comment->start_el('', Object(WP_Comment), 1, Array)
+#8 C:\xampp\htdocs\mywordpress\wp-includes\class-walker-comment.php(139): Walker->display_element(Object(WP_Comment), Array, '5', 0, Array, '')
+#9 C:\xampp\htdocs\mywordpress\wp-includes\class-wp-walker.php(390): Walker_Comment->display_element(Object(WP_Comment), Array, '5', 0, Array, '')
+#10 C:\xampp\htdocs\mywordpress\wp-includes\comment-template.php(2346): Walker->paged_walk(Array, '5', 0, 0, Array)
+#11 C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\woocommerce\single-product-reviews.php(45): wp_list_comments(Array)
+#12 C:\xampp\htdocs\mywordpress\wp-includes\comment-template.php(1591): require('C:\\xampp\\htdocs...')
+#13 C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\woocommerce\single-product\tabs\tabs.php(50): comments_template('reviews', Array)
+#14 C:\xampp\htdocs\mywordpress\wp-content\plugins\woocommerce\includes\wc-core-functions.php(345): include('C:\\xampp\\htdocs...')
+#15 C:\xampp\htdocs\mywordpress\wp-content\plugins\woocommerce\includes\wc-template-functions.php(1618): wc_get_template('single-product/...')
+#16 C:\xampp\htdocs\mywordpress\wp-includes\class-wp-hook.php(308): woocommerce_output_product_data_tabs('')
+#17 C:\xampp\htdocs\mywordpress\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#18 C:\xampp\htdocs\mywordpress\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#19 C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\woocommerce\content-single-product.php(73): do_action('woocommerce_aft...')
+#20 C:\xampp\htdocs\mywordpress\wp-includes\template.php(785): require('C:\\xampp\\htdocs...')
+#21 C:\xampp\htdocs\mywordpress\wp-content\plugins\woocommerce\includes\wc-core-functions.php(284): load_template('C:\\xampp\\htdocs...', false)
+#22 C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\woocommerce\single-product.php(38): wc_get_template_part('content', 'single-product')
+#23 C:\xampp\htdocs\mywordpress\wp-includes\template-loader.php(106): include('C:\\xampp\\htdocs...')
+#24 C:\xampp\htdocs\mywordpress\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#25 C:\xampp\htdocs\mywordpress\index.php(17): require('C:\\xampp\\htdocs...')
+#26 {main}
+  thrown in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\functions.php on line 126
+
+2023-05-07T10:37:41+00:00 CRITICAL Uncaught Error: Call to undefined function my_get_review_rating() in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\functions.php:123
+Stack trace:
+#0 C:\xampp\htdocs\mywordpress\wp-includes\class-wp-hook.php(308): my_woocommerce_review_before_comment_meta(Object(WP_Comment))
+#1 C:\xampp\htdocs\mywordpress\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters(NULL, Array)
+#2 C:\xampp\htdocs\mywordpress\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#3 C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\woocommerce\single-product\review.php(55): do_action('woocommerce_rev...', Object(WP_Comment))
+#4 C:\xampp\htdocs\mywordpress\wp-content\plugins\woocommerce\includes\wc-core-functions.php(345): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\mywordpress\wp-content\plugins\woocommerce\includes\wc-template-functions.php(1968): wc_get_template('single-product/...', Array)
+#6 C:\xampp\htdocs\mywordpress\wp-includes\class-walker-comment.php(184): woocommerce_comments(Object(WP_Comment), Array, 1)
+#7 C:\xampp\htdocs\mywordpress\wp-includes\class-wp-walker.php(147): Walker_Comment->start_el('', Object(WP_Comment), 1, Array)
+#8 C:\xampp\htdocs\mywordpress\wp-includes\class-walker-comment.php(139): Walker->display_element(Object(WP_Comment), Array, '5', 0, Array, '')
+#9 C:\xampp\htdocs\mywordpress\wp-includes\class-wp-walker.php(390): Walker_Comment->display_element(Object(WP_Comment), Array, '5', 0, Array, '')
+#10 C:\xampp\htdocs\mywordpress\wp-includes\comment-template.php(2346): Walker->paged_walk(Array, '5', 0, 0, Array)
+#11 C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\woocommerce\single-product-reviews.php(45): wp_list_comments(Array)
+#12 C:\xampp\htdocs\mywordpress\wp-includes\comment-template.php(1591): require('C:\\xampp\\htdocs...')
+#13 C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\woocommerce\single-product\tabs\tabs.php(50): comments_template('reviews', Array)
+#14 C:\xampp\htdocs\mywordpress\wp-content\plugins\woocommerce\includes\wc-core-functions.php(345): include('C:\\xampp\\htdocs...')
+#15 C:\xampp\htdocs\mywordpress\wp-content\plugins\woocommerce\includes\wc-template-functions.php(1618): wc_get_template('single-product/...')
+#16 C:\xampp\htdocs\mywordpress\wp-includes\class-wp-hook.php(308): woocommerce_output_product_data_tabs('')
+#17 C:\xampp\htdocs\mywordpress\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#18 C:\xampp\htdocs\mywordpress\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#19 C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\woocommerce\content-single-product.php(73): do_action('woocommerce_aft...')
+#20 C:\xampp\htdocs\mywordpress\wp-includes\template.php(785): require('C:\\xampp\\htdocs...')
+#21 C:\xampp\htdocs\mywordpress\wp-content\plugins\woocommerce\includes\wc-core-functions.php(284): load_template('C:\\xampp\\htdocs...', false)
+#22 C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\woocommerce\single-product.php(38): wc_get_template_part('content', 'single-product')
+#23 C:\xampp\htdocs\mywordpress\wp-includes\template-loader.php(106): include('C:\\xampp\\htdocs...')
+#24 C:\xampp\htdocs\mywordpress\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#25 C:\xampp\htdocs\mywordpress\index.php(17): require('C:\\xampp\\htdocs...')
+#26 {main}
+  thrown in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\functions.php on line 123
+

@@ -10,6 +10,31 @@ window.addEventListener("load", function () {
     var header = document.querySelector(".header");
     header.style.top = "0";
   }
+  // Click vote rating
+  // Lấy tất cả các radio button và icon sao
+  const radioButtons = document.querySelectorAll(
+    '.star-rating_list span input[type="radio"]'
+  );
+  const stars = document.querySelectorAll(
+    ".star-rating_list span label svg path"
+  );
+
+  // Thêm sự kiện onchange vào các radio button
+  radioButtons.forEach(function (radioButton) {
+    radioButton.addEventListener("change", function () {
+      // Lấy giá trị của radio button được chọn
+      const value = parseInt(this.value);
+
+      // Thay đổi màu sắc của các icon sao
+      for (let i = 0; i < stars.length; i++) {
+        if (i < value) {
+          stars[i].setAttribute("fill", "#000");
+        } else {
+          stars[i].setAttribute("fill", "#fff");
+        }
+      }
+    });
+  });
 });
 
 //Slider men-product
@@ -71,5 +96,78 @@ $(document).ready(function () {
       $(".pagination .active").removeClass("active");
       next.addClass("active");
     }
+  });
+});
+
+// Xử lý nút tăng giảm sản phẩm
+jQuery(function ($) {
+  if (!String.prototype.getDecimals) {
+    String.prototype.getDecimals = function () {
+      var num = this,
+        match = ("" + num).match(/(?:\.(\d+))?(?:[eE]([+-]?\d+))?$/);
+      if (!match) {
+        return 0;
+      }
+      return Math.max(
+        0,
+        (match[1] ? match[1].length : 0) - (match[2] ? +match[2] : 0)
+      );
+    };
+  }
+  // Quantity "plus" and "minus" buttons
+  $(document.body).on("click", ".plus, .minus", function () {
+    var $qty = $(this).closest(".quantity").find(".qty"),
+      currentVal = parseFloat($qty.val()),
+      max = parseFloat($qty.attr("max")),
+      min = parseFloat($qty.attr("min")),
+      step = $qty.attr("step");
+
+    // Format values
+    if (!currentVal || currentVal === "" || currentVal === "NaN")
+      currentVal = 0;
+    if (max === "" || max === "NaN") max = "";
+    if (min === "" || min === "NaN") min = 0;
+    if (
+      step === "any" ||
+      step === "" ||
+      step === undefined ||
+      parseFloat(step) === "NaN"
+    )
+      step = 1;
+
+    // Change the value
+    if ($(this).is(".plus")) {
+      if (max && currentVal >= max) {
+        $qty.val(max);
+      } else {
+        $qty.val((currentVal + parseFloat(step)).toFixed(step.getDecimals()));
+      }
+    } else {
+      if (min && currentVal <= min) {
+        $qty.val(min);
+      } else if (currentVal > 0) {
+        $qty.val((currentVal - parseFloat(step)).toFixed(step.getDecimals()));
+      }
+    }
+
+    // Trigger change event
+    $qty.trigger("change");
+  });
+});
+
+//FlexSlider cho Gallery Image
+$(document).ready(function () {
+  $(".flexslider").flexslider({
+    animation: "slide",
+    controlNav: false,
+    directionNav: false,
+    slideshow: true,
+    itemWidth: 120,
+    itemMargin: 0,
+    minItems: 4,
+    maxItems: 5,
+    start: function (slider) {
+      slider.flexAnimate(4);
+    },
   });
 });
