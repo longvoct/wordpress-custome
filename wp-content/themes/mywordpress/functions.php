@@ -165,15 +165,18 @@ function store_mall_wc_empty_cart_redirect_url()
 }
 add_filter('woocommerce_return_to_shop_redirect', 'store_mall_wc_empty_cart_redirect_url');
 
+
 //Custome flash sale
 add_filter('woocommerce_sale_flash', 'ds_change_sale_text');
-
 function ds_change_sale_text()
 {
-  return '<div class="product-detail__onsale">
-  <span>S</span>
-  <span>A</span>
-  <span>L</span>
-  <span>E</span>
-</div>';
+  return '<div class="product-detail__onsale" style="background: linear-gradient(-45deg, rgba(243, 52, 64, 1) 50%, #000 50%);
+  ">
+    <span>S</span>
+    <span>A</span>
+    <span>L</span>
+    <span>E</span>
+  </div>';
 }
+
+// 

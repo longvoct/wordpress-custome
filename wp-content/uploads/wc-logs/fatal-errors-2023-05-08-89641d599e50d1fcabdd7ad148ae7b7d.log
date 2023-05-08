@@ -1,0 +1,20 @@
+2023-05-08T07:28:03+00:00 CRITICAL Uncaught TypeError: call_user_func_array(): Argument #1 ($callback) must be a valid callback, function "custom_variation_add_to_cart_button" not found or invalid function name in C:\xampp\htdocs\mywordpress\wp-includes\class-wp-hook.php:308
+Stack trace:
+#0 C:\xampp\htdocs\mywordpress\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#1 C:\xampp\htdocs\mywordpress\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#2 C:\xampp\htdocs\mywordpress\wp-content\plugins\woocommerce\includes\wc-template-functions.php(1694): do_action('woocommerce_var...')
+#3 C:\xampp\htdocs\mywordpress\wp-includes\class-wp-hook.php(308): woocommerce_template_single_add_to_cart('')
+#4 C:\xampp\htdocs\mywordpress\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters(NULL, Array)
+#5 C:\xampp\htdocs\mywordpress\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#6 C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\woocommerce\content-single-product.php(62): do_action('woocommerce_sin...')
+#7 C:\xampp\htdocs\mywordpress\wp-includes\template.php(785): require('C:\\xampp\\htdocs...')
+#8 C:\xampp\htdocs\mywordpress\wp-content\plugins\woocommerce\includes\wc-core-functions.php(284): load_template('C:\\xampp\\htdocs...', false)
+#9 C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\woocommerce\single-product.php(38): wc_get_template_part('content', 'single-product')
+#10 C:\xampp\htdocs\mywordpress\wp-includes\template-loader.php(106): include('C:\\xampp\\htdocs...')
+#11 C:\xampp\htdocs\mywordpress\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#12 C:\xampp\htdocs\mywordpress\index.php(17): require('C:\\xampp\\htdocs...')
+#13 {main}
+  thrown in C:\xampp\htdocs\mywordpress\wp-includes\class-wp-hook.php on line 308
+
+2023-05-08T08:48:51+00:00 CRITICAL syntax error, unexpected token "class", expecting ")" in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\woocommerce\single-product\add-to-cart\variation-add-to-cart-button.php on line 15
+
