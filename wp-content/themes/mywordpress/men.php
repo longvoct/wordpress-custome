@@ -7,12 +7,18 @@ Template Name: men
 <div class="body-content margin-head">
   <h2 class="product-heading">SẢN PHẨM NỔI BẬT</h2>
   <div class="featured-products-list">
-    <div class="featured-product-item"><img class="featured-product-img" src="<?php bloginfo('template_directory'); ?>/images/men/men-1.jpg" alt=""></div>
-    <div class="featured-product-item"><img class="featured-product-img" src="<?php bloginfo('template_directory'); ?>/images/men/men-2.jpg" alt=""></div>
-    <div class="featured-product-item"><img class="featured-product-img" src="<?php bloginfo('template_directory'); ?>/images/men/men-3.jpg" alt=""></div>
-    <div class="featured-product-item"><img class="featured-product-img" src="<?php bloginfo('template_directory'); ?>/images/men/men-4.jpg" alt=""></div>
-    <div class="featured-product-item"><img class="featured-product-img" src="<?php bloginfo('template_directory'); ?>/images/men/men-5.jpg" alt=""></div>
-    <div class="featured-product-item"><img class="featured-product-img" src="<?php bloginfo('template_directory'); ?>/images/men/men-6.jpg" alt=""></div>
+    <div class="featured-product-item"><img class="featured-product-img"
+        src="<?php bloginfo('template_directory'); ?>/images/men/men-1.jpg" alt=""></div>
+    <div class="featured-product-item"><img class="featured-product-img"
+        src="<?php bloginfo('template_directory'); ?>/images/men/men-2.jpg" alt=""></div>
+    <div class="featured-product-item"><img class="featured-product-img"
+        src="<?php bloginfo('template_directory'); ?>/images/men/men-3.jpg" alt=""></div>
+    <div class="featured-product-item"><img class="featured-product-img"
+        src="<?php bloginfo('template_directory'); ?>/images/men/men-4.jpg" alt=""></div>
+    <div class="featured-product-item"><img class="featured-product-img"
+        src="<?php bloginfo('template_directory'); ?>/images/men/men-5.jpg" alt=""></div>
+    <div class="featured-product-item"><img class="featured-product-img"
+        src="<?php bloginfo('template_directory'); ?>/images/men/men-6.jpg" alt=""></div>
   </div>
   <!-- <div class="featured-products-list two">
     <div class="featured-product-item"><img class="featured-product-img"
@@ -156,8 +162,8 @@ Template Name: men
       <?php global $wp_query;
       $wp_query->in_the_loop = true; ?>
       <?php while ($getposts->have_posts()) : $getposts->the_post(); ?>
-        <?php global $product; ?>
-        <?php get_template_part('product'); ?>
+      <?php global $product; ?>
+      <?php get_template_part('/components/product'); ?>
       <?php endwhile;
       wp_reset_postdata(); ?>
     </div>

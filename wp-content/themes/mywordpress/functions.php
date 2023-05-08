@@ -164,3 +164,16 @@ function store_mall_wc_empty_cart_redirect_url()
   return esc_url($url);
 }
 add_filter('woocommerce_return_to_shop_redirect', 'store_mall_wc_empty_cart_redirect_url');
+
+//Custome flash sale
+add_filter('woocommerce_sale_flash', 'ds_change_sale_text');
+
+function ds_change_sale_text()
+{
+  return '<div class="product-detail__onsale">
+  <span>S</span>
+  <span>A</span>
+  <span>L</span>
+  <span>E</span>
+</div>';
+}

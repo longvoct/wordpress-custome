@@ -142,6 +142,7 @@ input[type="checkbox"]:checked {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 35px;
 }
 
 /* Pagination style */
@@ -307,4 +308,132 @@ input[type="search"]::-ms-clear {
 
 .woocommerce a.remove {
   color: #d6d6d6 !important;
+}
+/* Bộ lọc danh mục sản phẩm */
+.product-filter {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+}
+
+.product-filter label {
+  margin-right: 10px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  width: 180px;
+  height: 40px;
+  background-color: #fff;
+  border: 1px solid #dfdfdf;
+}
+
+.icon-filter {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.dropdown-toggle {
+  border: none;
+  cursor: pointer;
+  outline: none;
+  width: 100%;
+  height: 100%;
+  text-align: left;
+  padding-left: 20px;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  font-weight: 400;
+}
+
+.dropdown-toggle:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 105%;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  width: 100%;
+  padding: 5px 0;
+  margin: 2px 0 0;
+  font-size: 14px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.dropdown-menu li {
+  display: block;
+  width: 100%;
+}
+
+.dropdown-menu li:hover {
+  background-color: #f2f2f2;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 3px 20px;
+  clear: both;
+  font-weight: normal;
+  color: #333;
+  white-space: nowrap;
+}
+
+.dropdown-menu a:hover {
+  color: #262626;
+  text-decoration: none;
+  background-color: #f2f2f2;
+}
+
+.dropdown-menu li.active a {
+  font-weight: bold;
+}
+
+.dashed-loading {
+  position: relative;
+  height: 30px;
+}
+
+.dashed-loading:after,
+.dashed-loading:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+}
+
+.dashed-loading:before {
+  z-index: 5;
+  border: 2px dashed #4f4f4f;
+  border-left: 2px solid transparent;
+  border-bottom: 2px solid transparent;
+  -webkit-animation: dashed 1s linear infinite;
+  animation: dashed 1s linear infinite;
+}
+
+.dashed-loading:after {
+  z-index: 10;
+  border: 3px solid #000000;
+  border-left: 2px solid transparent;
+  border-bottom: 2px solid transparent;
+  -webkit-animation: dashed 1s ease infinite;
+  animation: dashed 1s ease infinite;
+}
+
+@keyframes dashed {
+  to {
+    transform: rotate(360deg);
+  }
 }

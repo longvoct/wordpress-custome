@@ -15,7 +15,7 @@
 
     if ($related_products->have_posts()) :
       while ($related_products->have_posts()) : $related_products->the_post(); ?>
-        <?php get_template_part('product'); ?>
+        <?php get_template_part('./components/product'); ?>
     <?php endwhile;
       wp_reset_postdata();
     endif;

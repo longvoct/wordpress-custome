@@ -31,7 +31,7 @@
     $wp_query->in_the_loop = true; ?>
     <?php while ($getposts->have_posts()) : $getposts->the_post(); ?>
       <?php global $product; ?>
-      <?php get_template_part('product'); ?>
+      <?php get_template_part('./components/product'); ?>
     <?php endwhile;
     wp_reset_postdata(); ?>
     <!-- <div class="product-list__item">
@@ -93,7 +93,7 @@
         $products->the_post();
         global $product;
     ?>
-        <?php get_template_part('product'); ?>
+        <?php get_template_part('/components/product'); ?>
     <?php
       }
       wp_reset_postdata();

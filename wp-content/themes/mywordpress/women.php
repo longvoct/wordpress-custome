@@ -169,7 +169,7 @@ Template Name: women
       $wp_query->in_the_loop = true; ?>
       <?php while ($getposts->have_posts()) : $getposts->the_post(); ?>
         <?php global $product; ?>
-        <?php get_template_part('product'); ?>
+        <?php get_template_part('/components/product'); ?>
       <?php endwhile;
       wp_reset_postdata(); ?>
     </div>
