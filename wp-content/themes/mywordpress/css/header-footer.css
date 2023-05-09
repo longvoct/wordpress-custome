@@ -28,11 +28,12 @@
   align-items: center;
 }
 .menu__link {
-  font-family: "UTM-Impact";
+  /* font-family: "UTM-Impact"; */
+  font-weight: 600;
   position: relative;
   color: #000;
   opacity: 1;
-  padding: 0 15px;
+  padding: 0 10px;
   text-decoration: none;
   transition: opacity 0.3s ease-in-out;
 }

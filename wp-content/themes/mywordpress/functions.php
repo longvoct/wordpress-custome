@@ -8,6 +8,17 @@ function my_custom_wc_theme_support()
 }
 add_action('after_setup_theme', 'my_custom_wc_theme_support');
 
+// Thêm TI Wishlist --> tùy chỉnh giao diện
+add_filter('woocommerce_locate_template', 'ti_wishlist_template_override', 10, 3);
+
+function ti_wishlist_template_override($template, $template_name, $template_path)
+{
+  if ($template_name == 'ti-addedtowishlist-dialogbox.php') {
+    $template = get_stylesheet_directory() . '/ti-woocommerce-wishlist/templates/ti-addedtowishlist-dialogbox.php';
+  }
+  return $template;
+}
+
 //Khởi tạo menu
 function register_my_menu()
 {

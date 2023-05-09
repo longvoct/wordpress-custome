@@ -106,6 +106,26 @@
   <!-- Banner-product -->
   <div class="banner-product">
     <img class="banner-product__image" src="<?php bloginfo('template_directory'); ?>/images/banner-product-title.png" alt="Product Image">
+    <div class="banner-gallery__opacity"></div>
+    <div class="banner-product__content">
+      <span>One Star Pro Sean Pablo </br>
+        X Paradise </span>
+      <span>A BOLD VISION </span>
+      <p>The CONS pro, Sean Pablo, brings his unique creativity to your favorite performance skate sho nae, finds
+        unexpected color mash-ups inspired by ‘90s nostalgia.</p>
+      <div class="banner-link_wrapper">
+        <a href="<?php bloginfo('url'); ?>/cua-hang">
+          <button class="banner-link_store">
+            Cửa hàng
+          </button>
+        </a>
+      </div>
+    </div>
+    <div class="banner-deco_list">
+      <img class="banner-deco_first" src="<?php bloginfo('template_directory'); ?>/images/converse-cons.png" alt="">
+      <span>PORTLAND </br> OREGON</span>
+      <img class="banner-deco_sec" src="<?php bloginfo('template_directory'); ?>/images/edieCernicky.png" alt="">
+    </div>
   </div>
 </div>
 <?php get_footer() ?>
