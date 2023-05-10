@@ -1,6 +1,18 @@
-.ti-add-to-wishlist {
-  background: #fff;
-  border: 1px solid #ccc;
+.tinvwl-buttons-group.tinv-wishlist-clear {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  flex-direction: column;
+}
+
+.button.tinvwl_button_close {
+  margin-top: 0 !important;
+}
+
+.tinvwl-buttons-group.tinv-wishlist-clear button {
+  border: none;
+  outline: none;
+  background-color: #f4f8f9;
   padding: 10px 15px;
-  font-size: 14px;
 }

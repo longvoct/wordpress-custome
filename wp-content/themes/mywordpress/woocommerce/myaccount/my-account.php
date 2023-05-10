@@ -25,7 +25,7 @@ defined( 'ABSPATH' ) || exit;
 do_action( 'woocommerce_account_navigation' ); ?>
 
 <div class="woocommerce-MyAccount-content">
-	<?php
+  <?php
 		/**
 		 * My Account content.
 		 *
@@ -33,4 +33,5 @@ do_action( 'woocommerce_account_navigation' ); ?>
 		 */
 		do_action( 'woocommerce_account_content' );
 	?>
+</div>
 </div>

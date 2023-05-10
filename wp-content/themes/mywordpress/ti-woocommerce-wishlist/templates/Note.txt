@@ -1,0 +1,11 @@
+<!--  
+Nội dung: của dialog msg đã thay đổi trong public/wishlist/ajax.class.php
+Cụ thể:
+if ($wlp->remove($product_data)) {
+					$response['status'] = true;
+					$response['msg'][]  = sprintf(__('%s has been removed from wishlist.', 'ti-woocommerce-wishlist'), $title);
+				} else {
+					$response['status'] = false;
+					$response['msg'][]  = sprintf(__('%s has not been removed from wishlist.', 'ti-woocommerce-wishlist'), $title);
+				}
+-->

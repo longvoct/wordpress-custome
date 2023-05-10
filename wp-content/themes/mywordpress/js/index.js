@@ -19,7 +19,7 @@ window.addEventListener("load", function () {
     ".star-rating_list span label svg path"
   );
 
-  // Thêm sự kiện onchange vào các radio button
+  // Thêm sự kiện onchange vào các radio button (ngôi sao)
   radioButtons.forEach(function (radioButton) {
     radioButton.addEventListener("change", function () {
       // Lấy giá trị của radio button được chọn
@@ -35,6 +35,14 @@ window.addEventListener("load", function () {
       }
     });
   });
+
+  //Thay đổi nội dung Wishlist --> Yêu thích
+  // Lấy đối tượng thẻ <li> từ DOM
+  const wishlistLink = document.querySelector(
+    "li.woocommerce-MyAccount-navigation-link--wishlist"
+  );
+  // Xóa nội dung bên trong thẻ
+  wishlistLink.textContent = "Yêu thích";
 });
 
 //Slider men-product

@@ -10,3 +10,5 @@ Stack trace:
 #7 {main}
   thrown in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\header.php on line 79
 
+2023-05-10T13:49:05+00:00 CRITICAL syntax error, unexpected token "endif", expecting end of file in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\woocommerce\cart\cart-empty.php on line 75
+

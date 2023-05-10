@@ -191,7 +191,7 @@ msgstr ""
 #: admin/settings/general.class.php:258
 msgid "\"Product already in Wishlist\" Text"
 msgstr ""
-
+zz
 #: admin/settings/general.class.php:259
 msgid "This notification will be shown if a user will try to add a product that is already on the wishlist. "
 msgstr ""
