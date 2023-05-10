@@ -568,3 +568,7 @@ span.wpcf7-not-valid-tip {
   margin-top: 5px;
   font-size: 14px;
 }
+
+.u-columns.woocommerce-Addresses.col2-set.addresses {
+  margin-top: 20px;
+}
