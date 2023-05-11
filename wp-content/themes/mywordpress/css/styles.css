@@ -104,13 +104,13 @@ input[type="checkbox"]:checked {
   border-color: #000000;
 }
 
-.tag-type {
+.tag-type,
+h4.filter-title {
   display: inline-block;
   font-weight: 700;
   font-size: 16px;
   line-height: 150%;
-  letter-spacing: 0.02em;
-  color: #212121;
+  color: #212121 !important;
   margin-bottom: 10px;
 }
 
@@ -571,4 +571,88 @@ span.wpcf7-not-valid-tip {
 
 .u-columns.woocommerce-Addresses.col2-set.addresses {
   margin-top: 20px;
+}
+
+.yith-wcan-filters
+  .yith-wcan-filter
+  .filter-items
+  .filter-item.active.color:not(.no-color):not(.no-image):not(.label-right)
+  > a:after {
+  background-color: #000 !important;
+}
+
+.yith-wcan-filters
+  .yith-wcan-filter
+  .filter-items
+  .filter-item.active.color
+  .term-color,
+.yith-wcan-filters
+  .yith-wcan-filter
+  .filter-items
+  .filter-item.active.color
+  .term-image {
+  border-color: #000 !important;
+}
+
+.yith-wcan-filters .yith-wcan-filter .filter-items .filter-item.active > a,
+.yith-wcan-filters
+  .yith-wcan-filter
+  .filter-items
+  .filter-item.active
+  > label
+  > a {
+  color: #000 !important;
+}
+
+ul.filter-items.filter-color.level-0 {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  column-gap: 15px !important;
+  row-gap: 0;
+}
+
+[data-term-id="32"] .color-swatch {
+  border-color: #1a1919 !important;
+}
+
+h4.filter-title {
+  margin-bottom: 15px;
+}
+.yith-wcan-filters
+  .yith-wcan-filter
+  .filter-items
+  .filter-item.label:not(.disabled):hover {
+  background-color: #f6f6f6 !important;
+  border: none !important;
+}
+.yith-wcan-filters
+  .yith-wcan-filter
+  .filter-items
+  .filter-item.label:not(.with-image):not(.disabled):hover
+  .term-label,
+.yith-wcan-filters
+  .yith-wcan-filter
+  .filter-items
+  .filter-item.label:not(.with-image):not(.disabled):hover
+  .item-count {
+  color: #000 !important;
+}
+
+.yith-wcan-filters
+  .yith-wcan-filter
+  .filter-items
+  .filter-item.label.active.with-image,
+.yith-wcan-filters
+  .yith-wcan-filter
+  .filter-items
+  .filter-item.label:not(.disabled):hover {
+  box-shadow: 0 0 0 1px #575757 !important;
+}
+
+.yith-wcan-filters
+  .yith-wcan-filter
+  .filter-items
+  .filter-item.label.active:not(.with-image) {
+  background-color: #000 !important;
+  box-shadow: 0 0 0 1px #000 !important;
 }

@@ -41,3 +41,203 @@ Stack trace:
 #14 {main}
   thrown in C:\xampp\htdocs\mywordpress\wp-content\plugins\wp-optimize\templates\minify\cached-file-log.php on line 15
 
+2023-05-11T08:00:52+00:00 CRITICAL Uncaught Error: Class "PWVS_Swatch" not found in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\men.php:57
+Stack trace:
+#0 C:\xampp\htdocs\mywordpress\wp-includes\template-loader.php(106): include()
+#1 C:\xampp\htdocs\mywordpress\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\mywordpress\index.php(17): require('C:\\xampp\\htdocs...')
+#3 {main}
+  thrown in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\men.php on line 57
+
+2023-05-11T08:50:18+00:00 CRITICAL Uncaught Error: Call to a member function get_variation_attributes() on null in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\men.php:20
+Stack trace:
+#0 C:\xampp\htdocs\mywordpress\wp-includes\template-loader.php(106): include()
+#1 C:\xampp\htdocs\mywordpress\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\mywordpress\index.php(17): require('C:\\xampp\\htdocs...')
+#3 {main}
+  thrown in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\men.php on line 20
+
+2023-05-11T08:51:45+00:00 CRITICAL Uncaught Error: Call to a member function get_variation_attributes() on null in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\men.php:20
+Stack trace:
+#0 C:\xampp\htdocs\mywordpress\wp-includes\template-loader.php(106): include()
+#1 C:\xampp\htdocs\mywordpress\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\mywordpress\index.php(17): require('C:\\xampp\\htdocs...')
+#3 {main}
+  thrown in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\men.php on line 20
+
+2023-05-11T08:51:57+00:00 CRITICAL Uncaught Error: Call to a member function get_variation_attributes() on null in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\men.php:20
+Stack trace:
+#0 C:\xampp\htdocs\mywordpress\wp-includes\template-loader.php(106): include()
+#1 C:\xampp\htdocs\mywordpress\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\mywordpress\index.php(17): require('C:\\xampp\\htdocs...')
+#3 {main}
+  thrown in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\men.php on line 20
+
+2023-05-11T08:53:08+00:00 CRITICAL Uncaught Error: Call to a member function get_variation_attributes() on null in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\men.php:20
+Stack trace:
+#0 C:\xampp\htdocs\mywordpress\wp-includes\template-loader.php(106): include()
+#1 C:\xampp\htdocs\mywordpress\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\mywordpress\index.php(17): require('C:\\xampp\\htdocs...')
+#3 {main}
+  thrown in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\men.php on line 20
+
+2023-05-11T08:54:38+00:00 CRITICAL Uncaught Error: Call to a member function get_variation_attributes() on null in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\men.php:20
+Stack trace:
+#0 C:\xampp\htdocs\mywordpress\wp-includes\template-loader.php(106): include()
+#1 C:\xampp\htdocs\mywordpress\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\mywordpress\index.php(17): require('C:\\xampp\\htdocs...')
+#3 {main}
+  thrown in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\men.php on line 20
+
+2023-05-11T08:55:42+00:00 CRITICAL Uncaught Error: Call to a member function get_variation_attributes() on null in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\men.php:20
+Stack trace:
+#0 C:\xampp\htdocs\mywordpress\wp-includes\template-loader.php(106): include()
+#1 C:\xampp\htdocs\mywordpress\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\mywordpress\index.php(17): require('C:\\xampp\\htdocs...')
+#3 {main}
+  thrown in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\men.php on line 20
+
+2023-05-11T08:55:55+00:00 CRITICAL Uncaught Error: Call to a member function get_variation_attributes() on null in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\men.php:19
+Stack trace:
+#0 C:\xampp\htdocs\mywordpress\wp-includes\template-loader.php(106): include()
+#1 C:\xampp\htdocs\mywordpress\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\mywordpress\index.php(17): require('C:\\xampp\\htdocs...')
+#3 {main}
+  thrown in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\men.php on line 19
+
+2023-05-11T10:59:22+00:00 CRITICAL Uncaught TypeError: Cannot access offset of type string on string in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\men.php:29
+Stack trace:
+#0 C:\xampp\htdocs\mywordpress\wp-includes\template-loader.php(106): include()
+#1 C:\xampp\htdocs\mywordpress\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\mywordpress\index.php(17): require('C:\\xampp\\htdocs...')
+#3 {main}
+  thrown in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\men.php on line 29
+
+2023-05-11T11:00:23+00:00 CRITICAL Uncaught Error: Call to a member function get_id() on bool in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\men.php:15
+Stack trace:
+#0 C:\xampp\htdocs\mywordpress\wp-includes\template-loader.php(106): include()
+#1 C:\xampp\htdocs\mywordpress\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\mywordpress\index.php(17): require('C:\\xampp\\htdocs...')
+#3 {main}
+  thrown in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\men.php on line 15
+
+2023-05-11T11:00:56+00:00 CRITICAL Uncaught Error: Call to a member function get_id() on bool in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\men.php:15
+Stack trace:
+#0 C:\xampp\htdocs\mywordpress\wp-includes\template-loader.php(106): include()
+#1 C:\xampp\htdocs\mywordpress\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\mywordpress\index.php(17): require('C:\\xampp\\htdocs...')
+#3 {main}
+  thrown in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\men.php on line 15
+
+2023-05-11T11:11:52+00:00 CRITICAL Uncaught Error: Call to a member function get_id() on bool in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\men.php:15
+Stack trace:
+#0 C:\xampp\htdocs\mywordpress\wp-includes\template-loader.php(106): include()
+#1 C:\xampp\htdocs\mywordpress\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\mywordpress\index.php(17): require('C:\\xampp\\htdocs...')
+#3 {main}
+  thrown in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\men.php on line 15
+
+2023-05-11T11:34:29+00:00 CRITICAL Uncaught Error: Call to a member function get_price_html() on bool in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\components\product.php:12
+Stack trace:
+#0 C:\xampp\htdocs\mywordpress\wp-includes\template.php(785): require()
+#1 C:\xampp\htdocs\mywordpress\wp-includes\template.php(718): load_template('C:\\xampp\\htdocs...', false, Array)
+#2 C:\xampp\htdocs\mywordpress\wp-includes\general-template.php(204): locate_template(Array, true, false, Array)
+#3 C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\men.php(157): get_template_part('/components/pro...')
+#4 C:\xampp\htdocs\mywordpress\wp-includes\template-loader.php(106): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\mywordpress\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\mywordpress\index.php(17): require('C:\\xampp\\htdocs...')
+#7 {main}
+  thrown in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\components\product.php on line 12
+
+2023-05-11T11:36:18+00:00 CRITICAL Uncaught Error: Call to a member function get_price_html() on bool in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\components\product.php:12
+Stack trace:
+#0 C:\xampp\htdocs\mywordpress\wp-includes\template.php(785): require()
+#1 C:\xampp\htdocs\mywordpress\wp-includes\template.php(718): load_template('C:\\xampp\\htdocs...', false, Array)
+#2 C:\xampp\htdocs\mywordpress\wp-includes\general-template.php(204): locate_template(Array, true, false, Array)
+#3 C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\men.php(163): get_template_part('/components/pro...')
+#4 C:\xampp\htdocs\mywordpress\wp-includes\template-loader.php(106): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\mywordpress\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\mywordpress\index.php(17): require('C:\\xampp\\htdocs...')
+#7 {main}
+  thrown in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\components\product.php on line 12
+
+2023-05-11T11:38:03+00:00 CRITICAL Uncaught Error: Call to a member function get_price_html() on bool in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\components\product.php:12
+Stack trace:
+#0 C:\xampp\htdocs\mywordpress\wp-includes\template.php(785): require()
+#1 C:\xampp\htdocs\mywordpress\wp-includes\template.php(718): load_template('C:\\xampp\\htdocs...', false, Array)
+#2 C:\xampp\htdocs\mywordpress\wp-includes\general-template.php(204): locate_template(Array, true, false, Array)
+#3 C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\men.php(163): get_template_part('components/prod...')
+#4 C:\xampp\htdocs\mywordpress\wp-includes\template-loader.php(106): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\mywordpress\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\mywordpress\index.php(17): require('C:\\xampp\\htdocs...')
+#7 {main}
+  thrown in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\components\product.php on line 12
+
+2023-05-11T11:38:17+00:00 CRITICAL Uncaught Error: Call to a member function get_price_html() on bool in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\components\product.php:12
+Stack trace:
+#0 C:\xampp\htdocs\mywordpress\wp-includes\template.php(785): require()
+#1 C:\xampp\htdocs\mywordpress\wp-includes\template.php(718): load_template('C:\\xampp\\htdocs...', false, Array)
+#2 C:\xampp\htdocs\mywordpress\wp-includes\general-template.php(204): locate_template(Array, true, false, Array)
+#3 C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\men.php(163): get_template_part('components/prod...')
+#4 C:\xampp\htdocs\mywordpress\wp-includes\template-loader.php(106): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\mywordpress\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\mywordpress\index.php(17): require('C:\\xampp\\htdocs...')
+#7 {main}
+  thrown in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\components\product.php on line 12
+
+2023-05-11T11:38:24+00:00 CRITICAL Uncaught Error: Call to a member function get_price_html() on bool in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\components\product.php:12
+Stack trace:
+#0 C:\xampp\htdocs\mywordpress\wp-includes\template.php(785): require()
+#1 C:\xampp\htdocs\mywordpress\wp-includes\template.php(718): load_template('C:\\xampp\\htdocs...', false, Array)
+#2 C:\xampp\htdocs\mywordpress\wp-includes\general-template.php(204): locate_template(Array, true, false, Array)
+#3 C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\men.php(163): get_template_part('components/prod...')
+#4 C:\xampp\htdocs\mywordpress\wp-includes\template-loader.php(106): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\mywordpress\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\mywordpress\index.php(17): require('C:\\xampp\\htdocs...')
+#7 {main}
+  thrown in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\components\product.php on line 12
+
+2023-05-11T11:38:32+00:00 CRITICAL Uncaught Error: Call to a member function get_price_html() on bool in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\components\product.php:12
+Stack trace:
+#0 C:\xampp\htdocs\mywordpress\wp-includes\template.php(785): require()
+#1 C:\xampp\htdocs\mywordpress\wp-includes\template.php(718): load_template('C:\\xampp\\htdocs...', false, Array)
+#2 C:\xampp\htdocs\mywordpress\wp-includes\general-template.php(204): locate_template(Array, true, false, Array)
+#3 C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\men.php(163): get_template_part('components/prod...')
+#4 C:\xampp\htdocs\mywordpress\wp-includes\template-loader.php(106): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\mywordpress\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\mywordpress\index.php(17): require('C:\\xampp\\htdocs...')
+#7 {main}
+  thrown in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\components\product.php on line 12
+
+2023-05-11T11:51:26+00:00 CRITICAL Uncaught Error: Call to undefined function wc_get_product_ids_by_visibility() in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\men.php:158
+Stack trace:
+#0 C:\xampp\htdocs\mywordpress\wp-includes\template-loader.php(106): include()
+#1 C:\xampp\htdocs\mywordpress\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\mywordpress\index.php(17): require('C:\\xampp\\htdocs...')
+#3 {main}
+  thrown in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\men.php on line 158
+
+2023-05-11T11:52:13+00:00 CRITICAL Uncaught Error: Call to undefined function wc_get_product_ids_by_visibility() in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\men.php:163
+Stack trace:
+#0 C:\xampp\htdocs\mywordpress\wp-includes\template-loader.php(106): include()
+#1 C:\xampp\htdocs\mywordpress\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\mywordpress\index.php(17): require('C:\\xampp\\htdocs...')
+#3 {main}
+  thrown in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\men.php on line 163
+
+2023-05-11T11:52:29+00:00 CRITICAL Uncaught Error: Call to undefined function wc_get_product_ids_by_visibility() in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\men.php:165
+Stack trace:
+#0 C:\xampp\htdocs\mywordpress\wp-includes\template-loader.php(106): include()
+#1 C:\xampp\htdocs\mywordpress\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\mywordpress\index.php(17): require('C:\\xampp\\htdocs...')
+#3 {main}
+  thrown in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\men.php on line 165
+
+2023-05-11T11:53:41+00:00 CRITICAL Uncaught Error: Call to undefined function wc_get_product_ids_by_visibility() in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\men.php:165
+Stack trace:
+#0 C:\xampp\htdocs\mywordpress\wp-includes\template-loader.php(106): include()
+#1 C:\xampp\htdocs\mywordpress\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\mywordpress\index.php(17): require('C:\\xampp\\htdocs...')
+#3 {main}
+  thrown in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\men.php on line 165
+

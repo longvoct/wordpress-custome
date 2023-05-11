@@ -6,31 +6,8 @@ Template Name: men
 <?php get_template_part('./components/breadcrumb'); ?>
 <div class="body-content margin-head">
   <h2 class="product-heading">SẢN PHẨM NỔI BẬT</h2>
-  <div class="featured-products-list">
-    <div class="featured-product-item"><img class="featured-product-img" src="<?php bloginfo('template_directory'); ?>/images/men/men-1.jpg" alt=""></div>
-    <div class="featured-product-item"><img class="featured-product-img" src="<?php bloginfo('template_directory'); ?>/images/men/men-2.jpg" alt=""></div>
-    <div class="featured-product-item"><img class="featured-product-img" src="<?php bloginfo('template_directory'); ?>/images/men/men-3.jpg" alt=""></div>
-    <div class="featured-product-item"><img class="featured-product-img" src="<?php bloginfo('template_directory'); ?>/images/men/men-4.jpg" alt=""></div>
-    <div class="featured-product-item"><img class="featured-product-img" src="<?php bloginfo('template_directory'); ?>/images/men/men-5.jpg" alt=""></div>
-    <div class="featured-product-item"><img class="featured-product-img" src="<?php bloginfo('template_directory'); ?>/images/men/men-6.jpg" alt=""></div>
-  </div>
-  <!-- <div class="featured-products-list two">
-    <div class="featured-product-item"><img class="featured-product-img"
-        src="<?php bloginfo('template_directory'); ?>/images/men/men-7.jpg" alt=""></div>
-    <div class="featured-product-item"><img class="featured-product-img"
-        src="<?php bloginfo('template_directory'); ?>/images/men/men-8.jpg" alt=""></div>
-    <div class="featured-product-item"><img class="featured-product-img"
-        src="<?php bloginfo('template_directory'); ?>/images/men/men-9.jpg" alt=""></div>
-    <div class="featured-product-item"><img class="featured-product-img"
-        src="<?php bloginfo('template_directory'); ?>/images/men/men-10.jpg" alt=""></div>
-    <div class="featured-product-item"><img class="featured-product-img"
-        src="<?php bloginfo('template_directory'); ?>/images/men/men-11.jpg" alt=""></div>
-    <div class="featured-product-item"><img class="featured-product-img"
-        src="<?php bloginfo('template_directory'); ?>/images/men/men-12.jpg" alt=""></div>
-  </div> -->
 </div>
 </div>
-
 
 </div>
 <img class="line-img" src="<?php bloginfo('template_directory'); ?>/images/men/line.png" alt="">
@@ -47,179 +24,77 @@ Template Name: men
   <div class="flex-3">
     <div class="shoe-type">
       <span class="tag-type">Phong cách giày</span>
-      <div class="shoe-type_checkbox">
-        <input type="checkbox" name="Chuck Taylor All Star" id="Chuck Taylor All Star">
-        <label for="Chuck Taylor All Star">
-          High Tops</label>
-      </div>
-      <div class="shoe-type_checkbox">
-        <input type="checkbox" name="Chuck Taylor II" id="Chuck Taylor II">
-        <label for="Chuck Taylor II">
-          Mid Tops</label>
-      </div>
-      <div class="shoe-type_checkbox">
-        <input type="checkbox" name="Jack Purcell" id="Jack Purcell">
-        <label for="Jack Purcell">
-          Platform</label>
-      </div>
-      <div class="shoe-type_checkbox">
-        <input type="checkbox" name="One Star" id="One Star">
-        <label for="One Star">
-          Slip</label>
-      </div>
-      <!-- <div class="shoe-type_checkbox">
-        <input type="checkbox" name="Chuck 70" id="Chuck 70">
-        <label for="Chuck 70">Chuck 70</label>
-      </div> -->
-    </div>
-    <div class="size-type">
-      <span class="tag-type">Kích cỡ</span>
-      <div class="sizes-list">
-        <div class="size-item size-ative">37</div>
-        <div class="size-item">36</div>
-        <div class="size-item">38</div>
-        <div class="size-item">39</div>
-        <div class="size-item">40</div>
-        <div class="size-item">41</div>
-        <div class="size-item">42</div>
-        <div class="size-item">43</div>
-        <div class="size-item">44</div>
-        <div class="size-item">45</div>
-        <div class="size-item">46</div>
-        <div class="size-item">47</div>
-        <div class="size-item">48</div>
-        <div class="size-item">49</div>
-        <div class="size-item">50</div>
-        <div class="size-item">51</div>
-        <div class="size-item">52</div>
-        <div class="size-item">53</div>
-        <div class="size-item">54</div>
-        <div class="size-item">55</div>
-      </div>
-    </div>
-    <!-- <div class="color-type">
-      <span class="tag-type">Màu sắc</span>
-      <div class="colors-list">
-        <div class="color-item color-active black"></div>
-        <div class="color-item gray"></div>
-        <div class="color-item white"></div>
-        <div class="color-item violet"></div>
-        <div class="color-item pink"></div>
-        <div class="color-item red"></div>
-        <div class="color-item orange"></div>
-        <div class="color-item yellow"></div>
-        <div class="color-item green"></div>
-        <div class="color-item blue"></div>
-      </div>
-    </div> -->
-    <div class="filter-list">
-      <ul>
-        <?php
-        // Lấy giá trị của bộ lọc
-        $color = isset($_GET['color']) ? $_GET['color'] : '';
-        $size = isset($_GET['size']) ? $_GET['size'] : '';
-
-        // Lấy tất cả các giá trị của thuộc tính pa_color
-        $color_terms = get_terms('pa_color', array(
-          'hide_empty' => false,
-        ));
-
-        // Lấy tất cả các giá trị của thuộc tính pa_size
-        $size_terms = get_terms('pa_size', array(
-          'hide_empty' => false,
-        ));
-        ?>
-
-        <li>
-          <span>Color:</span>
-          <?php foreach ($color_terms as $term) : ?>
-            <a href="<?php echo esc_url(add_query_arg('color', $term->slug)); ?>" <?php if ($color == $term->slug) {
-                                                                                        echo 'class="active"';
-                                                                                      } ?>><?php echo esc_html($term->name); ?></a>
-          <?php endforeach; ?>
-        </li>
-
-        <li>
-          <span>Size:</span>
-          <?php foreach ($size_terms as $term) : ?>
-            <a href="<?php echo esc_url(add_query_arg('size', $term->slug)); ?>" <?php if ($size == $term->slug) {
-                                                                                        echo 'class="active"';
-                                                                                      } ?>><?php echo esc_html($term->name); ?></a>
-          <?php endforeach; ?>
-        </li>
-      </ul>
     </div>
 
-    <div class="price-type">
-      <span class="tag-type">Giá sản phẩm</span>
-      <div class="price-type_checkbox">
-        <input type="checkbox" name="price-1" id="price-1">
-        <label for="price-1">Giá dưới 500.000đ</label>
-      </div>
-      <div class="price-type_checkbox">
-        <input type="checkbox" name="price-2" id="price-2">
-        <label for="price-3">500.000đ - 1.000.000đ</label>
-      </div>
-      <div class="price-type_checkbox">
-        <input type="checkbox" name="price-3" id="price-3">
-        <label for="price-3">1.000.000đ - 1.500.000đ</label>
-      </div>
-      <div class="price-type_checkbox">
-        <input type="checkbox" name="price-4" id="price-4">
-        <label for="price-4">1.500.000đ - 2.000.000đ</label>
-      </div>
-      <div class="price-type_checkbox">
-        <input type="checkbox" name="price-4" id="price-4">
-        <label for="price-4">Trên 2.000.000</label>
-      </div>
-    </div>
+    <?php
+    // Hiển thị shortcode
+    echo do_shortcode('[yith_wcan_filters slug="filter-products"]');
+    // Đoạn mã PHP của bạn ở đây
+    ?>
+
   </div>
   <div class="flex-9">
     <div class="flex-9_top-right">
-      <span style="font-weight: 600;">85 kết quả tìm thấy</span>
+      <span style="font-weight: 600;"><?php echo $wp_query->found_posts; ?> kết quả tìm thấy</span>
       <label for="">Lọc theo</label>
     </div>
     <div class="product-list" style="grid-template-columns: repeat(3, minmax(0, 1fr));">
-      <!-- Code woo -->
       <?php
-      // Điều kiện lọc sản phẩm
-      $tax_query = array();
-      if ($color) {
-        $tax_query[] = array(
-          'taxonomy' => 'pa_color',
-          'field'    => 'slug',
-          'terms'    => $color,
-        );
-      }
-      if ($size) {
-        $tax_query[] = array(
-          'taxonomy' => 'pa_size',
-          'field'    => 'slug',
-          'terms'    => $size,
-        );
-      }
-
-      // Thêm điều kiện lọc vào biến $args
-      $args = array(
-        'post_type'      => 'product',
-        'posts_per_page' => 12,
-        'tax_query'      => $tax_query,
+      $query_args = array(
+        'post_type' => 'product',
+        'posts_per_page' => -1,
       );
 
-      // Lấy danh sách sản phẩm
-      $products = new WP_Query($args);
-      if ($products->have_posts()) {
-        while ($products->have_posts()) {
-          $products->the_post();
-          wc_get_template_part('/components/product');
-        }
-      } else {
-        echo 'No products found';
+      if (isset($_GET['filter_color']) && isset($_GET['filter_size'])) {
+        // If both color and size are selected, filter by both
+        $query_args['tax_query'] = array(
+          'relation' => 'AND',
+          array(
+            'taxonomy' => 'pa_color',
+            'field' => 'slug',
+            'terms' => explode(',', $_GET['filter_color']),
+            'operator' => isset($_GET['query_type_color']) ? $_GET['query_type_color'] : 'IN'
+          ),
+          array(
+            'taxonomy' => 'pa_size',
+            'field' => 'slug',
+            'terms' => explode(',', $_GET['filter_size']),
+            'operator' => isset($_GET['query_type_size']) ? $_GET['query_type_size'] : 'IN'
+          )
+        );
+      } elseif (isset($_GET['filter_color'])) {
+        // If only color is selected, filter by color
+        $query_args['tax_query'] = array(
+          array(
+            'taxonomy' => 'pa_color',
+            'field' => 'slug',
+            'terms' => explode(',', $_GET['filter_color']),
+            'operator' => isset($_GET['query_type_color']) ? $_GET['query_type_color'] : 'IN'
+          )
+        );
+      } elseif (isset($_GET['filter_size'])) {
+        // If only size is selected, filter by size
+        $query_args['tax_query'] = array(
+          array(
+            'taxonomy' => 'pa_size',
+            'field' => 'slug',
+            'terms' => explode(',', $_GET['filter_size']),
+            'operator' => isset($_GET['query_type_size']) ? $_GET['query_type_size'] : 'IN'
+          )
+        );
       }
-      wp_reset_postdata();
+
+      $query = new WP_Query($query_args);
+      if ($query->have_posts()) {
+        while ($query->have_posts()) : $query->the_post();
+          wc_get_template_part('/components/product');
+        endwhile;
+        wp_reset_postdata();
+      } else {
+        echo '<p>Không tìm thấy sản phẩm nào.</p>';
+      }
       ?>
     </div>
-
     <div class="pagination">
       <a href="#" class="prev">&laquo;</a>
       <a href="#" class="page active">1</a>
@@ -229,7 +104,6 @@ Template Name: men
       <a href="#" class="page">5</a>
       <a href="#" class="next">&raquo;</a>
     </div>
-
   </div>
 </div>
 <?php get_footer() ?>

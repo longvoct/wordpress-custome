@@ -207,24 +207,8 @@ function ds_change_sale_text()
 }
 
 // Bộc lọc nâng cao sản phẩm
-/* Thêm bộ lọc cho thuộc tính màu sắc */
-add_filter('woocommerce_layered_nav_term_value', 'woocommerce_layered_nav_term_value_custom_color', 10, 2);
-function woocommerce_layered_nav_term_value_custom_color($term_html, $term)
-{
-  // Kiểm tra nếu thuộc tính là màu sắc
-  if ($term->taxonomy == 'pa_color') {
-    $term_html = '<a href="' . get_term_link($term, 'pa_color') . '">' . $term->name . '</a>';
-  }
-  return $term_html;
+if (!function_exists('wc_get_product_ids_by_visibility')) {
+  return;
 }
 
-/* Thêm bộ lọc cho thuộc tính kích cỡ */
-add_filter('woocommerce_layered_nav_term_value', 'woocommerce_layered_nav_term_value_custom_size', 10, 2);
-function woocommerce_layered_nav_term_value_custom_size($term_html, $term)
-{
-  // Kiểm tra nếu thuộc tính là kích cỡ
-  if ($term->taxonomy == 'pa_size') {
-    $term_html = '<a href="' . get_term_link($term, 'pa_size') . '">' . $term->name . '</a>';
-  }
-  return $term_html;
-}
+// Đoạn mã khác của bạn ở đây

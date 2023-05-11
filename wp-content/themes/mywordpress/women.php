@@ -31,14 +31,20 @@ Template Name: women
         </div>
       </div>
       <div class="slider-women__arrows">
-        <button class="slider-women__arrow slider-women__arrow--prev"><svg width="29" height="28" viewBox="0 0 29 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <button class="slider-women__arrow slider-women__arrow--prev"><svg width="29" height="28" viewBox="0 0 29 28"
+            fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="14" cy="14" r="14" transform="matrix(-1 0 0 1 28.5 0)" fill="#212121" />
-            <path d="M16.4344 19.4668C16.7859 19.7725 17.3089 19.7723 17.6602 19.4664C18.0982 19.085 18.0857 18.4001 17.636 18.0326C16.0848 16.7649 12.9935 14.2064 13.0553 14C13.1171 13.7941 16.1332 11.2466 17.6491 9.97598C18.0947 9.60247 18.1105 8.9267 17.6715 8.54545C17.3165 8.23722 16.7796 8.22955 16.425 8.53817L11.6028 12.7351C11.2168 13.0706 11 13.5256 11 14C11 14.4744 11.2168 14.9294 11.6028 15.2649L16.4344 19.4668Z" fill="white" />
+            <path
+              d="M16.4344 19.4668C16.7859 19.7725 17.3089 19.7723 17.6602 19.4664C18.0982 19.085 18.0857 18.4001 17.636 18.0326C16.0848 16.7649 12.9935 14.2064 13.0553 14C13.1171 13.7941 16.1332 11.2466 17.6491 9.97598C18.0947 9.60247 18.1105 8.9267 17.6715 8.54545C17.3165 8.23722 16.7796 8.22955 16.425 8.53817L11.6028 12.7351C11.2168 13.0706 11 13.5256 11 14C11 14.4744 11.2168 14.9294 11.6028 15.2649L16.4344 19.4668Z"
+              fill="white" />
           </svg>
         </button>
-        <button class="slider-women__arrow slider-women__arrow--next"><svg width="29" height="28" viewBox="0 0 29 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <button class="slider-women__arrow slider-women__arrow--next"><svg width="29" height="28" viewBox="0 0 29 28"
+            fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="14" cy="14" r="14" transform="matrix(1 0 0 -1 0.5 28)" fill="#212121" />
-            <path d="M12.5656 8.53318C12.2141 8.2275 11.6911 8.22768 11.3398 8.5336C10.9018 8.91503 10.9143 9.59991 11.364 9.96744C12.9152 11.2351 16.0065 13.7936 15.9447 14C15.8829 14.2059 12.8668 16.7534 11.3509 18.024C10.9053 18.3975 10.8895 19.0733 11.3285 19.4545C11.6835 19.7628 12.2204 19.7705 12.575 19.4618L17.3972 15.2649C17.7832 14.9294 18 14.4744 18 14C18 13.5256 17.7832 13.0706 17.3972 12.7351L12.5656 8.53318Z" fill="white" />
+            <path
+              d="M12.5656 8.53318C12.2141 8.2275 11.6911 8.22768 11.3398 8.5336C10.9018 8.91503 10.9143 9.59991 11.364 9.96744C12.9152 11.2351 16.0065 13.7936 15.9447 14C15.8829 14.2059 12.8668 16.7534 11.3509 18.024C10.9053 18.3975 10.8895 19.0733 11.3285 19.4545C11.6835 19.7628 12.2204 19.7705 12.575 19.4618L17.3972 15.2649C17.7832 14.9294 18 14.4744 18 14C18 13.5256 17.7832 13.0706 17.3972 12.7351L12.5656 8.53318Z"
+              fill="white" />
           </svg>
         </button>
       </div>
@@ -168,8 +174,8 @@ Template Name: women
       <?php global $wp_query;
       $wp_query->in_the_loop = true; ?>
       <?php while ($getposts->have_posts()) : $getposts->the_post(); ?>
-        <?php global $product; ?>
-        <?php get_template_part('/components/product'); ?>
+      <?php global $product; ?>
+      <?php get_template_part('/components/product'); ?>
       <?php endwhile;
       wp_reset_postdata(); ?>
     </div>
