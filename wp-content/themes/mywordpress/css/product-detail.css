@@ -234,23 +234,23 @@ tr:nth-child(2) .value .thwvsf_fields {
 }
 
 .thwvsf-wrapper-ul .thwvsf-wrapper-item-li.attr_swatch_design_1:hover {
-  -webkit-box-shadow: 0 0 0 1px #0c0c0c;
-  box-shadow: 0 0 0 1px #0c0c0c;
+  -webkit-box-shadow: 0 0 0 1px #0c0c0c !important;
+  box-shadow: 0 0 0 1px #0c0c0c !important;
 }
 
 .thwvsf-wrapper-ul .thwvsf-wrapper-item-li:hover {
-  -webkit-box-shadow: 0 0 0 1px #5a5a5a;
-  box-shadow: 0 0 0 1px #5a5a5a;
+  -webkit-box-shadow: 0 0 0 1px #5a5a5a !important;
+  box-shadow: 0 0 0 1px #5a5a5a !important;
 }
 
 .thwvsf-wrapper-ul .thwvsf-wrapper-item-li.attr_swatch_design_default:hover {
-  box-shadow: 0 0 0 2px #d6d6d6;
+  box-shadow: 0 0 0 1px #d6d6d6 !important;
 }
 
 .thwvsf-wrapper-ul
   .thwvsf-wrapper-item-li.thwvsf-label-li.attr_swatch_design_1 {
-  width: 120px;
-  height: 34px;
+  width: 120px !important ;
+  height: 34px !important;
   color: #000;
   background-color: #fff;
   border-radius: 0;
@@ -259,7 +259,7 @@ tr:nth-child(2) .value .thwvsf_fields {
 .thwvsf-wrapper-ul
   .thwvsf-label-li.attr_swatch_design_1
   .thwvsf-item-span.item-span-text {
-  font-size: 13px;
+  font-size: 13px !important;
 }
 
 .reset_variations {
@@ -417,8 +417,8 @@ p.form-submit {
 .thwvsf-wrapper-ul .thwvsf-wrapper-item-li.attr_swatch_design_1.thwvsf-selected,
 .thwvsf-wrapper-ul
   .thwvsf-wrapper-item-li.attr_swatch_design_1.thwvsf-selected:hover {
-  -webkit-box-shadow: 0 0 0 1px #0c0c0c;
-  box-shadow: 0 0 0 1px #0c0c0c;
+  -webkit-box-shadow: 0 0 0 1px #0c0c0c !important;
+  box-shadow: 0 0 0 1px #0c0c0c !important;
   background-color: #f7f7f7;
 }
 
@@ -428,7 +428,6 @@ p.form-submit {
   top: 0;
   left: 0;
   width: 30px;
-  /* height: 120px; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -471,8 +470,8 @@ ins span.woocommerce-Price-amount.amount {
   .thwvsf-wrapper-item-li.attr_swatch_design_default.thwvsf-selected,
 .thwvsf-wrapper-ul
   .thwvsf-wrapper-item-li.attr_swatch_design_default.thwvsf-selected:hover {
-  -webkit-box-shadow: 0 0 0 1px #000000;
-  box-shadow: 0 0 0 1px #000000;
+  -webkit-box-shadow: 0 0 0 1px #000000 !important;
+  box-shadow: 0 0 0 1px #000000 !important;
 }
 
 .actionbtn-with_product {
@@ -507,6 +506,5 @@ ins span.woocommerce-Price-amount.amount {
   position: absolute;
   top: 0%;
   left: 0%;
-  transform: translate(40%, 40%);
   font-size: 25px;
 }
