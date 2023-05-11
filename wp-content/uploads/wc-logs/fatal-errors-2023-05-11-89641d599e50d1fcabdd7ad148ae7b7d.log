@@ -1,0 +1,24 @@
+2023-05-11T02:39:40+00:00 CRITICAL Cannot redeclare woocommerce_layered_nav_term_value_custom() (previously declared in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\functions.php:212) in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\functions.php on line 223
+
+2023-05-11T02:39:40+00:00 CRITICAL Cannot redeclare woocommerce_layered_nav_term_value_custom() (previously declared in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\functions.php:212) in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\functions.php on line 223
+
+2023-05-11T03:14:06+00:00 CRITICAL Uncaught TypeError: array_keys(): Argument #1 ($array) must be of type array, null given in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\men.php:7
+Stack trace:
+#0 C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\men.php(7): array_keys(NULL)
+#1 C:\xampp\htdocs\mywordpress\wp-includes\template-loader.php(106): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\mywordpress\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\mywordpress\index.php(17): require('C:\\xampp\\htdocs...')
+#4 {main}
+  thrown in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\men.php on line 7
+
+2023-05-11T03:15:25+00:00 CRITICAL syntax error, unexpected token "<", expecting end of file in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\men.php on line 151
+
+2023-05-11T03:16:07+00:00 CRITICAL Uncaught TypeError: array_keys(): Argument #1 ($array) must be of type array, null given in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\men.php:148
+Stack trace:
+#0 C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\men.php(148): array_keys(NULL)
+#1 C:\xampp\htdocs\mywordpress\wp-includes\template-loader.php(106): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\mywordpress\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\mywordpress\index.php(17): require('C:\\xampp\\htdocs...')
+#4 {main}
+  thrown in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\men.php on line 148
+

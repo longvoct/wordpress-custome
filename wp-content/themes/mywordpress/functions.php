@@ -101,8 +101,24 @@ function move_sku_above_price()
   global $product;
   echo '<div class="product-info">';
   echo '<span class="sku_wrapper">Mã số: <span class="sku">' . $product->get_sku() . '</span></span>'; // Hiển thị SKU sản phẩm
-  echo wc_get_product_category_list($product->get_id(), ', ', '<span class="posted_in">' . _n('Category:', 'Categories:', count($product->get_category_ids()), 'woocommerce') . ' ', '</span>'); // Hiển thị danh mục sản phẩm
-  // echo wc_get_product_tag_list($product->get_id(), ', ', '<span class="tagged_as">' . _n('Tag:', 'Tags:', count($product->get_tag_ids()), 'woocommerce') . ' ', '</span>'); // Hiển thị tag sản phẩm
+
+  // Hiển thị danh mục sản phẩm
+  $category_ids = $product->get_category_ids(); // Lấy danh sách ID của danh mục sản phẩm
+  $category_count = count($category_ids); // Đếm số danh mục sản phẩm
+  if ($category_count > 0) { // Nếu có ít nhất 1 danh mục sản phẩm
+    echo '<span class="posted_in">' . _n('Category:', 'Categories:', $category_count, 'woocommerce') . ' </span>'; // Hiển thị tiêu đề danh mục sản phẩm
+    foreach ($category_ids as $category_id) { // Lặp qua các ID danh mục sản phẩm
+      $category = get_term($category_id, 'product_cat'); // Lấy thông tin của danh mục sản phẩm
+      $category_link = get_site_url() . '/' . $category->slug; // Tạo đường dẫn cho danh mục sản phẩm
+      echo '<a href="' . esc_url($category_link) . '">' . esc_html($category->name) . '</a>'; // Hiển thị danh mục sản phẩm với đường dẫn
+      if ($category_count > 1) { // Nếu có nhiều hơn 1 danh mục sản phẩm
+        echo ', '; // Hiển thị dấu phẩy để ngăn cách giữa các danh mục sản phẩm
+        $category_count--; // Giảm số lượng danh mục sản phẩm cần hiển thị
+      }
+    }
+  }
+
+  echo wc_get_product_tag_list($product->get_id(), ', ', '<span class="tagged_as">' . _n('Tag:', 'Tags:', count($product->get_tag_ids()), 'woocommerce') . ' ', '</span>'); // Hiển thị tag sản phẩm
   echo '</div>';
 }
 
@@ -190,4 +206,25 @@ function ds_change_sale_text()
   </div>';
 }
 
-// 
+// Bộc lọc nâng cao sản phẩm
+/* Thêm bộ lọc cho thuộc tính màu sắc */
+add_filter('woocommerce_layered_nav_term_value', 'woocommerce_layered_nav_term_value_custom_color', 10, 2);
+function woocommerce_layered_nav_term_value_custom_color($term_html, $term)
+{
+  // Kiểm tra nếu thuộc tính là màu sắc
+  if ($term->taxonomy == 'pa_color') {
+    $term_html = '<a href="' . get_term_link($term, 'pa_color') . '">' . $term->name . '</a>';
+  }
+  return $term_html;
+}
+
+/* Thêm bộ lọc cho thuộc tính kích cỡ */
+add_filter('woocommerce_layered_nav_term_value', 'woocommerce_layered_nav_term_value_custom_size', 10, 2);
+function woocommerce_layered_nav_term_value_custom_size($term_html, $term)
+{
+  // Kiểm tra nếu thuộc tính là kích cỡ
+  if ($term->taxonomy == 'pa_size') {
+    $term_html = '<a href="' . get_term_link($term, 'pa_size') . '">' . $term->name . '</a>';
+  }
+  return $term_html;
+}

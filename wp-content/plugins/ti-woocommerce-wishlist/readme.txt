@@ -2,8 +2,8 @@
 Contributors: templateinvaders
 Tags: woocommerce, wishlist, woocommerce wishlist, shop, ecommerce
 Requires at least: 4.7
-Tested up to: 6.1
-Stable tag: 2.3.6
+Tested up to: 6.2
+Stable tag: 2.4.4
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Plugin URI:  https://wordpress.org/plugins/ti-woocommerce-wishlist/
@@ -15,7 +15,7 @@ Let your customers save and share their favorite products!
 
 = Increase Sales and Conversions =
 
-Are you looking to boost sales on your WooCommerce site? Look no further than WooCommerce Wishlist! Our powerful tool is designed to increase conversions and drive more traffic to your site. By allowing customers to save products for later, they are more likely to return and make a purchase. Plus, the easy and convenient process of adding products to a wishlist can encourage customers to buy even more products than they planned. And with the ability to share wishlists, you can attract new potential customers and increase your site's visibility. Don't miss out on the opportunity to boost sales. Try WooCommerce Wishlist today and watch your business grow!
+Are you looking to **boost sales** on your WooCommerce site? Look no further than **WooCommerce Wishlist!** Our **powerful tool** is designed to **increase conversions** and **drive more traffic** to your site. By allowing customers to **save products for later**, they are more likely to return and make a purchase. Plus, the **easy and convenient process** of adding products to a wishlist can encourage customers to **buy even more products** than they planned. And with the ability to **share wishlists**, you can attract new potential customers and **increase your site's visibility**. Don't miss out on the opportunity to boost sales. Try **WooCommerce Wishlist** today and **watch your business grow!**
 
 🔗 [Live Preview](https://wishlist2.templateinvaders.com/?utm_source=wordpressorg&utm_content=preview)
 
@@ -157,6 +157,42 @@ Yes, you can! Join in on our [GitHub repository](https://github.com/TemplateInva
 
 
 == Changelog ==
+= 2.4.4 =
+*Release Date - 8 May 2023*
+
+* Fixed an issue with plugin admin notices
+* Framework update
+
+= 2.4.3 =
+*Release Date - 6 May 2023*
+
+* Added `{wishlist_title}` placeholder
+* Fixed issues with products in wishlists data
+
+= 2.4.2 =
+*Release Date - 1 May 2023*
+
+* Updated integration with the [myCred – Points, Rewards, Gamification, Ranks, Badges & Loyalty Plugin](https://wordpress.org/plugins/mycred/) plugin
+
+= 2.4.1 =
+*Release Date - 27 April 2023*
+
+* Updated integration with the WooCommerce TM Extra Product Options plugin
+* Fixed hidden option issue in the plugin settings
+
+= 2.4.0 =
+*Release Date - 26 April 2023*
+
+* Added support for WordPress 6.2
+* Added support for WooCommerce 7.6
+* Added a filter `tinvwl_allow_data_cookies`
+* Added filters `tinvwl_api_wishlist_data_response` and `tinvwl_api_product_data_response` for REST API response
+* Updated integration with the [YITH WooCommerce Product Add-Ons](https://wordpress.org/plugins/yith-woocommerce-product-add-ons/) plugin
+* Updated integration with the Advanced Product Fields Extended for WooCommerce plugin
+* Updated integration with the [Advanced Product Fields (Product Addons) for WooCommerce](https://wordpress.org/plugins/advanced-product-fields-for-woocommerce/) plugin
+* Fixed an issue with the dismiss button in admin notices
+* Fixed a JavaScript warning when checking cookies
+
 = 2.3.6 =
 *Release Date - 06 March 2023*
 

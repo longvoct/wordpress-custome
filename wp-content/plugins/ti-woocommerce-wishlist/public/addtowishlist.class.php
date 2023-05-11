@@ -144,7 +144,7 @@ class TInvWL_Public_AddToWishlist {
 		}
 
 		add_action( 'wp_loaded', array( $this, 'add_to_wishlist' ), 0 );
-		if ( is_user_logged_in() ) {
+		if ( is_user_logged_in() && apply_filters( 'tinvwl_allow_data_cookies', true ) ) {
 			add_action( 'init', array( $this, 'set_wishlists_data_cookies' ) );
 		}
 	}
@@ -394,6 +394,7 @@ class TInvWL_Public_AddToWishlist {
 						'get_name'
 					) ) ? $original_product->get_name() : $original_product->get_title(),
 					'{product_sku}'  => $original_product->get_sku(),
+					'{wishlist_title}' => ( empty( $wishlist['title'] ) ? apply_filters( 'tinvwl_default_wishlist_title', tinv_get_option( 'general', 'default_title' ) ) : $wishlist['title'] ),
 				),
 				$original_product
 			);
@@ -578,6 +579,11 @@ JOIN {$table_languages} l ON
 				foreach ( $wishlists as $wishlist ) {
 
 					foreach ( $results as $product ) {
+
+						if ( (int) $wishlist['ID'] !== (int) $product['wishlist_id'] ) {
+							continue;
+						}
+
 						if ( array_key_exists( $product['product_id'], $products ) ) {
 							$products[ $product['product_id'] ][ $wishlist['ID'] ]['in'][] = (int) $product['variation_id'];
 						} else {

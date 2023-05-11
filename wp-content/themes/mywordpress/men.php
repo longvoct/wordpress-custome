@@ -7,18 +7,12 @@ Template Name: men
 <div class="body-content margin-head">
   <h2 class="product-heading">SẢN PHẨM NỔI BẬT</h2>
   <div class="featured-products-list">
-    <div class="featured-product-item"><img class="featured-product-img"
-        src="<?php bloginfo('template_directory'); ?>/images/men/men-1.jpg" alt=""></div>
-    <div class="featured-product-item"><img class="featured-product-img"
-        src="<?php bloginfo('template_directory'); ?>/images/men/men-2.jpg" alt=""></div>
-    <div class="featured-product-item"><img class="featured-product-img"
-        src="<?php bloginfo('template_directory'); ?>/images/men/men-3.jpg" alt=""></div>
-    <div class="featured-product-item"><img class="featured-product-img"
-        src="<?php bloginfo('template_directory'); ?>/images/men/men-4.jpg" alt=""></div>
-    <div class="featured-product-item"><img class="featured-product-img"
-        src="<?php bloginfo('template_directory'); ?>/images/men/men-5.jpg" alt=""></div>
-    <div class="featured-product-item"><img class="featured-product-img"
-        src="<?php bloginfo('template_directory'); ?>/images/men/men-6.jpg" alt=""></div>
+    <div class="featured-product-item"><img class="featured-product-img" src="<?php bloginfo('template_directory'); ?>/images/men/men-1.jpg" alt=""></div>
+    <div class="featured-product-item"><img class="featured-product-img" src="<?php bloginfo('template_directory'); ?>/images/men/men-2.jpg" alt=""></div>
+    <div class="featured-product-item"><img class="featured-product-img" src="<?php bloginfo('template_directory'); ?>/images/men/men-3.jpg" alt=""></div>
+    <div class="featured-product-item"><img class="featured-product-img" src="<?php bloginfo('template_directory'); ?>/images/men/men-4.jpg" alt=""></div>
+    <div class="featured-product-item"><img class="featured-product-img" src="<?php bloginfo('template_directory'); ?>/images/men/men-5.jpg" alt=""></div>
+    <div class="featured-product-item"><img class="featured-product-img" src="<?php bloginfo('template_directory'); ?>/images/men/men-6.jpg" alt=""></div>
   </div>
   <!-- <div class="featured-products-list two">
     <div class="featured-product-item"><img class="featured-product-img"
@@ -103,7 +97,7 @@ Template Name: men
         <div class="size-item">55</div>
       </div>
     </div>
-    <div class="color-type">
+    <!-- <div class="color-type">
       <span class="tag-type">Màu sắc</span>
       <div class="colors-list">
         <div class="color-item color-active black"></div>
@@ -117,7 +111,45 @@ Template Name: men
         <div class="color-item green"></div>
         <div class="color-item blue"></div>
       </div>
+    </div> -->
+    <div class="filter-list">
+      <ul>
+        <?php
+        // Lấy giá trị của bộ lọc
+        $color = isset($_GET['color']) ? $_GET['color'] : '';
+        $size = isset($_GET['size']) ? $_GET['size'] : '';
+
+        // Lấy tất cả các giá trị của thuộc tính pa_color
+        $color_terms = get_terms('pa_color', array(
+          'hide_empty' => false,
+        ));
+
+        // Lấy tất cả các giá trị của thuộc tính pa_size
+        $size_terms = get_terms('pa_size', array(
+          'hide_empty' => false,
+        ));
+        ?>
+
+        <li>
+          <span>Color:</span>
+          <?php foreach ($color_terms as $term) : ?>
+            <a href="<?php echo esc_url(add_query_arg('color', $term->slug)); ?>" <?php if ($color == $term->slug) {
+                                                                                        echo 'class="active"';
+                                                                                      } ?>><?php echo esc_html($term->name); ?></a>
+          <?php endforeach; ?>
+        </li>
+
+        <li>
+          <span>Size:</span>
+          <?php foreach ($size_terms as $term) : ?>
+            <a href="<?php echo esc_url(add_query_arg('size', $term->slug)); ?>" <?php if ($size == $term->slug) {
+                                                                                        echo 'class="active"';
+                                                                                      } ?>><?php echo esc_html($term->name); ?></a>
+          <?php endforeach; ?>
+        </li>
+      </ul>
     </div>
+
     <div class="price-type">
       <span class="tag-type">Giá sản phẩm</span>
       <div class="price-type_checkbox">
@@ -150,23 +182,44 @@ Template Name: men
     <div class="product-list" style="grid-template-columns: repeat(3, minmax(0, 1fr));">
       <!-- Code woo -->
       <?php
-      $tax_query[] = array(
-        'taxonomy' => 'product_visibility',
-        'field'    => 'name',
-        'terms'    => 'featured',
-        'operator' => 'IN',
+      // Điều kiện lọc sản phẩm
+      $tax_query = array();
+      if ($color) {
+        $tax_query[] = array(
+          'taxonomy' => 'pa_color',
+          'field'    => 'slug',
+          'terms'    => $color,
+        );
+      }
+      if ($size) {
+        $tax_query[] = array(
+          'taxonomy' => 'pa_size',
+          'field'    => 'slug',
+          'terms'    => $size,
+        );
+      }
+
+      // Thêm điều kiện lọc vào biến $args
+      $args = array(
+        'post_type'      => 'product',
+        'posts_per_page' => 12,
+        'tax_query'      => $tax_query,
       );
+
+      // Lấy danh sách sản phẩm
+      $products = new WP_Query($args);
+      if ($products->have_posts()) {
+        while ($products->have_posts()) {
+          $products->the_post();
+          wc_get_template_part('/components/product');
+        }
+      } else {
+        echo 'No products found';
+      }
+      wp_reset_postdata();
       ?>
-      <?php $args = array('post_type' => 'product', 'posts_per_page' => 12, 'ignore_sticky_posts' => 1, 'tax_query' => $tax_query); ?>
-      <?php $getposts = new WP_query($args); ?>
-      <?php global $wp_query;
-      $wp_query->in_the_loop = true; ?>
-      <?php while ($getposts->have_posts()) : $getposts->the_post(); ?>
-      <?php global $product; ?>
-      <?php get_template_part('/components/product'); ?>
-      <?php endwhile;
-      wp_reset_postdata(); ?>
     </div>
+
     <div class="pagination">
       <a href="#" class="prev">&laquo;</a>
       <a href="#" class="page active">1</a>
