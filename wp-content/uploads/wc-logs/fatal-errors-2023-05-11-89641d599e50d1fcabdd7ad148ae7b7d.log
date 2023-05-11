@@ -22,3 +22,22 @@ Stack trace:
 #4 {main}
   thrown in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\men.php on line 148
 
+2023-05-11T06:09:49+00:00 CRITICAL Uncaught Error: Call to undefined function get_home_path() in C:\xampp\htdocs\mywordpress\wp-content\plugins\wp-optimize\templates\minify\cached-file-log.php:15
+Stack trace:
+#0 C:\xampp\htdocs\mywordpress\wp-content\plugins\wp-optimize\wp-optimize.php(1091): include()
+#1 C:\xampp\htdocs\mywordpress\wp-content\plugins\wp-optimize\minify\class-wp-optimize-minify-cache-functions.php(526): WP_Optimize->include_template('minify/cached-f...', true, Array)
+#2 [internal function]: WP_Optimize_Minify_Cache_Functions::format_file_logs(Array)
+#3 C:\xampp\htdocs\mywordpress\wp-content\plugins\wp-optimize\minify\class-wp-optimize-minify-commands.php(22): array_map(Array, Array)
+#4 C:\xampp\htdocs\mywordpress\wp-content\plugins\wp-optimize\minify\class-wp-optimize-minify-commands.php(86): WP_Optimize_Minify_Commands->get_minify_cached_files()
+#5 C:\xampp\htdocs\mywordpress\wp-content\plugins\wp-optimize\minify\class-wp-optimize-minify.php(139): WP_Optimize_Minify_Commands->purge_minify_cache()
+#6 C:\xampp\htdocs\mywordpress\wp-includes\class-wp-hook.php(308): WP_Optimize_Minify->handle_purge_minify_cache('')
+#7 C:\xampp\htdocs\mywordpress\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters(NULL, Array)
+#8 C:\xampp\htdocs\mywordpress\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#9 C:\xampp\htdocs\mywordpress\wp-settings.php(645): do_action('wp_loaded')
+#10 C:\xampp\htdocs\mywordpress\wp-config.php(97): require_once('C:\\xampp\\htdocs...')
+#11 C:\xampp\htdocs\mywordpress\wp-load.php(50): require_once('C:\\xampp\\htdocs...')
+#12 C:\xampp\htdocs\mywordpress\wp-blog-header.php(13): require_once('C:\\xampp\\htdocs...')
+#13 C:\xampp\htdocs\mywordpress\index.php(17): require('C:\\xampp\\htdocs...')
+#14 {main}
+  thrown in C:\xampp\htdocs\mywordpress\wp-content\plugins\wp-optimize\templates\minify\cached-file-log.php on line 15
+
