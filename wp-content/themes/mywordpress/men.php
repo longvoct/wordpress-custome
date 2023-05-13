@@ -7,9 +7,7 @@ Template Name: men
 <div class="body-content margin-head">
   <h2 class="product-heading">SẢN PHẨM NỔI BẬT</h2>
 </div>
-</div>
 
-</div>
 <img class="line-img" src="<?php bloginfo('template_directory'); ?>/images/men/line.png" alt="">
 <div class="men-content body-content" style="margin-top: 80px;">
   <div class="block">
@@ -31,12 +29,36 @@ Template Name: men
     echo do_shortcode('[yith_wcan_filters slug="filter-products"]');
     // Đoạn mã PHP của bạn ở đây
     ?>
-
   </div>
   <div class="flex-9">
     <div class="flex-9_top-right">
       <span style="font-weight: 600;"><?php echo $wp_query->found_posts; ?> kết quả tìm thấy</span>
-      <label for="">Lọc theo</label>
+      <!-- Loading -->
+      <div class="dashed-loading" style="display: none;"></div>
+      <!-- Filter -->
+      <div class="product-filter">
+        <label for="sort-by">Lọc theo:</label>
+        <div class="dropdown">
+          <button class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            <span>Nổi bật</span>
+          </button>
+          <span class="icon-filter">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-filter"
+              viewBox="0 0 16 16">
+              <path
+                d="M6 10.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5zm-2-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-2-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z" />
+            </svg>
+          </span>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton" id="sort-by">
+            <li data-value="position"><a href="#">Nổi bật</a></li>
+            <li data-value="revenue"><a href="#">Phổ biến</a></li>
+            <li data-value="date"><a href="#">Từ mới đến cũ</a></li>
+            <li data-value="price_asc"><a href="#">Giá thấp đến cao</a></li>
+            <li data-value="price_desc"><a href="#">Giá cao đến thấp</a></li>
+          </ul>
+        </div>
+      </div>
     </div>
     <div class="product-list" style="grid-template-columns: repeat(3, minmax(0, 1fr));">
       <?php
@@ -84,15 +106,54 @@ Template Name: men
         );
       }
 
-      $query = new WP_Query($query_args);
-      if ($query->have_posts()) {
-        while ($query->have_posts()) : $query->the_post();
+      $args = array(
+        'post_type'      => 'product',
+        'posts_per_page' => -1,
+      );
+      // Sắp xếp sản phẩm
+      if (isset($_GET['sort_by'])) {
+        switch ($_GET['sort_by']) {
+          case 'revenue':
+            $args['meta_key'] = 'total_sales';
+            $args['orderby'] = 'meta_value_num';
+            break;
+          case 'date':
+            $args['orderby'] = 'date';
+            $args['order'] = 'DESC';
+            break;
+          case 'price_asc':
+            $args['orderby'] = 'meta_value_num';
+            $args['meta_key'] = '_price';
+            $args['order'] = 'ASC';
+            break;
+          case 'price_desc':
+            $args['orderby'] = 'meta_value_num';
+            $args['meta_key'] = '_price';
+            $args['order'] = 'DESC';
+            break;
+          default:
+            $args['orderby'] = 'menu_order';
+            $args['order'] = 'ASC';
+            break;
+        }
+      } else {
+        $args['meta_key'] = 'total_sales'; // Sắp xếp sản phẩm theo mức độ phổ biến
+        $args['orderby'] = 'meta_value_num';
+        $args['order'] = 'DESC';
+      }
+
+      // Truy vấn sản phẩm
+      $products = new WP_Query(array_merge($query_args, $args));
+      if ($products->have_posts()) {
+        while ($products->have_posts()) {
+          $products->the_post();
+          global $product;
           wc_get_template_part('/components/product');
-        endwhile;
-        wp_reset_postdata();
+        }
       } else {
         echo '<p>Không tìm thấy sản phẩm nào.</p>';
       }
+      wp_reset_postdata();
       ?>
     </div>
     <div class="pagination">
@@ -106,4 +167,76 @@ Template Name: men
     </div>
   </div>
 </div>
+<script>
+jQuery(document).ready(function($) {
+  // Lấy giá trị ban đầu của dropdown
+  var sortBy = $('#sort-by li[data-value="' + $('#sort-by').data('value') + '"]').data('value');
+
+  // Thêm sự kiện "mousedown" cho dropdown-toggle
+  $('.dropdown-toggle').on('mousedown', function(e) {
+    e.preventDefault();
+    var dropdownMenu = $(this).parent().find('.dropdown-menu');
+    if (dropdownMenu.is(':hidden')) {
+      dropdownMenu.show();
+    } else {
+      dropdownMenu.hide();
+    }
+  });
+
+  // Thêm sự kiện "click" cho các mục trong dropdown-menu
+  $('#sort-by').on('click', 'a', function(e) {
+    e.preventDefault();
+    var newSortBy = $(this).parent().data('value');
+    if (newSortBy !== sortBy) {
+      sortBy = newSortBy;
+      // Hiển thị icon loading
+      $('.dashed-loading').show();
+      // Gửi yêu cầu AJAX để lọc sản phẩm
+      $.ajax({
+        type: 'GET',
+        url: window.location.href,
+        data: {
+          sort_by: sortBy
+        },
+        success: function(data) {
+          // Cập nhật danh sách sản phẩm
+          var productList = $(data).find('.product-list');
+          $('.product-list').html(productList.html());
+          // Cập nhật URL với giá trị mới của dropdown
+          var newUrl = updateQueryStringParameter(window.location.href, 'sort_by', sortBy);
+          window.history.pushState({
+            path: newUrl
+          }, '', newUrl);
+        },
+        complete: function() {
+          // Ẩn icon loading khi yêu cầu AJAX hoàn thành
+          $('.dashed-loading').hide();
+        }
+      });
+    }
+    // Ẩn dropdown-menu khi người dùng chọn mục
+    $('.dropdown-menu').hide();
+    // Cập nhật nội dung của dropdown-toggle
+    $(this).closest('.dropdown').find('.dropdown-toggle').html($(this).html());
+  });
+
+  // Hàm cập nhật giá trị của tham số "sort_by" trong URL
+  function updateQueryStringParameter(uri, key, value) {
+    var re = new RegExp("([?&])" + key + "=.*?(&|$)", "i");
+    var separator = uri.indexOf('?') !== -1 ? "&" : "?";
+    if (uri.match(re)) {
+      return uri.replace(re, '$1' + key + "=" + value + '$2');
+    } else {
+      return uri + separator + key + "=" + value;
+    }
+  }
+
+  // Ẩn dropdown-menu khi người dùng click bên ngoài dropdown
+  $(document).on('mousedown', function(e) {
+    if (!$(e.target).closest('.dropdown').length) {
+      $('.dropdown-menu').hide();
+    }
+  });
+});
+</script>
 <?php get_footer() ?>

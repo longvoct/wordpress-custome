@@ -1,0 +1,20 @@
+2023-05-13T14:45:25+00:00 CRITICAL Uncaught Error: Call to undefined function yith_wcan_get_filter_attributes() in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\men.php:31
+Stack trace:
+#0 C:\xampp\htdocs\mywordpress\wp-includes\template-loader.php(106): include()
+#1 C:\xampp\htdocs\mywordpress\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\mywordpress\index.php(17): require('C:\\xampp\\htdocs...')
+#3 {main}
+  thrown in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\men.php on line 31
+
+2023-05-13T14:46:40+00:00 CRITICAL Uncaught Error: Call to undefined function yith_wcan_get_filter_attributes() in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\men.php:31
+Stack trace:
+#0 C:\xampp\htdocs\mywordpress\wp-includes\template-loader.php(106): include()
+#1 C:\xampp\htdocs\mywordpress\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\mywordpress\index.php(17): require('C:\\xampp\\htdocs...')
+#3 {main}
+  thrown in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\men.php on line 31
+
+2023-05-13T15:08:30+00:00 CRITICAL Cannot redeclare ti_wishlist_template_override() (previously declared in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\functions.php:14) in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\functions.php on line 25
+
+2023-05-13T15:09:31+00:00 CRITICAL Cannot redeclare ti_wishlist_template_override() (previously declared in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\functions.php:14) in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\functions.php on line 25
+

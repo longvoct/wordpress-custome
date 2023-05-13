@@ -207,7 +207,7 @@ function ds_change_sale_text()
 }
 
 
-//
+
 // Đăng ký hành động AJAX để lấy số lượng sản phẩm tìm thấy sau mỗi lần lọc
 add_action('wp_ajax_get_filtered_product_count', 'get_filtered_product_count');
 add_action('wp_ajax_nopriv_get_filtered_product_count', 'get_filtered_product_count');
@@ -271,4 +271,15 @@ function get_filtered_product_count()
 
   // Ngừng kết xuất để đảm bảo rằng chỉ có số lượng sản phẩm được trả về
   wp_die();
+}
+
+
+//
+add_filter('yith_wcan_filter_reset_button', 'custom_yith_wcan_filter_reset_button');
+
+function custom_yith_wcan_filter_reset_button($button_html)
+{
+  $button_html = str_replace('Reset filters', 'Đặt lại bộ lọc', $button_html);
+
+  return $button_html;
 }

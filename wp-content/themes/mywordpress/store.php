@@ -125,8 +125,51 @@ Template Name: store
 
     <!-- Hiển thị sản phẩm -->
     <div class="product-list" style="grid-template-columns: repeat(3, minmax(0, 1fr));">
-      <!-- Products -->
       <?php
+      $query_args = array(
+        'post_type' => 'product',
+        'posts_per_page' => -1,
+      );
+
+      if (isset($_GET['filter_color']) && isset($_GET['filter_size'])) {
+        // If both color and size are selected, filter by both
+        $query_args['tax_query'] = array(
+          'relation' => 'AND',
+          array(
+            'taxonomy' => 'pa_color',
+            'field' => 'slug',
+            'terms' => explode(',', $_GET['filter_color']),
+            'operator' => isset($_GET['query_type_color']) ? $_GET['query_type_color'] : 'IN'
+          ),
+          array(
+            'taxonomy' => 'pa_size',
+            'field' => 'slug',
+            'terms' => explode(',', $_GET['filter_size']),
+            'operator' => isset($_GET['query_type_size']) ? $_GET['query_type_size'] : 'IN'
+          )
+        );
+      } elseif (isset($_GET['filter_color'])) {
+        // If only color is selected, filter by color
+        $query_args['tax_query'] = array(
+          array(
+            'taxonomy' => 'pa_color',
+            'field' => 'slug',
+            'terms' => explode(',', $_GET['filter_color']),
+            'operator' => isset($_GET['query_type_color']) ? $_GET['query_type_color'] : 'IN'
+          )
+        );
+      } elseif (isset($_GET['filter_size'])) {
+        // If only size is selected, filter by size
+        $query_args['tax_query'] = array(
+          array(
+            'taxonomy' => 'pa_size',
+            'field' => 'slug',
+            'terms' => explode(',', $_GET['filter_size']),
+            'operator' => isset($_GET['query_type_size']) ? $_GET['query_type_size'] : 'IN'
+          )
+        );
+      }
+
       $args = array(
         'post_type'      => 'product',
         'posts_per_page' => -1,
@@ -162,14 +205,17 @@ Template Name: store
         $args['orderby'] = 'meta_value_num';
         $args['order'] = 'DESC';
       }
+
       // Truy vấn sản phẩm
-      $products = new WP_Query($args);
+      $products = new WP_Query(array_merge($query_args, $args));
       if ($products->have_posts()) {
         while ($products->have_posts()) {
           $products->the_post();
           global $product;
-          get_template_part('components/product');
+          wc_get_template_part('/components/product');
         }
+      } else {
+        echo '<p>Không tìm thấy sản phẩm nào.</p>';
       }
       wp_reset_postdata();
       ?>

@@ -223,48 +223,6 @@ h4.filter-title {
   color: #fff;
   border: none;
 }
-
-.color-item {
-  width: 35px;
-  height: 35px;
-  border-radius: 100px;
-  cursor: pointer;
-}
-
-.black {
-  background-color: #000000;
-}
-
-.gray {
-  background-color: #9a9a9a;
-}
-
-.white {
-  background-color: #fff;
-  border: 1px solid #dfdfdf;
-}
-.violet {
-  background-color: #7434fc;
-}
-.pink {
-  background-color: #fc20b1;
-}
-.red {
-  background-color: #fc3440;
-}
-.orange {
-  background-color: #f87414;
-}
-.yellow {
-  background-color: #ffe143;
-}
-.green {
-  background-color: #54f050;
-}
-.blue {
-  background-color: #34b4fc;
-}
-
 input[type="search"]::-webkit-search-cancel-button {
   -webkit-appearance: none;
   display: none;
@@ -303,11 +261,14 @@ input[type="search"]::-ms-clear {
 
 .woocommerce-message:before {
   content: "\e015";
-  color: #5a13c4 !important;
+  color: #000 !important;
 }
 
 .woocommerce a.remove {
   color: #d6d6d6 !important;
+}
+.woocommerce a.remove:hover {
+  background: #000 !important;
 }
 /* Bộ lọc danh mục sản phẩm */
 .product-filter {
@@ -484,6 +445,16 @@ button#place_order {
   background-color: #000;
   color: white;
 }
+
+button.btn.btn-primary.yith-wcan-reset-filters.reset-filters.enhanced {
+  padding: 8px 25px;
+  background-color: #f6f6f6;
+  color: #000;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
 button#place_order {
   margin-top: 30px;
 }
@@ -604,9 +575,20 @@ span.wpcf7-not-valid-tip {
   color: #000 !important;
 }
 
+.yith-wcan-filters .yith-wcan-filter .filter-items .filter-item.label {
+  border-radius: 0 !important;
+  width: 120px !important;
+}
+
 ul.filter-items.filter-color.level-0 {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
+  column-gap: 15px !important;
+  row-gap: 0;
+}
+ul.filter-items.filter-label.level-0 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   column-gap: 15px !important;
   row-gap: 0;
 }
@@ -653,7 +635,7 @@ h4.filter-title {
   .yith-wcan-filter
   .filter-items
   .filter-item.label.active:not(.with-image) {
-  background-color: #000 !important;
+  background-color: #f6f6f6 !important;
   box-shadow: 0 0 0 1px #000 !important;
 }
 
@@ -707,4 +689,17 @@ button.woocommerce-button.button.woocommerce-form-login__submit.wp-element-butto
   .select2-selection--single
   .select2-selection__rendered {
   line-height: 40px !important;
+}
+
+.yith-wcan-filters
+  .yith-wcan-filter
+  .filter-items
+  .filter-item.label.active:not(.with-image)
+  .term-label,
+.yith-wcan-filters
+  .yith-wcan-filter
+  .filter-items
+  .filter-item.label.active:not(.with-image)
+  .item-count {
+  color: #000 !important;
 }
