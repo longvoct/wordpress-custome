@@ -8,9 +8,9 @@
     rel="stylesheet" />
   <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/style.css" />
   <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/resetcss.css" />
-  <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/styles.css" />
+  <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/style.css" />
   <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/sliderbanner.css" />
-  <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/header-footer.css" />
+  <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/head-foot.css" />
   <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/product-detail.css" />
   <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/main.css" />
   <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/static_page.css" />
@@ -38,6 +38,7 @@
 </head>
 
 <body>
+
   <div class="header">
     <div class="logo">
       <a href="<?php bloginfo('url'); ?>"><img src="<?php bloginfo('template_directory'); ?>/images/logo.png"
@@ -116,4 +117,5 @@
         </button>
       </form>
     </div>
+    <div class="progress-bar"></div>
   </div>
