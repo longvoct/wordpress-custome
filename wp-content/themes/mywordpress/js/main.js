@@ -185,3 +185,18 @@ $(document).ready(function () {
 });
 
 //
+jQuery(document).on("click", ".yith-wcan a", function (e) {
+  e.preventDefault(); // Ngăn chặn trình duyệt chuyển hướng đến URL của liên kết
+
+  var data = {
+    action: "get_filtered_product_count", // Tên hành động AJAX
+    filter_color: jQuery('[name="filter_color"]').val(), // Lọc theo màu sắc
+    filter_size: jQuery('[name="filter_size"]').val(), // Lọc theo kích thước
+  };
+
+  // Gọi AJAX và nhận phản hồi từ trình xử lý AJAX
+  jQuery.post(yith_wcan_frontend.ajaxurl, data, function (response) {
+    // Cập nhật lại số lượng sản phẩm tìm thấy
+    jQuery("#found-posts").html(response + " kết quả tìm thấy");
+  });
+});

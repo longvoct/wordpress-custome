@@ -206,9 +206,69 @@ function ds_change_sale_text()
   </div>';
 }
 
-// Bộc lọc nâng cao sản phẩm
-if (!function_exists('wc_get_product_ids_by_visibility')) {
-  return;
-}
 
-// Đoạn mã khác của bạn ở đây
+//
+// Đăng ký hành động AJAX để lấy số lượng sản phẩm tìm thấy sau mỗi lần lọc
+add_action('wp_ajax_get_filtered_product_count', 'get_filtered_product_count');
+add_action('wp_ajax_nopriv_get_filtered_product_count', 'get_filtered_product_count');
+function get_filtered_product_count()
+{
+  $filter_color = $_POST['filter_color']; // Lấy giá trị của tham số filter_color từ yêu cầu AJAX
+  $filter_size = $_POST['filter_size']; // Lấy giá trị của tham số filter_size từ yêu cầu AJAX
+
+  // Xây dựng một mảng đối số truy vấn để lấy số lượng sản phẩm được lọc
+  $query_args = array(
+    'post_type' => 'product',
+    'posts_per_page' => -1,
+    'tax_query' => array()
+  );
+
+  if (!empty($filter_color) && !empty($filter_size)) {
+    // Nếu cả màu sắc và kích thước được chọn, lọc theo cả hai
+    $query_args['tax_query'] = array(
+      'relation' => 'AND',
+      array(
+        'taxonomy' => 'pa_color',
+        'field' => 'slug',
+        'terms' => explode(',', $filter_color),
+        'operator' => 'IN'
+      ),
+      array(
+        'taxonomy' => 'pa_size',
+        'field' => 'slug',
+        'terms' => explode(',', $filter_size),
+        'operator' => 'IN'
+      )
+    );
+  } elseif (!empty($filter_color)) {
+    // Nếu chỉ có màu sắc được chọn, lọc theo màu sắc
+    $query_args['tax_query'] = array(
+      array(
+        'taxonomy' => 'pa_color',
+        'field' => 'slug',
+        'terms' => explode(',', $filter_color),
+        'operator' => 'IN'
+      )
+    );
+  } elseif (!empty($filter_size)) {
+    // Nếu chỉ có kích thước được chọn, lọc theo kích thước
+    $query_args['tax_query'] = array(
+      array(
+        'taxonomy' => 'pa_size',
+        'field' => 'slug',
+        'terms' => explode(',', $filter_size),
+        'operator' => 'IN'
+      )
+    );
+  }
+
+  // Thực hiện truy vấn và đếm số lượng sản phẩm được tìm thấy
+  $query = new WP_Query($query_args);
+  $count = $query->found_posts;
+
+  // Trả về số lượng sản phẩm được tìm thấy
+  echo $count;
+
+  // Ngừng kết xuất để đảm bảo rằng chỉ có số lượng sản phẩm được trả về
+  wp_die();
+}
