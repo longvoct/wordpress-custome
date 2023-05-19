@@ -41,7 +41,8 @@ $wishlist_link = do_shortcode('[ti_wishlists_addtowishlist]');
       <?php echo esc_html($product->single_add_to_cart_text()); ?></button>
     <!-- Thêm cái wishlist -->
     <div class="wishlist-button_box">
-      <?php echo $wishlist_link; ?>
+      <!-- <php echo $wishlist_link; ?> -->
+      <?php echo do_shortcode('[ti_wishlists_addtowishlist]'); ?>
     </div>
   </div>
 
