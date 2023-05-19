@@ -8,7 +8,7 @@
     rel="stylesheet" />
   <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/style.css" />
   <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/resetcss.css" />
-  <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/style.css" />
+  <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/styles.css" />
   <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/sliderbanner.css" />
   <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/head-foot.css" />
   <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/product-detail.css" />
