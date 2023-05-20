@@ -32,7 +32,31 @@ Template Name: men
   </div>
   <div class="flex-9">
     <div class="flex-9_top-right">
-      <span style="font-weight: 600;"><?php echo $wp_query->found_posts; ?> kết quả tìm thấy</span>
+      <?php
+      $query_args = array(
+        'post_type' => 'product',
+        'posts_per_page' => -1,
+        'tax_query' => array(
+          array(
+            'taxonomy' => 'product_cat',
+            'field' => 'name',
+            'terms' => 'Men'
+          )
+        )
+      );
+
+      $args = array(
+        'post_type'      => 'product',
+        'posts_per_page' => 24,
+      );
+      // Truy vấn sản phẩm và tính toán số trang dựa trên số lượng sản phẩm chia cho xx
+      $products = new WP_Query(array_merge($query_args, $args));
+      ?>
+      <?php if ($products->have_posts()) : ?>
+      <span style="font-weight: 600;"><?php echo $products->found_posts; ?> kết quả tìm thấy</span>
+      <?php else : ?>
+      <span style="font-weight: 600;">Không có kết quả nào được tìm thấy.</span>
+      <?php endif; ?>
       <!-- Loading -->
       <div class="dashed-loading" style="display: none;"></div>
       <!-- Filter -->
@@ -69,7 +93,7 @@ Template Name: men
           array(
             'taxonomy' => 'product_cat',
             'field' => 'name',
-            'terms' => 'Nam'
+            'terms' => 'Men'
           )
         )
       );
@@ -118,6 +142,13 @@ Template Name: men
         );
       }
 
+      // Lọc sản phẩm chỉ trong phạm vi danh mục "Men"
+      $query_args['tax_query'][] = array(
+        'taxonomy' => 'product_cat',
+        'field' => 'name',
+        'terms' => 'Men'
+      );
+
       $args = array(
         'post_type'      => 'product',
         'posts_per_page' => 24,
@@ -163,8 +194,6 @@ Template Name: men
           global $product;
           wc_get_template_part('/components/product');
         }
-      } else {
-        echo '<p>Không tìm thấy sản phẩm nào.</p>';
       }
       wp_reset_postdata();
       ?>

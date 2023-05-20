@@ -36,118 +36,181 @@ Template Name: kids
 <div class="flex-content">
   <div class="flex-3">
     <div class="shoe-type">
-      <span class="tag-type">Loại giày</span>
-      <div class="shoe-type_checkbox">
-        <input type="checkbox" name="Chuck Taylor All Star" id="Chuck Taylor All Star">
-        <label for="Chuck Taylor All Star">Chuck Taylor All Star</label>
-      </div>
-      <div class="shoe-type_checkbox">
-        <input type="checkbox" name="Chuck Taylor II" id="Chuck Taylor II">
-        <label for="Chuck Taylor II">Chuck Taylor II</label>
-      </div>
-      <div class="shoe-type_checkbox">
-        <input type="checkbox" name="Jack Purcell" id="Jack Purcell">
-        <label for="Jack Purcell">Jack Purcell</label>
-      </div>
-      <div class="shoe-type_checkbox">
-        <input type="checkbox" name="One Star" id="One Star">
-        <label for="One Star">One Star</label>
-      </div>
-      <div class="shoe-type_checkbox">
-        <input type="checkbox" name="Chuck 70" id="Chuck 70">
-        <label for="Chuck 70">Chuck 70</label>
-      </div>
+      <span class="tag-type">Phong cách giày</span>
     </div>
-    <div class="size-type">
-      <span class="tag-type">Kích cỡ</span>
-      <div class="sizes-list">
-        <div class="size-item size-ative">37</div>
-        <div class="size-item">36</div>
-        <div class="size-item">38</div>
-        <div class="size-item">39</div>
-        <div class="size-item">40</div>
-        <div class="size-item">41</div>
-        <div class="size-item">42</div>
-        <div class="size-item">43</div>
-        <div class="size-item">44</div>
-        <div class="size-item">45</div>
-        <div class="size-item">46</div>
-        <div class="size-item">47</div>
-        <div class="size-item">48</div>
-        <div class="size-item">49</div>
-        <div class="size-item">50</div>
-        <div class="size-item">51</div>
-        <div class="size-item">52</div>
-        <div class="size-item">53</div>
-        <div class="size-item">54</div>
-        <div class="size-item">55</div>
-      </div>
-    </div>
-    <div class="color-type">
-      <span class="tag-type">Màu sắc</span>
-      <div class="colors-list">
-        <div class="color-item color-active black"></div>
-        <div class="color-item gray"></div>
-        <div class="color-item white"></div>
-        <div class="color-item violet"></div>
-        <div class="color-item pink"></div>
-        <div class="color-item red"></div>
-        <div class="color-item orange"></div>
-        <div class="color-item yellow"></div>
-        <div class="color-item green"></div>
-        <div class="color-item blue"></div>
-      </div>
-    </div>
-    <div class="price-type">
-      <span class="tag-type">Giá sản phẩm</span>
-      <div class="price-type_checkbox">
-        <input type="checkbox" name="price-1" id="price-1">
-        <label for="price-1">Giá dưới 500.000đ</label>
-      </div>
-      <div class="price-type_checkbox">
-        <input type="checkbox" name="price-2" id="price-2">
-        <label for="price-3">500.000đ - 1.000.000đ</label>
-      </div>
-      <div class="price-type_checkbox">
-        <input type="checkbox" name="price-3" id="price-3">
-        <label for="price-3">1.000.000đ - 1.500.000đ</label>
-      </div>
-      <div class="price-type_checkbox">
-        <input type="checkbox" name="price-4" id="price-4">
-        <label for="price-4">1.500.000đ - 2.000.000đ</label>
-      </div>
-      <div class="price-type_checkbox">
-        <input type="checkbox" name="price-4" id="price-4">
-        <label for="price-4">Trên 2.000.000</label>
-      </div>
-    </div>
+
+    <?php
+    // Hiển thị shortcode
+    echo do_shortcode('[yith_wcan_filters slug="filter-products"]');
+    // Đoạn mã PHP của bạn ở đây
+    ?>
   </div>
   <div class="flex-9">
     <div class="flex-9_top-right">
-      <span style="font-weight: 600;">85 kết quả tìm thấy</span>
-      <label for="">Lọc theo</label>
+      <?php
+      $query_args = array(
+        'post_type' => 'product',
+        'posts_per_page' => -1,
+        'tax_query' => array(
+          array(
+            'taxonomy' => 'product_cat',
+            'field' => 'name',
+            'terms' => 'Kids'
+          )
+        )
+      );
+
+      $args = array(
+        'post_type'      => 'product',
+        'posts_per_page' => 24,
+      );
+      // Truy vấn sản phẩm và tính toán số trang dựa trên số lượng sản phẩm chia cho xx
+      $products = new WP_Query(array_merge($query_args, $args));
+      ?>
+      <?php if ($products->have_posts()) : ?>
+        <span style="font-weight: 600;"><?php echo $products->found_posts; ?> kết quả tìm thấy</span>
+      <?php else : ?>
+        <span style="font-weight: 600;">Không có kết quả nào được tìm thấy.</span>
+      <?php endif; ?>
+      <!-- Loading -->
+      <div class="dashed-loading" style="display: none;"></div>
+      <!-- Filter -->
+      <div class="product-filter">
+        <label for="sort-by">Lọc theo:</label>
+        <div class="dropdown">
+          <button class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span>Nổi bật</span>
+          </button>
+          <span class="icon-filter">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-filter" viewBox="0 0 16 16">
+              <path d="M6 10.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5zm-2-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-2-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z" />
+            </svg>
+          </span>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton" id="sort-by">
+            <li data-value="position"><a href="#">Nổi bật</a></li>
+            <li data-value="revenue"><a href="#">Phổ biến</a></li>
+            <li data-value="date"><a href="#">Từ mới đến cũ</a></li>
+            <li data-value="price_asc"><a href="#">Giá thấp đến cao</a></li>
+            <li data-value="price_desc"><a href="#">Giá cao đến thấp</a></li>
+          </ul>
+        </div>
+      </div>
     </div>
     <div class="product-list" style="grid-template-columns: repeat(3, minmax(0, 1fr));">
-      <!-- Code woo -->
       <?php
-      $tax_query[] = array(
-        'taxonomy' => 'product_visibility',
-        'field'    => 'name',
-        'terms'    => 'featured',
-        'operator' => 'IN',
+      $query_args = array(
+        'post_type' => 'product',
+        'posts_per_page' => -1,
+        'tax_query' => array(
+          array(
+            'taxonomy' => 'product_cat',
+            'field' => 'name',
+            'terms' => 'Kids'
+          )
+        )
       );
+
+      $args = array(
+        'post_type'      => 'product',
+        'posts_per_page' => 24,
+      );
+
+      if (isset($_GET['filter_color']) && isset($_GET['filter_size'])) {
+        // If both color and size are selected, filter by both
+        $query_args['tax_query'] = array(
+          'relation' => 'AND',
+          array(
+            'taxonomy' => 'pa_color',
+            'field' => 'slug',
+            'terms' => explode(',', $_GET['filter_color']),
+            'operator' => isset($_GET['query_type_color']) ? $_GET['query_type_color'] : 'IN'
+          ),
+          array(
+            'taxonomy' => 'pa_size',
+            'field' => 'slug',
+            'terms' => explode(',', $_GET['filter_size']),
+            'operator' => isset($_GET['query_type_size']) ? $_GET['query_type_size'] : 'IN'
+          )
+        );
+      } elseif (isset($_GET['filter_color'])) {
+        // If only color is selected, filter by color
+        $query_args['tax_query'] = array(
+          array(
+            'taxonomy' => 'pa_color',
+            'field' => 'slug',
+            'terms' => explode(',', $_GET['filter_color']),
+            'operator' => isset($_GET['query_type_color']) ? $_GET['query_type_color'] : 'IN'
+          )
+        );
+      } elseif (isset($_GET['filter_size'])) {
+        // If only size is selected, filter by size
+        $query_args['tax_query'] = array(
+          array(
+            'taxonomy' => 'pa_size',
+            'field' => 'slug',
+            'terms' => explode(',', $_GET['filter_size']),
+            'operator' => isset($_GET['query_type_size']) ? $_GET['query_type_size'] : 'IN'
+          )
+        );
+      }
+
+      // Lọc sản phẩm chỉ trong phạm vi danh mục "Men"
+      $query_args['tax_query'][] = array(
+        'taxonomy' => 'product_cat',
+        'field' => 'name',
+        'terms' => 'Kids'
+      );
+
+      $args = array(
+        'post_type'      => 'product',
+        'posts_per_page' => 24,
+      );
+      // Sắp xếp sản phẩm
+      if (isset($_GET['sort_by'])) {
+        switch ($_GET['sort_by']) {
+          case 'revenue':
+            $args['meta_key'] = 'total_sales';
+            $args['orderby'] = 'meta_value_num';
+            break;
+          case 'date':
+            $args['orderby'] = 'date';
+            $args['order'] = 'DESC';
+            break;
+          case 'price_asc':
+            $args['orderby'] = 'meta_value_num';
+            $args['meta_key'] = '_price';
+            $args['order'] = 'ASC';
+            break;
+          case 'price_desc':
+            $args['orderby'] = 'meta_value_num';
+            $args['meta_key'] = '_price';
+            $args['order'] = 'DESC';
+            break;
+          default:
+            $args['orderby'] = 'menu_order';
+            $args['order'] = 'ASC';
+            break;
+        }
+      } else {
+        $args['meta_key'] = 'total_sales'; // Sắp xếp sản phẩm theo mức độ phổ biến
+        $args['orderby'] = 'meta_value_num';
+        $args['order'] = 'DESC';
+      }
+      // Truy vấn sản phẩm
+      // Truy vấn sản phẩm và tính toán số trang dựa trên số lượng sản phẩm chia cho 12
+      $products = new WP_Query(array_merge($query_args, $args));
+      $total_pages = ceil($products->found_posts / 2);
+      if ($products->have_posts()) {
+        while ($products->have_posts()) {
+          $products->the_post();
+          global $product;
+          wc_get_template_part('/components/product');
+        }
+      }
+      wp_reset_postdata();
       ?>
-      <?php $args = array('post_type' => 'product', 'posts_per_page' => 12, 'ignore_sticky_posts' => 1, 'tax_query' => $tax_query); ?>
-      <?php $getposts = new WP_query($args); ?>
-      <?php global $wp_query;
-      $wp_query->in_the_loop = true; ?>
-      <?php while ($getposts->have_posts()) : $getposts->the_post(); ?>
-        <?php global $product; ?>
-        <?php get_template_part('/components/product'); ?>
-      <?php endwhile;
-      wp_reset_postdata(); ?>
     </div>
-    <div class="pagination">
+    <!-- <div class="pagination">
       <a href="#" class="prev">&laquo;</a>
       <a href="#" class="page active">1</a>
       <a href="#" class="page">2</a>
@@ -155,8 +218,29 @@ Template Name: kids
       <a href="#" class="page">4</a>
       <a href="#" class="page">5</a>
       <a href="#" class="next">&raquo;</a>
-    </div>
+    </div> -->
+    <div class="pagination">
+      <?php
+      // Lấy giá trị của biến $current_page từ URL
+      $current_page = max(1, get_query_var('paged'));
 
+      // Cấu hình các tham số cho hàm paginate_links
+      $args = array(
+        'base'         => get_pagenum_link(1) . '%_%',
+        'format'       => 'page/%#%',
+        'current'      => $current_page,
+        'total'        => $total_pages,
+        'prev_text'    => '&laquo;',
+        'next_text'    => '&raquo;',
+        'type'         => 'list',
+        'end_size'     => 2,
+        'mid_size'     => 2,
+      );
+
+      // Hiển thị phân trang
+      echo paginate_links($args);
+      ?>
+    </div>
   </div>
 </div>
 <?php get_footer() ?>

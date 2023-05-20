@@ -73,7 +73,31 @@ Template Nue: women
   </div>
   <div class="flex-9">
     <div class="flex-9_top-right">
-      <span style="font-weight: 600;"><?php echo $wp_query->found_posts; ?> kết quả tìm thấy</span>
+      <?php
+      $query_args = array(
+        'post_type' => 'product',
+        'posts_per_page' => -1,
+        'tax_query' => array(
+          array(
+            'taxonomy' => 'product_cat',
+            'field' => 'name',
+            'terms' => 'Women'
+          )
+        )
+      );
+
+      $args = array(
+        'post_type'      => 'product',
+        'posts_per_page' => 24,
+      );
+      // Truy vấn sản phẩm và tính toán số trang dựa trên số lượng sản phẩm chia cho xx
+      $products = new WP_Query(array_merge($query_args, $args));
+      ?>
+      <?php if ($products->have_posts()) : ?>
+        <span style="font-weight: 600;"><?php echo $products->found_posts; ?> kết quả tìm thấy</span>
+      <?php else : ?>
+        <span style="font-weight: 600;">Không có kết quả nào được tìm thấy.</span>
+      <?php endif; ?>
       <!-- Loading -->
       <div class="dashed-loading" style="display: none;"></div>
       <!-- Filter -->
@@ -107,7 +131,7 @@ Template Nue: women
           array(
             'taxonomy' => 'product_cat',
             'field' => 'name',
-            'terms' => 'Nu'
+            'terms' => 'Women'
           )
         )
       );
@@ -156,6 +180,13 @@ Template Nue: women
         );
       }
 
+      // Lọc sản phẩm chỉ trong phạm vi danh mục "Men"
+      $query_args['tax_query'][] = array(
+        'taxonomy' => 'product_cat',
+        'field' => 'name',
+        'terms' => 'Women'
+      );
+
       $args = array(
         'post_type'      => 'product',
         'posts_per_page' => 24,
@@ -194,19 +225,26 @@ Template Nue: women
       // Truy vấn sản phẩm
       // Truy vấn sản phẩm và tính toán số trang dựa trên số lượng sản phẩm chia cho 12
       $products = new WP_Query(array_merge($query_args, $args));
-      $total_pages = ceil($products->found_posts / 24);
+      $total_pages = ceil($products->found_posts / 2);
       if ($products->have_posts()) {
         while ($products->have_posts()) {
           $products->the_post();
           global $product;
           wc_get_template_part('/components/product');
         }
-      } else {
-        echo '<p>Không tìm thấy sản phẩm nào.</p>';
       }
       wp_reset_postdata();
       ?>
     </div>
+    <!-- <div class="pagination">
+      <a href="#" class="prev">&laquo;</a>
+      <a href="#" class="page active">1</a>
+      <a href="#" class="page">2</a>
+      <a href="#" class="page">3</a>
+      <a href="#" class="page">4</a>
+      <a href="#" class="page">5</a>
+      <a href="#" class="next">&raquo;</a>
+    </div> -->
     <div class="pagination">
       <?php
       // Lấy giá trị của biến $current_page từ URL
@@ -231,4 +269,76 @@ Template Nue: women
     </div>
   </div>
 </div>
+<script>
+  jQuery(document).ready(function($) {
+    // Lấy giá trị ban đầu của dropdown
+    var sortBy = $('#sort-by li[data-value="' + $('#sort-by').data('value') + '"]').data('value');
+
+    // Thêm sự kiện "mousedown" cho dropdown-toggle
+    $('.dropdown-toggle').on('mousedown', function(e) {
+      e.preventDefault();
+      var dropdownMenu = $(this).parent().find('.dropdown-menu');
+      if (dropdownMenu.is(':hidden')) {
+        dropdownMenu.show();
+      } else {
+        dropdownMenu.hide();
+      }
+    });
+
+    // Thêm sự kiện "click" cho các mục trong dropdown-menu
+    $('#sort-by').on('click', 'a', function(e) {
+      e.preventDefault();
+      var newSortBy = $(this).parent().data('value');
+      if (newSortBy !== sortBy) {
+        sortBy = newSortBy;
+        // Hiển thị icon loading
+        $('.dashed-loading').show();
+        // Gửi yêu cầu AJAX để lọc sản phẩm
+        $.ajax({
+          type: 'GET',
+          url: window.location.href,
+          data: {
+            sort_by: sortBy
+          },
+          success: function(data) {
+            // Cập nhật danh sách sản phẩm
+            var productList = $(data).find('.product-list');
+            $('.product-list').html(productList.html());
+            // Cập nhật URL với giá trị mới của dropdown
+            var newUrl = updateQueryStringParameter(window.location.href, 'sort_by', sortBy);
+            window.history.pushState({
+              path: newUrl
+            }, '', newUrl);
+          },
+          complete: function() {
+            // Ẩn icon loading khi yêu cầu AJAX hoàn thành
+            $('.dashed-loading').hide();
+          }
+        });
+      }
+      // Ẩn dropdown-menu khi người dùng chọn mục
+      $('.dropdown-menu').hide();
+      // Cập nhật nội dung của dropdown-toggle
+      $(this).closest('.dropdown').find('.dropdown-toggle').html($(this).html());
+    });
+
+    // Hàm cập nhật giá trị của tham số "sort_by" trong URL
+    function updateQueryStringParameter(uri, key, value) {
+      var re = new RegExp("([?&])" + key + "=.*?(&|$)", "i");
+      var separator = uri.indexOf('?') !== -1 ? "&" : "?";
+      if (uri.match(re)) {
+        return uri.replace(re, '$1' + key + "=" + value + '$2');
+      } else {
+        return uri + separator + key + "=" + value;
+      }
+    }
+
+    // Ẩn dropdown-menu khi người dùng click bên ngoài dropdown
+    $(document).on('mousedown', function(e) {
+      if (!$(e.target).closest('.dropdown').length) {
+        $('.dropdown-menu').hide();
+      }
+    });
+  });
+</script>
 <?php get_footer() ?>
