@@ -146,7 +146,6 @@ h4.filter-title {
 }
 
 /* Pagination style */
-
 .pagination {
   margin-top: 80px;
 }
@@ -184,6 +183,17 @@ li:has(.page-numbers.current) {
 
 .page-numbers .prev,
 .page-numbers .next {
+  background-color: #000;
+  color: white;
+  border: 1px solid #000;
+}
+
+.pagination a:hover:not(.active) {
+  background-color: #ddd;
+}
+
+.pagination .prev,
+.pagination .next {
   font-size: 20px;
   font-weight: 300;
 }
