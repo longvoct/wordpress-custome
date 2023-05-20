@@ -283,3 +283,12 @@ function custom_yith_wcan_filter_reset_button($button_html)
 
   return $button_html;
 }
+
+
+//
+function my_pagination_setup()
+{
+  // Thêm hỗ trợ phân trang
+  add_theme_support('paginate_links');
+}
+add_action('after_setup_theme', 'my_pagination_setup');

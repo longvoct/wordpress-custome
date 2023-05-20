@@ -31,7 +31,7 @@ if (!defined('ABSPATH')) {
 						<button class="button tinvwl_button_view tinvwl-btn-onclick" data-url="<?php echo esc_url($dialog_custom_url); ?>" type="button"><?php echo $dialog_custom_html; // WPCS: xss ok. 
 																																																																							?></button>
 					<?php endif; ?>
-					<button class="button tinvwl_button_close" type="button"><i class="ftinvwl ftinvwl-times"></i><?php esc_html_e('Close', 'ti-woocommerce-wishlist'); ?>
+					<button class="button tinvwl_button_close" type="button"><i class="ftinvwl ftinvwl-times"></i><?php esc_html_e('Đóng', 'ti-woocommerce-wishlist'); ?>
 					</button>
 				</div>
 				<div class="tinv-wishlist-clear"></div>
