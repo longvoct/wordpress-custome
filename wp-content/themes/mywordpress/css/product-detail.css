@@ -135,6 +135,22 @@ button.single_add_to_cart_button.button.alt.wp-element-button {
   align-items: center;
   gap: 15px;
   font-size: 15px;
+  transition: all 0.25s linear;
+}
+
+button.single_add_to_cart_button.button.alt.wp-element-button:hover {
+  background-color: #fff;
+  color: #000;
+  border: solid 1px #000;
+}
+
+button.single_add_to_cart_button.button.alt.wp-element-button:hover > svg {
+  fill: #000;
+}
+button.single_add_to_cart_button.button.alt.wp-element-button:hover
+  > svg
+  > path {
+  stroke: #000;
 }
 
 .product_meta {

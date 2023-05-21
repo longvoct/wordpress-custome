@@ -1,16 +1,12 @@
   <?php
   /*
-  Template Name: men
+  Template Name: store
   */ ?>
   <?php get_header(); ?>
   <?php get_template_part('./components/breadcrumb'); ?>
   <div class="line"></div>
   <div class="flex-content">
     <div class="flex-3">
-      <div class="shoe-type">
-        <span class="tag-type">Phong cách giày</span>
-      </div>
-
       <?php
       // Hiển thị shortcode
       echo do_shortcode('[yith_wcan_filters slug="filter-products"]');

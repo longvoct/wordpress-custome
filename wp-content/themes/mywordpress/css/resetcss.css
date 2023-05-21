@@ -10,6 +10,7 @@
 * {
   margin: 0;
   padding: 0;
+  --yith-wcan-filters_colors_accent: #ebebeb;
 }
 html,
 body {
