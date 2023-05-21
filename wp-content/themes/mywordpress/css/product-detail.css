@@ -172,6 +172,12 @@ button.single_add_to_cart_button.button.alt.wp-element-button:hover
   border-top: solid 1px #eee;
 }
 
+.pdp_description li {
+  list-style: disc !important;
+  margin-left: 30px;
+  margin-top: 10px;
+}
+
 .tabs.wc-tabs {
   display: flex;
   gap: 10px;
