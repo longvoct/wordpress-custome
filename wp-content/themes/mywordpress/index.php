@@ -45,7 +45,7 @@
   <!-- Gallery -->
   <div class="gallery">
     <div class="gallery__item gallery__item--men">
-      <img class="gallery__item-image" src="<?php bloginfo('template_directory'); ?>/images/men.png" alt="men-product">
+      <img class="gallery__item-image" src="<?php bloginfo('template_directory'); ?>/images/men.webp" alt="men-product">
       <div class="gallery__opacity"></div>
       <div class="gallery__content">
         <h3 class="gallery__caption">Sneakers dành cho Nam</h3>
@@ -55,7 +55,7 @@
       </div>
     </div>
     <div class="gallery__item gallery__item--women">
-      <img class="gallery__item-image" src="<?php bloginfo('template_directory'); ?>/images/women.png" alt="men-product">
+      <img class="gallery__item-image" src="<?php bloginfo('template_directory'); ?>/images/women.webp" alt="men-product">
       <div class="gallery__opacity"></div>
       <div class="gallery__content">
         <h3 class="gallery__caption">Sneakers dành cho Nữ</h3>
@@ -65,7 +65,7 @@
       </div>
     </div>
     <div class="gallery__item gallery__item--kids">
-      <img class="gallery__item-image" src="<?php bloginfo('template_directory'); ?>/images/kids.png" alt="men-product">
+      <img class="gallery__item-image" src="<?php bloginfo('template_directory'); ?>/images/kids.webp" alt="men-product">
       <div class="gallery__opacity"></div>
       <div class="gallery__content">
         <h3 class="gallery__caption">Sneakers cho trẻ em</h3>
@@ -105,7 +105,7 @@
   </div>
   <!-- Banner-product -->
   <div class="banner-product">
-    <img class="banner-product__image" src="<?php bloginfo('template_directory'); ?>/images/banner-product-title.png" alt="Product Image">
+    <img class="banner-product__image" src="<?php bloginfo('template_directory'); ?>/images/banner-product-title.webp" alt="Product Image">
     <div class="banner-gallery__opacity"></div>
     <div class="banner-product__content">
       <span>One Star Pro Sean Pablo </br>

@@ -11,19 +11,19 @@
     <div class="slider-women">
       <div class="slider-women__slides">
         <div class="slider-women__slide">
-          <img src="<?php bloginfo('template_directory'); ?>/images/women/women-1.png" alt="">
+          <img src="<?php bloginfo('template_directory'); ?>/images/women/women-1.webp" alt="">
         </div>
         <div class="slider-women__slide">
-          <img src="<?php bloginfo('template_directory'); ?>/images/women/women-2.png" alt="">
+          <img src="<?php bloginfo('template_directory'); ?>/images/women/women-2.webp" alt="">
         </div>
         <div class="slider-women__slide">
-          <img src="<?php bloginfo('template_directory'); ?>/images/women/women-3.png" alt="">
+          <img src="<?php bloginfo('template_directory'); ?>/images/women/women-3.webp" alt="">
         </div>
         <div class="slider-women__slide">
-          <img src="<?php bloginfo('template_directory'); ?>/images/women/women-4.png" alt="">
+          <img src="<?php bloginfo('template_directory'); ?>/images/women/women-4.webp" alt="">
         </div>
         <div class="slider-women__slide">
-          <img src="<?php bloginfo('template_directory'); ?>/images/women/women-5.png" alt="">
+          <img src="<?php bloginfo('template_directory'); ?>/images/women/women-5.webp" alt="">
         </div>
       </div>
       <div class="slider-women__arrows">
@@ -41,11 +41,11 @@
     </div>
     <div class="img-right">
       <div class="img-right_top">
-        <img src="<?php bloginfo('template_directory'); ?>/images/women/women-6.png" alt="">
-        <img src="<?php bloginfo('template_directory'); ?>/images/women/women-7.png" alt="">
+        <img src="<?php bloginfo('template_directory'); ?>/images/women/women-6.webp" alt="">
+        <img src="<?php bloginfo('template_directory'); ?>/images/women/women-7.webp" alt="">
       </div>
       <div class="img-right_bottom">
-        <img src="<?php bloginfo('template_directory'); ?>/images/women/women-8.png" alt="">
+        <img src="<?php bloginfo('template_directory'); ?>/images/women/women-8.webp" alt="">
       </div>
     </div>
   </div>
