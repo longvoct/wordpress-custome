@@ -1,7 +1,3 @@
-<?php
-/*
-Template Nue: women
-*/ ?>
 <?php get_header(); ?>
 <?php get_template_part('./components/breadcrumb'); ?>
 <div class="women-content body-content margin-head">

@@ -180,7 +180,7 @@ Template Name: men
       // Truy vấn sản phẩm
       // Truy vấn sản phẩm và tính toán số trang dựa trên số lượng sản phẩm chia cho 12
       $products = new WP_Query(array_merge($query_args, $args));
-      $total_pages = ceil($products->found_posts / 2);
+      $total_pages = ceil($products->found_posts / 24);
       if ($products->have_posts()) {
         while ($products->have_posts()) {
           $products->the_post();

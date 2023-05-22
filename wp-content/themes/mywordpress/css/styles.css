@@ -342,7 +342,7 @@ input[type="search"]::-ms-clear {
   position: absolute;
   top: 105%;
   left: 0;
-  z-index: 1000;
+  z-index: 10;
   display: none;
   width: 100%;
   padding: 5px 0;

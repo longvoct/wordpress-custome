@@ -172,7 +172,8 @@ button.single_add_to_cart_button.button.alt.wp-element-button:hover
   border-top: solid 1px #eee;
 }
 
-.pdp_description li {
+.pdp_description li,
+#tab-description li {
   list-style: disc !important;
   margin-left: 30px;
   margin-top: 10px;
@@ -271,7 +272,7 @@ tr:nth-child(2) .value .thwvsf_fields {
 
 .thwvsf-wrapper-ul
   .thwvsf-wrapper-item-li.thwvsf-label-li.attr_swatch_design_1 {
-  width: 120px !important ;
+  width: 150px !important ;
   height: 34px !important;
   color: #000;
   background-color: #fff;
