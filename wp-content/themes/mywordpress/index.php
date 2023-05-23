@@ -25,7 +25,7 @@
       'operator' => 'IN',
     );
     ?>
-    <?php $args = array('post_type' => 'product', 'posts_per_page' => 12, 'ignore_sticky_posts' => 1, 'tax_query' => $tax_query); ?>
+    <?php $args = array('post_type' => 'product', 'posts_per_page' => 28, 'ignore_sticky_posts' => 1, 'tax_query' => $tax_query); ?>
     <?php $getposts = new WP_query($args); ?>
     <?php global $wp_query;
     $wp_query->in_the_loop = true; ?>
@@ -51,7 +51,7 @@
         <h3 class="gallery__caption">Sneakers dành cho Nam</h3>
         <p class="gallery__desc">Phù hợp với nhiều sở thích và nhu cầu của phái nam, từ những mẫu cổ điển cho đến
           những kiểu mới nhất, đã sẵn sàng để bạn có thể mua sắm.</p>
-        <a href="<?php bloginfo('url'); ?>/nam"><button class="gallery__button">Khám phá</button></a>
+        <a href="<?php bloginfo('url'); ?>/giay-nam"><button class="gallery__button">Khám phá</button></a>
       </div>
     </div>
     <div class="gallery__item gallery__item--women">
@@ -61,7 +61,7 @@
         <h3 class="gallery__caption">Sneakers dành cho Nữ</h3>
         <p class="gallery__desc">Tôn vinh vóc dáng xinh đẹp của phái nữ với các mẫu thiết kế giày dép thời trang và hiện
           đại. Tự hào cung cấp những sản phẩm chất lượng nhất.</p>
-        <a href="<?php bloginfo('url'); ?>/nu"><button class="gallery__button">Khám phá</button></a>
+        <a href="<?php bloginfo('url'); ?>/giay-nu"><button class="gallery__button">Khám phá</button></a>
       </div>
     </div>
     <div class="gallery__item gallery__item--kids">
@@ -71,7 +71,7 @@
         <h3 class="gallery__caption">Sneakers cho trẻ em</h3>
         <p class="gallery__desc">Cung cấp những sản phẩm với chất liệu mềm mại, thiết kế êm ái và độ bền cao. Mang lại
           cảm giác thoải mái và tự tin khi hoạt động.</p>
-        <a href="<?php bloginfo('url'); ?>/nam"><button class="gallery__button">Khám phá</button></a>
+        <a href="<?php bloginfo('url'); ?>/giay-tre-em"><button class="gallery__button">Khám phá</button></a>
       </div>
     </div>
   </div>
@@ -82,7 +82,7 @@
     <?php
     $args = array(
       'post_type' => 'product',
-      'posts_per_page' => 12,
+      'posts_per_page' => 28,
       'orderby' => 'date',
       'order' => 'DESC'
     );

@@ -43,6 +43,10 @@ img.product-list__image.wp-post-image {
   height: 280px;
   width: 100%;
   object-fit: cover;
+  transition: all 0.2s ease-in-out;
+}
+img.product-list__image.wp-post-image:hover {
+  opacity: 0.75;
 }
 
 .product-list__item {
@@ -776,4 +780,10 @@ li.filter-item.checkbox > label {
   .filter-item.label
   .term-label {
   font-size: 13px !important;
+}
+
+.product-list__variations {
+  margin-top: 5px;
+  font-size: 13px;
+  color: #939393;
 }
