@@ -4,21 +4,23 @@
 }
 
 .sologan p {
-  font-family: "UTM Impact";
-  font-weight: 400;
-  font-size: 50px;
+  font-family: "Anton";
+  font-weight: 800;
+  font-size: 52px;
   line-height: 120%;
   text-transform: uppercase;
   color: #212121;
-  width: 428px;
+  width: 500px;
   margin-right: 35px;
+  letter-spacing: 0.05rem;
 }
 .sologan .line {
-  width: 300px !important;
+  width: 200px !important;
   margin: 0 !important;
 }
 
 .sologan:nth-child(2) p {
-  width: 600px;
+  width: 700px;
+  margin-top: 10px;
   margin-left: 35px;
 }

@@ -51,7 +51,7 @@
 }
 
 .gallery__caption {
-  font-family: "UTM Impact";
+  font-family: "Anton";
   font-weight: 400;
   font-size: 20px;
   line-height: 150%;
@@ -154,7 +154,7 @@ button.banner-link_store {
   color: #212121;
   border: none;
   outline: none;
-  /* font-family: "UTM Impact"; */
+  /* font-family: "Anton"; */
   font-weight: 600;
   cursor: pointer;
   text-align: center;
