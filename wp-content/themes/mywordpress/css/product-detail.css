@@ -269,6 +269,9 @@ tr:nth-child(2) .value .thwvsf_fields {
 .thwvsf-wrapper-ul .thwvsf-wrapper-item-li.attr_swatch_design_default:hover {
   box-shadow: 0 0 0 1px #d6d6d6 !important;
 }
+.thwvsf-wrapper-ul .thwvsf-wrapper-item-li.attr_swatch_design_default {
+  border-radius: 0px !important;
+}
 
 .thwvsf-wrapper-ul
   .thwvsf-wrapper-item-li.thwvsf-label-li.attr_swatch_design_1 {
@@ -317,10 +320,6 @@ img.avatar.avatar-60.photo {
 .comment_container {
   display: flex;
   gap: 20px;
-}
-
-input#payment_method_bacs {
-  display: inline-block !important;
 }
 
 .star-rating_list {
@@ -542,4 +541,8 @@ ins span.woocommerce-Price-amount.amount {
   .tinvwl_add_to_wishlist_button.tinvwl-icon-heart-plus.no-txt:before,
 .tinv-wishlist .tinvwl_add_to_wishlist_button.tinvwl-icon-heart.no-txt:before {
   transform: translate(-50%, -50%) !important;
+}
+
+ul.payment_methods.methods > li > input {
+  display: inline-block !important;
 }

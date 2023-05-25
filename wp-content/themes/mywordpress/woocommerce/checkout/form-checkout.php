@@ -32,43 +32,45 @@ if (!$checkout->is_registration_enabled() && $checkout->is_registration_required
 
 <form name="checkout" method="post" class="checkout woocommerce-checkout" style="
 	display: flex;
+	flex-direction: column;
   justify-content: space-between;
 	align-items: flex-start;
-  gap: 50px;" action="<?php echo esc_url(wc_get_checkout_url()); ?>" enctype="multipart/form-data">
+ " action="<?php echo esc_url(wc_get_checkout_url()); ?>" enctype="multipart/form-data">
 
-	<?php if ($checkout->get_checkout_fields()) : ?>
+  <?php if ($checkout->get_checkout_fields()) : ?>
 
-		<?php do_action('woocommerce_checkout_before_customer_details'); ?>
+  <?php do_action('woocommerce_checkout_before_customer_details'); ?>
 
-		<div class="col2-set" id="customer_details" style="  
-		display: flex !important;
-  flex-direction: column !important;
-	flex: 60%;
-	">
-			<div class="col-1" style="width: 100%;">
-				<?php do_action('woocommerce_checkout_billing'); ?>
-			</div>
-			<div class="col-2" style="width: 100%; margin-top: 20px;">
-				<?php do_action('woocommerce_checkout_shipping'); ?>
-			</div>
-		</div>
+  <div class="checkout_woo-bottom" style="
+	display: flex;
+  justify-content: space-between;
+	align-items: flex-start;
+  gap: 50px;">
+    <div class="col2-set" id="customer_details" style="  
+			display: flex !important;
+			flex-direction: column !important;
+			flex: 60%;
+			">
+      <div class="col-1" style="width: 100%;">
+        <?php do_action('woocommerce_checkout_billing'); ?>
+      </div>
+      <div class="col-2" style="width: 100%; margin-top: 20px;">
+        <?php do_action('woocommerce_checkout_shipping'); ?>
+      </div>
+    </div>
+    <?php do_action('woocommerce_checkout_after_customer_details'); ?>
+    <?php endif; ?>
+    <?php do_action('woocommerce_checkout_before_order_review_heading'); ?>
+    <div style="flex: 40%;">
+      <h3 id="order_review_heading" style="margin-top: 0"><?php esc_html_e('Your order', 'woocommerce'); ?></h3>
+      <?php do_action('woocommerce_checkout_before_order_review'); ?>
+      <div id="order_review" class="woocommerce-checkout-review-order">
+        <?php do_action('woocommerce_checkout_order_review'); ?>
+      </div>
+    </div>
+  </div>
 
-		<?php do_action('woocommerce_checkout_after_customer_details'); ?>
-
-	<?php endif; ?>
-
-	<?php do_action('woocommerce_checkout_before_order_review_heading'); ?>
-
-	<div style="flex: 40%;">
-		<h3 id="order_review_heading" style="margin-top: 0"><?php esc_html_e('Your order', 'woocommerce'); ?></h3>
-
-		<?php do_action('woocommerce_checkout_before_order_review'); ?>
-		<div id="order_review" class="woocommerce-checkout-review-order">
-			<?php do_action('woocommerce_checkout_order_review'); ?>
-		</div>
-	</div>
-
-	<?php do_action('woocommerce_checkout_after_order_review'); ?>
+  <?php do_action('woocommerce_checkout_after_order_review'); ?>
 
 </form>
 

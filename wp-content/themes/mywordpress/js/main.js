@@ -1,16 +1,16 @@
 // Thao tác với header
 window.addEventListener("load", function () {
-  var wpAdminBar = document.getElementById("wpadminbar");
-  if (wpAdminBar) {
-    // Nếu có #wpadminbar, đặt top cho header là 32px
-    var header = document.querySelector(".header");
-    // header.style.top = "32px";
-    header.style.top = "0";
-  } else {
-    // Nếu không có #wpadminbar, đặt top cho header là 0
-    var header = document.querySelector(".header");
-    header.style.top = "0";
-  }
+  // var wpAdminBar = document.getElementById("wpadminbar");
+  // if (wpAdminBar) {
+  //   // Nếu có #wpadminbar, đặt top cho header là 32px
+  //   var header = document.querySelector(".header");
+  //   // header.style.top = "32px";
+  //   header.style.top = "0";
+  // } else {
+  //   // Nếu không có #wpadminbar, đặt top cho header là 0
+  //   var header = document.querySelector(".header");
+  //   header.style.top = "0";
+  // }
   // Click vote rating
   // Lấy tất cả các radio button và icon sao
   const radioButtons = document.querySelectorAll(

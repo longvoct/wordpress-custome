@@ -1,4 +1,4 @@
-<div class="body-content" style="margin-top: 99px">
+<div class="body-content" style="margin-top: 79px">
   <?php if (function_exists('yoast_breadcrumb')) {
     yoast_breadcrumb('<p id="breadcrumbs">', '</p>');
   } ?>
