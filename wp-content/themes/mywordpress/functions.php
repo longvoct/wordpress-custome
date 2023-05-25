@@ -31,16 +31,16 @@ add_action('init', 'register_my_menu');
 // add_filter('use_block_editor_for_post', '__return_false');
 
 // Thay đổi ký hiệu tiền tệ trong WooCommerce thành "CA$"
-function add_custom_currency_symbol($currency_symbol, $currency)
-{
-  switch ($currency) {
-    case 'CAD':
-      $currency_symbol = 'CA$';
-      break;
-  }
-  return $currency_symbol;
-}
-add_filter('woocommerce_currency_symbol', 'add_custom_currency_symbol', 10, 2);
+// function add_custom_currency_symbol($currency_symbol, $currency)
+// {
+//   switch ($currency) {
+//     case 'CAD':
+//       $currency_symbol = 'CA$';
+//       break;
+//   }
+//   return $currency_symbol;
+// }
+// add_filter('woocommerce_currency_symbol', 'add_custom_currency_symbol', 10, 2);
 
 //custom thanh serch
 function custom_search_filter($query)

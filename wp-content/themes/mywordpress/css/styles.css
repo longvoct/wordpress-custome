@@ -489,10 +489,6 @@ button#place_order {
   margin-top: 30px;
 }
 
-.cart_totals > table.shop_table.shop_table_responsive {
-  margin-top: 15px;
-}
-
 .showcoupon {
   font-weight: bold;
 }
@@ -741,20 +737,28 @@ li.filter-item.checkbox > label {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  column-gap: 70px;
+  column-gap: 50px;
 }
 
 .woocommerce-cart_wrapper > form.woocommerce-cart-form {
   flex: 70%;
 }
 .woocommerce-cart_wrapper > .cart-collaterals {
-  flex: 30%;
+  flex: 40%;
   margin-top: 0;
 }
 
 .woocommerce .cart-collaterals .cart_totals,
 .woocommerce-page .cart-collaterals .cart_totals {
   width: 100%;
+}
+
+.cart_totals .shop_table.shop_table_responsive th {
+  width: 100px;
+}
+
+.cart_totals h2 {
+  display: none;
 }
 
 .woocommerce-info {
