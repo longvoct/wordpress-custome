@@ -224,36 +224,3 @@ function my_pagination_setup()
   add_theme_support('paginate_links');
 }
 add_action('after_setup_theme', 'my_pagination_setup');
-
-// Tùy chỉnh ảnh gallery bị mờ
-// add_filter('woocommerce_get_image_size_gallery_thumbnail', function ($size) {
-//   return array(
-//     'width' => 150,
-//     'height' => 150,
-//     'crop' => 0,
-//   );
-// });
-
-// add_filter('single_product_archive_thumbnail_size', function ($size) {
-//   return array(
-//     'width' => 500,
-//     'height' => 500,
-//     'crop' => 0,
-//   );
-// });
-
-// add_filter('subcategory_archive_thumbnail_size', function ($size) {
-//   return array(
-//     'width' => 500,
-//     'height' => 500,
-//     'crop' => 0,
-//   );
-// });
-
-// add_filter('woocommerce_gallery_thumbnail_size', function ($size) {
-//   return array(
-//     'width' => 500,
-//     'height' => 500,
-//     'crop' => 0,
-//   );
-// });

@@ -1,0 +1,9 @@
+2023-05-21T19:13:16+00:00 CRITICAL Uncaught Error: Call to undefined function get_home_path() in /home/fuugtvdh/domains/converse.azdigi.shop/public_html/wp-content/plugins/wp-optimize/templates/minify/cached-file-log.php:15
+Stack trace:
+#0 /home/fuugtvdh/domains/converse.azdigi.shop/public_html/wp-content/plugins/wp-optimize/wp-optimize.php(1091): include()
+#1 /home/fuugtvdh/domains/converse.azdigi.shop/public_html/wp-content/plugins/wp-optimize/minify/class-wp-optimize-minify-cache-functions.php(526): WP_Optimize->include_template('minify/cached-f...', true, Array)
+#2 [internal function]: WP_Optimize_Minify_Cache_Functions::format_file_logs(Array)
+#3 /home/fuugtvdh/domains/converse.azdigi.shop/public_html/wp-content/plugins/wp-optimize/minify/class-wp-optimize-minify-commands.php(22): array_map(Array, Array)
+#4 /home/fuugtvdh/domains/converse.azdigi.shop/public_html/wp-content/plugins/wp-optimize/minify/class-wp-optimize-minify-commands.php(86): WP_Optimize_Minify_Commands->get_minify_cached_files()
+#5 /home/fuugtvdh/domains/converse.azdigi.s in /home/fuugtvdh/domains/converse.azdigi.shop/public_html/wp-content/plugins/wp-optimize/templates/minify/cached-file-log.php on line 15
+

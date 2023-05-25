@@ -62,14 +62,14 @@
 }
 .current-menu-item::after {
   /* content: "";
-    position: absolute;
-    width: 80%;
-    height: 2.5px;
-    background-color: #000;
-    bottom: -25px;
-    left: 50%;
-    z-index: 10;
-    transform: translateX(-50%); */
+  position: absolute;
+  width: 80%;
+  height: 2.5px;
+  background-color: #000;
+  bottom: -25px;
+  left: 50%;
+  z-index: 10;
+  transform: translateX(-50%); */
 }
 
 .right-header {
