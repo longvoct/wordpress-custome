@@ -13,7 +13,8 @@
 .header {
   position: fixed;
   transition: 0.25s all cubic-bezier(0.39, 0.575, 0.565, 1);
-  top: 32px;
+  /* top: 32px */
+  top: 0;
   left: 0;
   right: 0;
   z-index: 100;
@@ -61,14 +62,14 @@
 }
 .current-menu-item::after {
   /* content: "";
-  position: absolute;
-  width: 80%;
-  height: 2.5px;
-  background-color: #000;
-  bottom: -25px;
-  left: 50%;
-  z-index: 10;
-  transform: translateX(-50%); */
+    position: absolute;
+    width: 80%;
+    height: 2.5px;
+    background-color: #000;
+    bottom: -25px;
+    left: 50%;
+    z-index: 10;
+    transform: translateX(-50%); */
 }
 
 .right-header {
