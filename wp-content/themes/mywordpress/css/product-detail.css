@@ -319,8 +319,8 @@ img.avatar.avatar-60.photo {
   gap: 20px;
 }
 
-input[type="radio"] {
-  display: none;
+input#payment_method_bacs {
+  display: inline-block !important;
 }
 
 .star-rating_list {

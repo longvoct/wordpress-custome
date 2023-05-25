@@ -1,0 +1,84 @@
+2023-05-24T01:16:53+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Product_Simple::get_available_variations() in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\components\product.php:4
+Stack trace:
+#0 C:\xampp\htdocs\mywordpress\wp-includes\template.php(785): require()
+#1 C:\xampp\htdocs\mywordpress\wp-includes\template.php(718): load_template('C:\\xampp\\htdocs...', false, Array)
+#2 C:\xampp\htdocs\mywordpress\wp-includes\general-template.php(204): locate_template(Array, true, false, Array)
+#3 C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\index.php(96): get_template_part('/components/pro...')
+#4 C:\xampp\htdocs\mywordpress\wp-includes\template-loader.php(106): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\mywordpress\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\mywordpress\index.php(17): require('C:\\xampp\\htdocs...')
+#7 {main}
+  thrown in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\components\product.php on line 4
+
+2023-05-24T01:17:02+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Product_Simple::get_available_variations() in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\components\product.php:4
+Stack trace:
+#0 C:\xampp\htdocs\mywordpress\wp-includes\template.php(785): require()
+#1 C:\xampp\htdocs\mywordpress\wp-includes\template.php(718): load_template('C:\\xampp\\htdocs...', false, Array)
+#2 C:\xampp\htdocs\mywordpress\wp-includes\general-template.php(204): locate_template(Array, true, false, Array)
+#3 C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\index.php(96): get_template_part('/components/pro...')
+#4 C:\xampp\htdocs\mywordpress\wp-includes\template-loader.php(106): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\mywordpress\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\mywordpress\index.php(17): require('C:\\xampp\\htdocs...')
+#7 {main}
+  thrown in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\components\product.php on line 4
+
+2023-05-24T01:17:08+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Product_Simple::get_available_variations() in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\components\product.php:4
+Stack trace:
+#0 C:\xampp\htdocs\mywordpress\wp-includes\template.php(785): require()
+#1 C:\xampp\htdocs\mywordpress\wp-includes\template.php(718): load_template('C:\\xampp\\htdocs...', false, Array)
+#2 C:\xampp\htdocs\mywordpress\wp-includes\general-template.php(204): locate_template(Array, true, false, Array)
+#3 C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\index.php(96): get_template_part('/components/pro...')
+#4 C:\xampp\htdocs\mywordpress\wp-includes\template-loader.php(106): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\mywordpress\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\mywordpress\index.php(17): require('C:\\xampp\\htdocs...')
+#7 {main}
+  thrown in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\components\product.php on line 4
+
+2023-05-24T01:17:13+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Product_Simple::get_available_variations() in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\components\product.php:4
+Stack trace:
+#0 C:\xampp\htdocs\mywordpress\wp-includes\template.php(785): require()
+#1 C:\xampp\htdocs\mywordpress\wp-includes\template.php(718): load_template('C:\\xampp\\htdocs...', false, Array)
+#2 C:\xampp\htdocs\mywordpress\wp-includes\general-template.php(204): locate_template(Array, true, false, Array)
+#3 C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\index.php(96): get_template_part('/components/pro...')
+#4 C:\xampp\htdocs\mywordpress\wp-includes\template-loader.php(106): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\mywordpress\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\mywordpress\index.php(17): require('C:\\xampp\\htdocs...')
+#7 {main}
+  thrown in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\components\product.php on line 4
+
+2023-05-24T01:17:14+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Product_Simple::get_available_variations() in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\components\product.php:4
+Stack trace:
+#0 C:\xampp\htdocs\mywordpress\wp-includes\template.php(785): require()
+#1 C:\xampp\htdocs\mywordpress\wp-includes\template.php(718): load_template('C:\\xampp\\htdocs...', false, Array)
+#2 C:\xampp\htdocs\mywordpress\wp-includes\general-template.php(204): locate_template(Array, true, false, Array)
+#3 C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\index.php(96): get_template_part('/components/pro...')
+#4 C:\xampp\htdocs\mywordpress\wp-includes\template-loader.php(106): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\mywordpress\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\mywordpress\index.php(17): require('C:\\xampp\\htdocs...')
+#7 {main}
+  thrown in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\components\product.php on line 4
+
+2023-05-24T01:17:36+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Product_Simple::get_available_variations() in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\components\product.php:4
+Stack trace:
+#0 C:\xampp\htdocs\mywordpress\wp-includes\template.php(785): require()
+#1 C:\xampp\htdocs\mywordpress\wp-includes\template.php(718): load_template('C:\\xampp\\htdocs...', false, Array)
+#2 C:\xampp\htdocs\mywordpress\wp-includes\general-template.php(204): locate_template(Array, true, false, Array)
+#3 C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\index.php(96): get_template_part('/components/pro...')
+#4 C:\xampp\htdocs\mywordpress\wp-includes\template-loader.php(106): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\mywordpress\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\mywordpress\index.php(17): require('C:\\xampp\\htdocs...')
+#7 {main}
+  thrown in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\components\product.php on line 4
+
+2023-05-24T01:18:49+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Product_Simple::get_available_variations() in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\components\product.php:4
+Stack trace:
+#0 C:\xampp\htdocs\mywordpress\wp-includes\template.php(785): require()
+#1 C:\xampp\htdocs\mywordpress\wp-includes\template.php(718): load_template('C:\\xampp\\htdocs...', false, Array)
+#2 C:\xampp\htdocs\mywordpress\wp-includes\general-template.php(204): locate_template(Array, true, false, Array)
+#3 C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\index.php(96): get_template_part('/components/pro...')
+#4 C:\xampp\htdocs\mywordpress\wp-includes\template-loader.php(106): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\mywordpress\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\mywordpress\index.php(17): require('C:\\xampp\\htdocs...')
+#7 {main}
+  thrown in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\components\product.php on line 4
+
