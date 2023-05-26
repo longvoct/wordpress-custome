@@ -74,41 +74,48 @@
               fill="#212121" stroke="#212121" stroke-width="0.3" />
           </svg>
         </a>
-        <a href="<?php bloginfo('url'); ?>/gio-hang" class="icon-header icon-bag">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M3.9 5.73333L5.08557 14.275C5.22282 15.2638 6.06825 16 7.06658 16L17.8334 16C18.8317 16 19.6772 15.2638 19.8144 14.275L20.7632 7.43955C20.8883 6.53778 20.1878 5.73333 19.2774 5.73333L3.9 5.73333ZM3.9 5.73333L3.60486 3.4136C3.50205 2.60558 2.81454 2 2 2V2"
-              stroke="#121219" stroke-width="1.5" />
-            <path
-              d="M9 20.5C9 19.6716 8.32843 19 7.5 19C6.67157 19 6 19.6716 6 20.5C6 21.3284 6.67157 22 7.5 22C8.32843 22 9 21.3284 9 20.5Z"
-              stroke="#121219" stroke-width="1.5" />
-            <path
-              d="M19 20.5C19 19.6716 18.3284 19 17.5 19C16.6716 19 16 19.6716 16 20.5C16 21.3284 16.6716 22 17.5 22C18.3284 22 19 21.3284 19 20.5Z"
-              stroke="#121219" stroke-width="1.5" />
-          </svg>
-
-          <span class="cart-count"><?php echo WC()->cart->get_cart_contents_count(); ?></span>
-          <script>
-          jQuery(document).ready(function($) {
-            var cart_count = <?php echo WC()->cart->get_cart_contents_count(); ?>;
-            var cart_count_element = $('.icon-bag .cart-count');
-            if (cart_count === 0) {
-              cart_count_element.hide();
-            } else {
-              cart_count_element.text(cart_count);
-            }
-
-            $(document.body).on('added_to_cart removed_from_cart', function() {
+        <div class="icon-bag_wrapper">
+          <a href="<?php bloginfo('url'); ?>/gio-hang" class="icon-header icon-bag">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M3.9 5.73333L5.08557 14.275C5.22282 15.2638 6.06825 16 7.06658 16L17.8334 16C18.8317 16 19.6772 15.2638 19.8144 14.275L20.7632 7.43955C20.8883 6.53778 20.1878 5.73333 19.2774 5.73333L3.9 5.73333ZM3.9 5.73333L3.60486 3.4136C3.50205 2.60558 2.81454 2 2 2V2"
+                stroke="#121219" stroke-width="1.5" />
+              <path
+                d="M9 20.5C9 19.6716 8.32843 19 7.5 19C6.67157 19 6 19.6716 6 20.5C6 21.3284 6.67157 22 7.5 22C8.32843 22 9 21.3284 9 20.5Z"
+                stroke="#121219" stroke-width="1.5" />
+              <path
+                d="M19 20.5C19 19.6716 18.3284 19 17.5 19C16.6716 19 16 19.6716 16 20.5C16 21.3284 16.6716 22 17.5 22C18.3284 22 19 21.3284 19 20.5Z"
+                stroke="#121219" stroke-width="1.5" />
+            </svg>
+            <span class="cart-count"><?php echo WC()->cart->get_cart_contents_count(); ?></span>
+            <script>
+            jQuery(document).ready(function($) {
               var cart_count = <?php echo WC()->cart->get_cart_contents_count(); ?>;
+              var cart_count_element = $('.icon-bag .cart-count');
               if (cart_count === 0) {
                 cart_count_element.hide();
               } else {
-                cart_count_element.text(cart_count).show();
+                cart_count_element.text(cart_count);
               }
+              $(document.body).on('added_to_cart removed_from_cart', function() {
+                var cart_count = <?php echo WC()->cart->get_cart_contents_count(); ?>;
+                if (cart_count === 0) {
+                  cart_count_element.hide();
+                } else {
+                  cart_count_element.text(cart_count).show();
+                }
+              });
             });
-          });
-          </script>
-        </a>
+            </script>
+          </a>
+          <div class="triangle"></div>
+          <div class="mini-cart-container">
+            <?php
+            include('woocommerce/cart/mini-cart.php');
+            ?>
+          </div>
+        </div>
+
       </div>
       <form role="search" method="get" class="search-form input-wrapper" action="<?php echo esc_url(home_url('/')); ?>">
         <input type="search" class="input-search"

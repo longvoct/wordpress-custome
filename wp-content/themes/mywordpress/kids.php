@@ -15,18 +15,12 @@ Template Name: kids
   </div>
   <h2 class="product-heading">SẢN PHẨM NỔI BẬT</h2>
   <div class="featured-products-list">
-    <div class="featured-product-item"><img class="featured-product-img"
-        src="<?php bloginfo('template_directory'); ?>/images/men/men-1.jpg" alt=""></div>
-    <div class="featured-product-item"><img class="featured-product-img"
-        src="<?php bloginfo('template_directory'); ?>/images/men/men-2.jpg" alt=""></div>
-    <div class="featured-product-item"><img class="featured-product-img"
-        src="<?php bloginfo('template_directory'); ?>/images/men/men-3.jpg" alt=""></div>
-    <div class="featured-product-item"><img class="featured-product-img"
-        src="<?php bloginfo('template_directory'); ?>/images/men/men-4.jpg" alt=""></div>
-    <div class="featured-product-item"><img class="featured-product-img"
-        src="<?php bloginfo('template_directory'); ?>/images/men/men-5.jpg" alt=""></div>
-    <div class="featured-product-item"><img class="featured-product-img"
-        src="<?php bloginfo('template_directory'); ?>/images/men/men-6.jpg" alt=""></div>
+    <div class="featured-product-item"><img class="featured-product-img" src="<?php bloginfo('template_directory'); ?>/images/men/men-1.jpg" alt=""></div>
+    <div class="featured-product-item"><img class="featured-product-img" src="<?php bloginfo('template_directory'); ?>/images/men/men-2.jpg" alt=""></div>
+    <div class="featured-product-item"><img class="featured-product-img" src="<?php bloginfo('template_directory'); ?>/images/men/men-3.jpg" alt=""></div>
+    <div class="featured-product-item"><img class="featured-product-img" src="<?php bloginfo('template_directory'); ?>/images/men/men-4.jpg" alt=""></div>
+    <div class="featured-product-item"><img class="featured-product-img" src="<?php bloginfo('template_directory'); ?>/images/men/men-5.jpg" alt=""></div>
+    <div class="featured-product-item"><img class="featured-product-img" src="<?php bloginfo('template_directory'); ?>/images/men/men-6.jpg" alt=""></div>
   </div>
 </div>
 
@@ -70,9 +64,9 @@ Template Name: kids
       $products = new WP_Query(array_merge($query_args, $args));
       ?>
       <?php if ($products->have_posts()) : ?>
-      <span style="font-weight: 600;"><?php echo $products->found_posts; ?> kết quả tìm thấy</span>
+        <span style="font-weight: 600;"><?php echo $products->found_posts; ?> kết quả tìm thấy</span>
       <?php else : ?>
-      <span style="font-weight: 600;">Không có kết quả nào được tìm thấy.</span>
+        <span style="font-weight: 600;">Không có kết quả nào được tìm thấy.</span>
       <?php endif; ?>
       <!-- Loading -->
       <div class="dashed-loading" style="display: none;"></div>
@@ -80,15 +74,12 @@ Template Name: kids
       <div class="product-filter">
         <label for="sort-by">Lọc theo:</label>
         <div class="dropdown">
-          <button class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">
+          <button class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <span>Nổi bật</span>
           </button>
           <span class="icon-filter">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-filter"
-              viewBox="0 0 16 16">
-              <path
-                d="M6 10.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5zm-2-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-2-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z" />
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-filter" viewBox="0 0 16 16">
+              <path d="M6 10.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5zm-2-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-2-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z" />
             </svg>
           </span>
           <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton" id="sort-by">

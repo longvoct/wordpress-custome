@@ -813,7 +813,7 @@ li.filter-item.checkbox > label {
   }
 }
 div#wpadminbar {
-  display: none;
+  /* display: none; */
 }
 
 #add_payment_method #payment,
@@ -876,7 +876,8 @@ img.qr-code-1 {
 }
 
 .order-total span.woocommerce-Price-amount.amount {
-  font-size: 22px;
+  font-size: 18px;
+  font-weight: 600;
 }
 
 .product-name > .variation {
@@ -972,4 +973,5 @@ ul.woocommerce-order-overview.woocommerce-thankyou-order-details.order_details {
 
 li.thwvsf-wrapper-item-li.thwvsf-label-li.thwvsf-div.thwvsf-checkbox.attribute_pa_color {
   width: auto !important;
+  min-width: 150px !important;
 }

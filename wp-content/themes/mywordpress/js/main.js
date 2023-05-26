@@ -1,16 +1,16 @@
 // Thao tác với header
 window.addEventListener("load", function () {
-  // var wpAdminBar = document.getElementById("wpadminbar");
-  // if (wpAdminBar) {
-  //   // Nếu có #wpadminbar, đặt top cho header là 32px
-  //   var header = document.querySelector(".header");
-  //   // header.style.top = "32px";
-  //   header.style.top = "0";
-  // } else {
-  //   // Nếu không có #wpadminbar, đặt top cho header là 0
-  //   var header = document.querySelector(".header");
-  //   header.style.top = "0";
-  // }
+  var wpAdminBar = document.getElementById("wpadminbar");
+  if (wpAdminBar) {
+    // Nếu có #wpadminbar, đặt top cho header là 32px
+    var header = document.querySelector(".header");
+    header.style.top = "32px";
+    // header.style.top = "0";
+  } else {
+    // Nếu không có #wpadminbar, đặt top cho header là 0
+    var header = document.querySelector(".header");
+    header.style.top = "0";
+  }
   // Click vote rating
   // Lấy tất cả các radio button và icon sao
   const radioButtons = document.querySelectorAll(
@@ -212,5 +212,32 @@ jQuery(document).on("click", ".yith-wcan a", function (e) {
   jQuery.post(yith_wcan_frontend.ajaxurl, data, function (response) {
     // Cập nhật lại số lượng sản phẩm tìm thấy
     jQuery("#found-posts").html(response + " kết quả tìm thấy");
+  });
+});
+//
+jQuery(document).ready(function ($) {
+  $(".remove_from_cart_button").click(function (e) {
+    e.preventDefault();
+
+    var cart_item_key = $(this).data("cart_item_key");
+    var product_id = $(this).data("product_id");
+
+    $.ajax({
+      type: "POST",
+      dataType: "Text",
+      url: wc_cart_fragments_params.ajax_url,
+      data: {
+        action: "remove_cart_item",
+        cart_item_key: cart_item_key,
+        product_id: product_id,
+      },
+      success: function (response) {
+        // Cập nhật giỏ hàng mini cart
+        $(document.body).trigger("wc_fragment_refresh");
+      },
+      error: function (xhr, status, error) {
+        console.log(error);
+      },
+    });
   });
 });

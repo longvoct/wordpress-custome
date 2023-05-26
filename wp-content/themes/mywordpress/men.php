@@ -6,6 +6,45 @@ Template Name: men
 <?php get_template_part('./components/breadcrumb'); ?>
 <div class="body-content margin-head">
   <h2 class="product-heading">SẢN PHẨM NỔI BẬT</h2>
+  <?php
+  $args = array(
+    'post_type' => 'product',
+    'orderby' => 'date',
+    'order' => 'DESC',
+    'posts_per_page' => 8,
+    'tax_query' => array(
+      array(
+        'taxonomy' => 'product_cat',
+        'field' => 'name',
+        'terms' => 'Men'
+      )
+    )
+  );
+
+  $products = get_posts($args);
+
+  if ($products) {
+    echo '<ul class="featured-products-list">';
+    foreach ($products as $product) {
+      $product_id = $product->ID;
+      $product_link = get_permalink($product_id);
+      $product_title = get_the_title($product_id);
+      $image_url = get_the_post_thumbnail_url($product_id, 'medium');
+      echo '<li class="featured-product-item">
+      <div class="featured__opacity"></div>
+      <a href="' . $product_link . '"><img class="featured-product-img" src="' . $image_url . '" alt="">
+     <button class="featured-product-button">Xem ngay <span>
+     <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M0 7.5C0 3.35786 3.35786 0 7.5 0C11.6421 0 15 3.35786 15 7.5C15 11.6421 11.6421 15 7.5 15C3.35786 15 0 11.6421 0 7.5ZM10.1973 6.24886C11.1654 6.80207 11.1654 8.19801 10.1973 8.75123L6.86549 10.6551C5.97862 11.1619 4.87515 10.5215 4.87515 9.50004L4.87515 5.50004C4.87515 4.47859 5.97863 3.83822 6.86549 4.345L10.1973 6.24886Z" fill="#323232"/>
+</svg>
+     </span>
+     </button>
+      <span class="featured-product-title" >' . $product_title . '</span>
+      </a></li>';
+    }
+    echo '</ul>';
+  }
+  ?>
 </div>
 
 <img class="line-img" src="<?php bloginfo('template_directory'); ?>/images/men/line.png" alt="">
