@@ -5,31 +5,32 @@ Template Name: kids
 <?php get_header(); ?>
 <?php get_template_part('./components/breadcrumb'); ?>
 <div class="kids-content body-content margin-head">
-  <div class="sologan">
-    <p>ĐI CÙNG THỜI TRANG</p>
-    <div class="line"></div>
+  <div style="display: flex;
+  justify-content: space-between;
+  align-items: center;">
+    <div>
+      <div class="sologan">
+        <p>ĐI CÙNG THỜI TRANG</p>
+        <div class="line"></div>
+      </div>
+      <div class="sologan">
+        <div class="line"></div>
+        <p>BỀN VỮNG CÙNG TUỔI THƠ</p>
+      </div>
+    </div>
+    <img src="<?php bloginfo('template_directory'); ?>/images/kids/kids-boys.webp" alt="" class="" style="width: 250px; object-fit: cover; border: solid 5px #eee ; border-radius:8px" />
+    <img src="<?php bloginfo('template_directory'); ?>/images/kids/kids-girls.webp" alt="" class="" style="width: 150px; object-fit: cover; border: solid 5px #eee ; border-radius:8px" />
   </div>
-  <div class="sologan">
-    <div class="line"></div>
-    <p>BỀN VỮNG CÙNG TUỔI THƠ</p>
-  </div>
-  <h2 class="product-heading">SẢN PHẨM NỔI BẬT</h2>
-  <div class="featured-products-list">
-    <div class="featured-product-item"><img class="featured-product-img" src="<?php bloginfo('template_directory'); ?>/images/men/men-1.jpg" alt=""></div>
-    <div class="featured-product-item"><img class="featured-product-img" src="<?php bloginfo('template_directory'); ?>/images/men/men-2.jpg" alt=""></div>
-    <div class="featured-product-item"><img class="featured-product-img" src="<?php bloginfo('template_directory'); ?>/images/men/men-3.jpg" alt=""></div>
-    <div class="featured-product-item"><img class="featured-product-img" src="<?php bloginfo('template_directory'); ?>/images/men/men-4.jpg" alt=""></div>
-    <div class="featured-product-item"><img class="featured-product-img" src="<?php bloginfo('template_directory'); ?>/images/men/men-5.jpg" alt=""></div>
-    <div class="featured-product-item"><img class="featured-product-img" src="<?php bloginfo('template_directory'); ?>/images/men/men-6.jpg" alt=""></div>
-  </div>
+  <img src="<?php bloginfo('template_directory'); ?>/images/kids/converse-kids.webp" alt="" class="" style="height: 500px; width: 100%; object-fit: cover; margin-top: 15px;" />
 </div>
 
-<div class="men-content body-content" style="margin-top: 80px;">
+<div class="men-content body-content" style="margin-top: 50px;">
   <div class="block">
-    <h3 class="block__title">Haretra ultrices varius placerat</h3>
-    <span class="block__text">Lorem ipsum dolor sit amet consectetur. Sit non habitasse eu sed. Turpis erat sed
-      egestas semper. Tincidunt ullamcorper faucibus sapien gravida. Et elementum in ac vitae. Mauris amet molestie
-      neque quam. Odio donec sit mattis nibh porttitor enim sit</span>
+    <h3 class="block__title">Lựa chọn phong cách cá tính cho bé yêu</h3>
+    <p class="block__text">Converse là một lựa chọn tuyệt vời cho các bé yêu thích phong cách thời trang
+      đơn giản và cá tính. Với
+      màu sắc đa dạng, kiểu dáng đẹp mắt và chất liệu bền đẹp, giày Converse không chỉ giúp bé tự tin và thoải
+      mái khi di chuyển giúp bé thể hiện phong cách riêng của mình, dễ dàng kết hợp với nhiều trang phục hàng ngày.
   </div>
 </div>
 <div class="line"></div>

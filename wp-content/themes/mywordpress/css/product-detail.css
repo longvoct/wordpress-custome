@@ -566,6 +566,7 @@ p.woocommerce-mini-cart__empty-message {
   opacity: 0;
   visibility: hidden;
   z-index: 2;
+  font-weight: 500;
 }
 
 .featured-product-button {
