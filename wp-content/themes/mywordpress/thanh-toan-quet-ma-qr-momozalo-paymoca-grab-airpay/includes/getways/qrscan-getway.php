@@ -453,14 +453,9 @@ class QrScanGetWay extends WC_Payment_Gateway
     {
     ?>
         <p id="footer_scan">
-        <div class="use_momo_app">
-            <img width="25" src="<?php echo sprintf("%s/public/images/qr-code-1.png", MC_QUETMA_PLUGIN_URL); ?>" alt="" class="qr-code-1">
-            <span>Sử dụng App <b>MoMo</b> để quét mã.</span>
-        </div>
-        <br>
-        <img width="25" class="loading-quetma" src="<?php echo sprintf("%s/public/images/loading.gif", MC_QUETMA_PLUGIN_URL); ?>" alt=""> <br><strong>Đơn hàng sẽ
-            xử
-            lý tự động <?php echo $this->get_normal_minute_complete_order(); ?> </strong>
+            <img width="25" class="loading-quetma" src="<?php echo sprintf("%s/public/images/loading.gif", MC_QUETMA_PLUGIN_URL); ?>" alt=""> <br><strong>Đơn hàng sẽ
+                xử
+                lý tự động <?php echo $this->get_normal_minute_complete_order(); ?> </strong>
         </p>
 
 <?php

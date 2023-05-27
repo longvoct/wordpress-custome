@@ -80,10 +80,12 @@
   background-color: #f1f1f1;
 }
 .banner-product {
+  margin-top: 100px;
   position: relative;
+  overflow: hidden;
+  height: 650px;
 }
 .banner-product__image {
-  margin-top: 100px;
   height: 650px;
   width: 100%;
   object-fit: cover;
@@ -107,6 +109,11 @@
 .banner-product:hover > .banner-gallery__opacity {
   opacity: 1;
   visibility: visible;
+}
+
+.banner-product:hover .banner-product__image {
+  transform: scale(1.2);
+  transition: all 0.4s linear;
 }
 
 .banner-product__content > span:first-child {
@@ -226,4 +233,29 @@ img.banner-deco_sec {
 .gallery__item:hover .gallery__content {
   opacity: 1;
   visibility: visible;
+}
+
+.use_momo_app {
+  margin-top: 10px;
+}
+.use_momo_app > span {
+  margin-top: 10px;
+  color: #b02473;
+  font-size: 16px;
+  font-weight: 600px;
+  text-transform: uppercase;
+}
+
+div#frame-thanhtoan:has(.use_momo_app) .btnfinish-scan {
+  border: 1px solid #b02473 !important;
+  border-radius: 0 !important;
+}
+
+.btnfinish-scan:hover {
+  background: #b02473 !important;
+  color: #fff !important;
+}
+
+p#footer_scan {
+  margin-bottom: 20px;
 }
