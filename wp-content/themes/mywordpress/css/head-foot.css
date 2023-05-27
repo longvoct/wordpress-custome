@@ -122,33 +122,9 @@ button.search-submi {
   right: 0;
   margin-top: 150px;
   background-color: #111314;
-  padding: 20px 100px;
+  padding: 50px 100px 20px;
   color: #fff;
-  height: 350px;
   margin-bottom: 0 !important;
-}
-.footer-top {
-  margin-top: 45px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  column-gap: 40px;
-  width: 100%;
-}
-.footer-top span {
-  font-weight: 900;
-  font-size: 36px;
-  line-height: 150%;
-  letter-spacing: 0.01em;
-}
-
-.footer-top button {
-  padding: 10px 20px;
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 150%;
-  border: none;
-  outline: none;
 }
 
 .footer-line {
@@ -156,34 +132,6 @@ button.search-submi {
   height: 0.1px;
   width: inherit;
   background-color: rgb(143, 143, 143);
-}
-
-.footer-bottom {
-  margin-top: 40px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.footer-bottom__left {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  column-gap: 15px;
-}
-
-.footer > span {
-  display: inline-block;
-  margin-top: 40px;
-  font-size: 13px;
-  color: #d3d3d3;
-}
-
-.footer-bottom__right {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  column-gap: 15px;
 }
 
 .footer-icon__social {
@@ -380,4 +328,67 @@ ul.woocommerce-mini-cart.cart_list.product_list_widget {
 
 .icon-header.icon-user:hover .icon-header.icon-heart {
   opacity: 0.8;
+}
+
+.footer_title span {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.footer_title > ul {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer_title > ul > li {
+  cursor: pointer;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 80px;
+}
+
+.footer-top__left {
+  flex: 30%;
+}
+
+.footer-top__right {
+  flex: 80%;
+}
+
+.footer-email_input {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  border: solid 1px #ccc;
+  padding: 10px 20px 10px 15px;
+  width: calc(100% - 105px);
+  color: #fff;
+}
+
+.footer-top button {
+  padding: 10px 20px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 150%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.footer-icon__social {
+  width: 27px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.footer-icon__list {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  column-gap: 15px;
 }
