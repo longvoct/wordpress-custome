@@ -300,6 +300,9 @@ ul.woocommerce-mini-cart.cart_list.product_list_widget {
   width: auto !important;
   box-shadow: none !important;
   padding: 0 !important;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .woocommerce-mini-cart__buttons.buttons
@@ -358,7 +361,12 @@ ul.woocommerce-mini-cart.cart_list.product_list_widget {
 
 .woocommerce-mini-cart-item.mini_cart_item .quantity {
   margin-left: 60px;
-  margin-top: 0;
+  margin-top: 5px;
+}
+
+.woocommerce-mini-cart__total.total > .woocommerce-Price-amount.amount {
+  font-size: 18px;
+  font-weight: 600;
 }
 
 .woocommerce #content table.cart img,
@@ -368,4 +376,8 @@ ul.woocommerce-mini-cart.cart_list.product_list_widget {
   width: 150px;
   height: 150px;
   object-fit: cover;
+}
+
+.icon-header.icon-user:hover .icon-header.icon-heart {
+  opacity: 0.8;
 }
