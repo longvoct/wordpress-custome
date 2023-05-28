@@ -1,0 +1,31 @@
+{
+  "name": "volon/mywordpress",
+  "autoload": {
+    "psr-4": {
+      "Volon\\Mywordpress\\": "src/"
+    }
+  },
+  "license": "MIT",
+  "license": "GPL-2.0",
+  "license": "Apache-2.0",
+  "authors": [
+    {
+      "name": "Vo Long",
+      "email": "volonglqd@gmail.com"
+    }
+  ],
+  "require": {
+    "monolog/monolog": "^2.0",
+    "guzzlehttp/guzzle": "^7.0",
+    "innovareti/password-policy": "^1.4"
+  },
+  "scripts": {
+    "test": "phpunit tests/",
+    "build": [
+      "rm -rf build/",
+      "mkdir build/",
+      "cp -r src/ build/",
+      "cp -r vendor/ build/"
+    ]
+  }
+}
