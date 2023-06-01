@@ -1065,3 +1065,7 @@ ul.woocommerce-order-overview.woocommerce-thankyou-order-details.order_details {
 .woocommerce table.shop_table td {
   line-height: 2em !important;
 }
+
+.cart > button.single_add_to_cart_button.button.alt.wp-element-button {
+  margin-top: 30px;
+}

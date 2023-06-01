@@ -259,3 +259,8 @@ div#frame-thanhtoan:has(.use_momo_app) .btnfinish-scan {
 p#footer_scan {
   margin-bottom: 20px;
 }
+
+.woocommerce-order {
+  flex-direction: row-reverse;
+  display: flex;
+}
