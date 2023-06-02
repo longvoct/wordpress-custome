@@ -14,9 +14,9 @@
   width: 100%;
   object-fit: cover;
 }
-.slick-slide {
-  margin-right: 20px !important;
-}
+/* .slick-slide {
+  margin-right: 0px !important;
+} */
 .slick-dots {
   bottom: -45px !important;
 }

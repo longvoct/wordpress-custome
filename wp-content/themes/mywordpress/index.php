@@ -1,16 +1,13 @@
 <?php get_header(); ?>
 <div class="landing-page" style="margin-top: 70px">
-  <img src="<?php bloginfo('template_directory'); ?>/images/banner-test.png" alt="" class="banner-test">
-  <!-- <php get_template_part('slider'); ?> -->
+  <!-- <img src="<php bloginfo('template_directory'); ?>/images/banner-test.png" alt="" class="banner-test"> -->
+  <?php get_template_part('slider'); ?>
 </div>
 
 <div class="body-content">
   <div class="block">
-    <h3 class="block__title">Haretra ultrices varius placerat</h3>
-    <span class="block__text">Lorem ipsum dolor sit amet consectetur. Sit non habitasse eu sed. Turpis erat sed
-      egestas semper. Tincidunt ullamcorper faucibus sapien gravida. Et elementum in ac vitae. Mauris amet molestie
-      neque quam. Nibh neque tincidunt at quis pharetra ultrices varius placerat. Lectus ac tortor vitae convallis
-      pellentesque. Odio donec sit mattis nibh porttitor enim sit</span>
+    <h3 class="block__title">Be Bold. Be Authentic. Be Yourself with Converse.</h3>
+    <span class="block__text">Converse - the perfect companion for your creative journey</span>
   </div>
 
   <!-- Product List -->
