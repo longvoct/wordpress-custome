@@ -619,3 +619,35 @@ button.featured-product-button {
   align-items: center;
   gap: 5px;
 }
+
+select#tinvwl_product_actions {
+  height: 44px !important;
+  padding: 0 10px !important;
+}
+.tinvwl-input-group-btn button.button {
+  padding: 15px 25px !important;
+}
+
+.tinv-wishlist tfoot .tinvwl-to-left + .tinvwl-to-right {
+  margin-top: 0 !important;
+}
+
+.product-action button.button.alt {
+  background: #000 !important;
+  min-width: 200px !important;
+  padding: 15px 25px !important;
+}
+
+.tinv-wishlist tfoot .tinvwl-to-right > * {
+  padding: 15px 25px !important;
+}
+
+.tinvwl-to-right.look_in .tinvwl-action-product_selected {
+  margin-right: 15px !important;
+}
+
+.wishlist_item > td > span,
+.wishlist_item > td > time {
+  display: block !important;
+  text-align: center !important;
+}

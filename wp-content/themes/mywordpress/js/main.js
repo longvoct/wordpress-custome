@@ -159,11 +159,7 @@ jQuery(function ($) {
 
     // Change the value
     if ($(this).is(".plus")) {
-      if (max && currentVal >= max) {
-        $qty.val(max);
-      } else {
-        $qty.val((currentVal + parseFloat(step)).toFixed(step.getDecimals()));
-      }
+      $qty.val((currentVal + parseFloat(step)).toFixed(step.getDecimals()));
     } else {
       if (min && currentVal <= min) {
         $qty.val(min);
