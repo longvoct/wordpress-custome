@@ -267,3 +267,29 @@ function my_custom_cart_is_empty_message()
   }
 }
 add_action('woocommerce_cart_is_empty', 'my_custom_cart_is_empty_message');
+
+
+// Cập nhật cart-count - AJAX mini cart
+add_filter('woocommerce_add_to_cart_fragments', 'custom_cart_fragment');
+// AJAX Mini cart
+function custom_cart_fragment($fragments)
+{
+  ob_start();
+?>
+  <div class="mini-cart-container">
+    <?php include('woocommerce/cart/mini-cart.php'); ?>
+  </div>
+  <?php
+  $fragments['div.mini-cart-container'] = ob_get_clean();
+
+  // Cập nhật lại số lượng sản phẩm trong giỏ hàng
+  ob_start();
+  ?>
+  <span class="cart-count"><?php echo WC()->cart->get_cart_contents_count(); ?></span>
+<?php
+  $fragments['span.cart-count'] = ob_get_clean();
+  return $fragments;
+}
+
+
+//send email

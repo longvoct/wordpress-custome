@@ -1,0 +1,4 @@
+2023-06-02T18:35:10+00:00 CRITICAL Cannot redeclare custom_cart_fragment() (previously declared in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\functions.php:275) in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\functions.php on line 292
+
+2023-06-02T18:35:13+00:00 CRITICAL Cannot redeclare custom_cart_fragment() (previously declared in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\functions.php:275) in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\functions.php on line 292
+

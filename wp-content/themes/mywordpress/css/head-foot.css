@@ -279,7 +279,7 @@ ul.woocommerce-mini-cart.cart_list.product_list_widget {
   align-items: center;
   margin-left: 10px;
   border-radius: 50px;
-  transition: all 0.2s linear;
+  /* transition: all 0.2s linear; */
 }
 
 .remove_from_cart-wrapper:hover {

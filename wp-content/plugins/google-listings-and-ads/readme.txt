@@ -5,7 +5,7 @@ Requires at least: 5.9
 Tested up to: 6.2
 Requires PHP: 7.4
 Requires PHP Architecture: 64 Bits
-Stable tag: 2.4.2
+Stable tag: 2.4.6
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -111,25 +111,17 @@ Yes, you can run both at the same time, and we recommend it! In the US, advertis
 
 == Changelog ==
 
-= 2.4.2 - 2023-03-29 =
-* Tweak - WC 7.6 compatibility.
+= 2.4.6 - 2023-05-30 =
+* Add - Filters for manually mapping product IDs.
+* Tweak - Adjust the MCM filter to always show in channels.
 
-= 2.4.1 - 2023-03-14 =
-* Tweak - WC 7.5 compatibility.
-* Tweak - WP 6.2 compatibility.
+= 2.4.5 - 2023-05-09 =
+* Fix - Bug in Attribute Mapping with Taxonomy based rules not being applied in variations.
+* Fix - Missing spaces between the card layouts on the Get Started page.
+* Tweak - WC 7.7 compatibility.
 
-= 2.4.0 - 2023-03-07 =
-* Add - Support for the Assets of Performance Max campaigns.
-* Dev - Externalize Panel, PanelBody, and PanelRow.
-* Dev - Externalize the KeyboardShortcuts component.
-* Dev - Increase maximum payload size in the test proxy.
-* Fix - The blank Product Feed page after completing the onboarding flow.
-* Tweak - Make the popover of the tooltip can be closed properly.
-
-= 2.3.10 - 2023-02-21 =
-* Add "Working with DEWP.md" to exclude list.
-* Add - Integration with WooCommerce Multichannel Marketing.
-* Tweak - Remove unnecessary PMax migration banners.
-* Tweak - Remove unnecessary woocommerce_loop_add_to_cart_link filter param.
+= 2.4.4 - 2023-05-02 =
+* Dev - Fix SEMGREP warnings.
+* Fix - Prefix Psr\Container package to prevent conflicts with other plugins.
 
 [See changelog for all versions](https://raw.githubusercontent.com/woocommerce/google-listings-and-ads/trunk/changelog.txt).
