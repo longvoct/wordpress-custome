@@ -1,5 +1,20 @@
 // Thao tác với header
 window.addEventListener("load", function () {
+  //Size guide:
+  const popupLink = document.getElementById("popup-link");
+  popupLink.addEventListener("click", () => {
+    const popupWrapper =
+      '<div class="popup-wrapper"><img src="https://converse.ca/media/cms_upload/sizeguide/New-Size-Chart_footwear_adults-EN-min.png" alt="Pop-up Image" ><button id="popup-close">Close</button></div>';
+    document.body.insertAdjacentHTML("beforeend", popupWrapper);
+
+    const popupCloseButton = document.getElementById("popup-close");
+    popupCloseButton.addEventListener("click", () => {
+      console.log("click me");
+      const popupWrapperRemove = document.querySelector(".popup-wrapper");
+      popupWrapperRemove.parentNode.removeChild(popupWrapperRemove);
+    });
+  });
+  // Hidden admin:
   var wpAdminBar = document.getElementById("wpadminbar");
   if (wpAdminBar) {
     // Nếu có #wpadminbar, đặt top cho header là 32px

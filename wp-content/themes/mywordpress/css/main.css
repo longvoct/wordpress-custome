@@ -235,7 +235,8 @@ img.banner-deco_sec {
   visibility: visible;
 }
 
-.use_momo_app {
+.use_momo_app,
+.use_Zalo_app {
   margin-top: 10px;
 }
 .use_momo_app > span {
@@ -246,13 +247,34 @@ img.banner-deco_sec {
   text-transform: uppercase;
 }
 
+.use_Zalo_app > span {
+  margin-top: 10px;
+  color: #058fe5;
+  font-size: 16px;
+  font-weight: 600px;
+  text-transform: uppercase;
+}
+
 div#frame-thanhtoan:has(.use_momo_app) .btnfinish-scan {
   border: 1px solid #b02473 !important;
   border-radius: 0 !important;
+  color: #b02473 !important;
 }
 
-.btnfinish-scan:hover {
+div#frame-thanhtoan:has(.use_momo_app) .btnfinish-scan:hover {
   background: #b02473 !important;
+  color: #fff !important;
+}
+
+div#frame-thanhtoan:has(.use_Zalo_app) .btnfinish-scan {
+  border: 1px solid #058fe5 !important;
+  border-radius: 0 !important;
+  color: #058fe5 !important;
+  margin-bottom: 20px;
+}
+
+div#frame-thanhtoan:has(.use_Zalo_app) .btnfinish-scan:hover {
+  background: #058fe5 !important;
   color: #fff !important;
 }
 
@@ -263,4 +285,59 @@ p#footer_scan {
 .woocommerce-order {
   flex-direction: row-reverse;
   display: flex;
+}
+
+.wc_payment_method label > img {
+  display: inline-block;
+}
+
+li.wc_payment_method.payment_method_zalopay_qr_scan,
+li.wc_payment_method.payment_method_momo_qr_scan {
+  margin-top: 25px !important;
+}
+.woocommerce-shipping-totals.shipping .product-name {
+  max-width: 200px !important;
+}
+
+div#payment {
+  padding: 10px 20px !important;
+}
+
+img.loading-quetma.lazyloaded {
+  width: 30px;
+}
+#frame-thanhtoan > h3 > img,
+img.mc-qrcode,
+img.loading-quetma,
+img.ls-is-cached {
+  margin: 0 auto;
+}
+
+.use_momo_app,
+.use_Zalo_app {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 15px;
+}
+img.qr-code-1 {
+  margin: 0 !important;
+}
+
+section.woocommerce-order-details {
+  margin-top: 50px;
+}
+
+#frame-thanhtoan hr {
+  margin-bottom: 20px;
+}
+
+#frame-thanhtoan hr {
+  margin-top: 20px;
+}
+
+.mc-loinhan {
+  border-radius: 0 !important;
+  line-height: 30px;
+  margin-top: 20px !important;
 }

@@ -272,14 +272,6 @@ input[type="search"]::-ms-clear {
   font-weight: 300;
 }
 
-.tinvwl-icon-heart:before {
-  font-size: 30px;
-}
-
-.tinv-wraper.woocommerce.tinv-wishlist.tinvwl-shortcode-add-to-cart.tinvwl-no-action
-  > a::before {
-  font-size: 25px;
-}
 .woocommerce {
   width: 100% !important;
 }
@@ -427,11 +419,6 @@ input[type="search"]::-ms-clear {
   to {
     transform: rotate(360deg);
   }
-}
-
-.tinv-wraper.woocommerce.tinv-wishlist.tinvwl-shortcode-add-to-cart.tinvwl-no-action
-  > a:before {
-  color: #000;
 }
 
 .woocommerce #content table.cart img,
@@ -837,45 +824,6 @@ div#wpadminbar {
   border-top-color: transparent !important;
 }
 
-.wc_payment_method label > img {
-  display: inline-block;
-}
-
-li.wc_payment_method.payment_method_zalopay_qr_scan,
-li.wc_payment_method.payment_method_momo_qr_scan {
-  margin-top: 25px !important;
-}
-.woocommerce-shipping-totals.shipping .product-name {
-  max-width: 200px !important;
-}
-
-div#payment {
-  padding: 10px 20px !important;
-}
-
-img.loading-quetma.lazyloaded {
-  width: 30px;
-}
-#frame-thanhtoan > h3 > img,
-img.mc-qrcode,
-img.loading-quetma.lazyloaded {
-  margin: 0 auto;
-}
-.use_momo_app {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  column-gap: 15px;
-}
-
-.use_momo_app > span {
-  margin-top: 10px;
-}
-
-img.qr-code-1 {
-  margin: 0 !important;
-}
-
 .order-total span.woocommerce-Price-amount.amount {
   font-size: 18px;
   font-weight: 600;
@@ -899,42 +847,6 @@ img.qr-code-1 {
   background-color: black !important;
 }
 
-.btnfinish-scan:hover {
-  background: #b02473 !important;
-  color: #fff !important;
-}
-
-.btnfinish-scan {
-  border: 1px solid #b02473 !important;
-  color: #b02473 !important;
-  border-radius: 0 !important;
-}
-
-section.woocommerce-order-details {
-  margin-top: 50px;
-}
-
-#frame-thanhtoan hr {
-  margin-bottom: 20px;
-}
-
-#frame-thanhtoan hr {
-  margin-top: 20px;
-}
-/* #frame-thanhtoan img {
-  margin-top: 10px !important;
-} */
-
-.mc-loinhan {
-  border-radius: 0 !important;
-  line-height: 30px;
-  margin-top: 20px !important;
-}
-
-ul.woocommerce-order-overview.woocommerce-thankyou-order-details.order_details {
-  margin-top: 10px;
-}
-
 .product-name a {
   font-weight: 600 !important;
 }
@@ -948,6 +860,9 @@ ul.woocommerce-order-overview.woocommerce-thankyou-order-details.order_details {
 .shipping-calculator-button {
   font-weight: bold;
   color: #2bbaf2;
+}
+.shipping-calculator-button:hover {
+  opacity: 0.7 !important;
 }
 
 .woocommerce-NoticeGroup.woocommerce-NoticeGroup-checkout {
@@ -984,34 +899,39 @@ li.thwvsf-wrapper-item-li.thwvsf-label-li.thwvsf-div.thwvsf-checkbox.attribute_p
 }
 
 .woocommerce-order_right__reverse {
-  flex: 32%;
-  padding: 25px;
-  max-height: 260px;
+  flex: 35%;
+  padding: 30px;
+  max-height: 360px;
   background-color: #f9f9f9;
 }
 
 .woocommerce-order_left__reverse {
-  flex: 68%;
+  flex: 65%;
 }
 
 p.woocommerce-notice.woocommerce-notice--success.woocommerce-thankyou-order-received {
-  color: #00d084;
+  color: #000;
   font-weight: 600;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #ccc;
 }
 
-.wc_payment_method.payment_method_momo_qr_scan img {
+.wc_payment_method.payment_method_momo_qr_scan img,
+.payment_method_zalopay_qr_scan img {
   width: 40px !important;
 }
 
 .woocommerce ul.order_details li {
   border: none;
+  margin-right: 0;
+  padding-right: 0;
 }
 
 .woocommerce-order-overview.woocommerce-thankyou-order-details.order_details
   li {
-  gap: 15px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   font-weight: 600;
   font-size: 14px;
   text-transform: none;
@@ -1026,7 +946,7 @@ p.woocommerce-notice.woocommerce-notice--success.woocommerce-thankyou-order-rece
 ul.woocommerce-order-overview.woocommerce-thankyou-order-details.order_details {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 30px !important;
 }
 
 .woocommerce .woocommerce-customer-details address {
@@ -1068,4 +988,29 @@ ul.woocommerce-order-overview.woocommerce-thankyou-order-details.order_details {
 
 .cart > button.single_add_to_cart_button.button.alt.wp-element-button {
   margin-top: 30px;
+}
+
+li.woocommerce-order-overview__total.total,
+li.woocommerce-order-overview__total.total bdi {
+  font-size: 16px !important;
+  font-weight: 700;
+}
+
+/* Size guide */
+.popup-wrapper {
+  height: 100vh;
+  width: 100%;
+  object-fit: cover;
+  overflow-y: scroll !important;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  display: block;
+  padding: 30px;
+}
+.popup-wrapper img {
+  margin: 0 auto !important;
 }

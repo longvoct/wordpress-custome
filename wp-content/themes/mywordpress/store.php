@@ -23,7 +23,7 @@
 
         $args = array(
           'post_type'      => 'product',
-          'posts_per_page' => 24,
+          // 'posts_per_page' => 24,
         );
         // Truy vấn sản phẩm và tính toán số trang dựa trên số lượng sản phẩm chia cho xx
         $products = new WP_Query(array_merge($query_args, $args));
@@ -103,7 +103,7 @@
 
         $args = array(
           'post_type'      => 'product',
-          'posts_per_page' => 24,
+          // 'posts_per_page' => 24,
         );
         // Sắp xếp sản phẩm
         if (isset($_GET['sort_by'])) {
@@ -137,7 +137,7 @@
           $args['order'] = 'DESC';
         }
         // Truy vấn sản phẩm
-        $total_pages = ceil($products->found_posts / 24);
+        // $total_pages = ceil($products->found_posts / 24);
         if ($products->have_posts()) {
           while ($products->have_posts()) {
             $products->the_post();
@@ -158,7 +158,7 @@
           'base'         => get_pagenum_link(1) . '%_%',
           'format'       => 'page/%#%',
           'current'      => $current_page,
-          'total'        => $total_pages,
+          // 'total'        => $total_pages,
           'prev_text'    => '&laquo;',
           'next_text'    => '&raquo;',
           'type'         => 'list',
