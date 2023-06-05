@@ -46,6 +46,7 @@
 .woocommerce-MyAccount-content > p > a {
   font-weight: bold;
   text-decoration: underline;
+  color: #2bbaf2;
 }
 
 .woocommerce-MyAccount-content > p:nth-child(3) {
