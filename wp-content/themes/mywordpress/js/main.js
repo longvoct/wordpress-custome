@@ -4,7 +4,7 @@ window.addEventListener("load", function () {
   const popupLink = document.getElementById("popup-link");
   popupLink.addEventListener("click", () => {
     const popupWrapper =
-      '<div class="popup-wrapper"><img src="https://converse.ca/media/cms_upload/sizeguide/New-Size-Chart_footwear_adults-EN-min.png" alt="Pop-up Image" ><button id="popup-close">Close</button></div>';
+      '<div class="popup-wrapper"><div class="popup-image"><img src="https://converse.ca/media/cms_upload/sizeguide/New-Size-Chart_footwear_adults-EN-min.png" alt="Pop-up Image" ></div><button id="popup-close"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-x-square-fill" viewBox="0 0 16 16"><path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm3.354 4.646L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 1 1 .708-.708z"/></svg></button></div>';
     document.body.insertAdjacentHTML("beforeend", popupWrapper);
 
     const popupCloseButton = document.getElementById("popup-close");
@@ -15,17 +15,17 @@ window.addEventListener("load", function () {
     });
   });
   // Hidden admin:
-  var wpAdminBar = document.getElementById("wpadminbar");
-  if (wpAdminBar) {
-    // Nếu có #wpadminbar, đặt top cho header là 32px
-    var header = document.querySelector(".header");
-    header.style.top = "32px";
-    // header.style.top = "0";
-  } else {
-    // Nếu không có #wpadminbar, đặt top cho header là 0
-    var header = document.querySelector(".header");
-    header.style.top = "0";
-  }
+  // const wpAdminBar = document.getElementById("wpadminbar");
+  // if (wpAdminBar) {
+  //   // Nếu có #wpadminbar, đặt top cho header là 32px
+  //   var header = document.querySelector(".header");
+  //   header.style.top = "32px";
+  //   // header.style.top = "0";
+  // } else {
+  //   // Nếu không có #wpadminbar, đặt top cho header là 0
+  //   var header = document.querySelector(".header");
+  //   header.style.top = "0";
+  // }
   // Click vote rating
   // Lấy tất cả các radio button và icon sao
   const radioButtons = document.querySelectorAll(

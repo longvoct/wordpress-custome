@@ -79,9 +79,14 @@ img.wp-post-image {
   font-weight: 700;
   margin-right: 10px;
 }
-.quantity_wrapper {
+
+.quantity_and_size-guide {
   margin-top: 20px;
+  display: flex;
+  align-items: flex-end;
+  gap: 150px;
 }
+
 .posted_in a,
 .sku_wrapper .sku {
   font-weight: 400;
@@ -601,4 +606,50 @@ span.tinvwl-txt {
 
 i.ftinvwl.ftinvwl-shopping-cart {
   display: block !important;
+}
+
+/* Size guide */
+.popup-wrapper {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 9999;
+  display: block;
+  padding: 30px;
+}
+.popup-wrapper img {
+  margin: 0 auto !important;
+}
+
+#popup-link {
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s linear;
+}
+#popup-link:hover {
+  color: #9a9a9a;
+}
+
+.popup-image {
+  position: relative;
+  overflow-y: scroll !important;
+  height: inherit;
+  width: 918px;
+  margin: 0 auto;
+}
+
+#popup-close {
+  position: fixed;
+  cursor: pointer;
+  top: 30px;
+  right: 0px;
+  padding: 10px 15px;
+  background: none;
+  color: #fff;
+  border: none;
+  outline: none;
 }
