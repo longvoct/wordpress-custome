@@ -115,10 +115,34 @@ input[type="checkbox"]:checked {
 h4.filter-title {
   display: inline-block;
   font-weight: 700;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 150%;
   color: #212121 !important;
   margin-bottom: 10px;
+}
+
+h4.filter-title {
+  margin-bottom: 15px;
+  cursor: pointer;
+  position: relative;
+  display: block;
+}
+h4.filter-title:before {
+  position: absolute;
+  content: "+";
+  z-index: 10;
+  right: 0;
+  top: 0;
+}
+
+.filter-content {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.3s ease-in-out;
+}
+
+.filter-content.active {
+  height: auto;
 }
 
 .flex-content {
@@ -592,13 +616,13 @@ span.wpcf7-not-valid-tip {
 
 .yith-wcan-filters .yith-wcan-filter .filter-items .filter-item.label {
   border-radius: 0 !important;
+  box-shadow: none !important;
   width: 120px !important;
 }
 
 ul.filter-items.filter-color.level-0 {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
-  column-gap: 15px !important;
   row-gap: 0;
 }
 ul.filter-items.filter-label.level-0 {
@@ -612,9 +636,6 @@ ul.filter-items.filter-label.level-0 {
   border-color: #1a1919 !important;
 }
 
-h4.filter-title {
-  margin-bottom: 15px;
-}
 .yith-wcan-filters
   .yith-wcan-filter
   .filter-items
@@ -643,7 +664,7 @@ h4.filter-title {
   .yith-wcan-filter
   .filter-items
   .filter-item.label:not(.disabled):hover {
-  box-shadow: 0 0 0 1px #575757 !important;
+  box-shadow: none !important;
 }
 
 .yith-wcan-filters
@@ -781,7 +802,7 @@ li.filter-item.checkbox > label {
   .filter-items
   .filter-item.label
   .term-label {
-  font-size: 13px !important;
+  font-size: 11px !important;
 }
 
 .product-list__variations {
