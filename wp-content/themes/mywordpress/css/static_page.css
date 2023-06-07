@@ -83,3 +83,11 @@ em {
   display: inline-block;
   font-size: 13px;
 }
+
+.must-log-in {
+  margin-top: 15px;
+}
+.must-log-in a {
+  font-weight: 600;
+  color: #2bbaf2;
+}

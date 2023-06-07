@@ -2,8 +2,7 @@
   <div class="footer-top">
     <div class="footer-top__left">
       <div class="logo">
-        <a href="<?php bloginfo('url'); ?>"><img src="<?php bloginfo('template_directory'); ?>/images/logo-white.png"
-            alt="<?php bloginfo('name'); ?>" class="img-logo" /></a>
+        <a href="<?php bloginfo('url'); ?>"><img src="<?php bloginfo('template_directory'); ?>/images/logo-white.png" alt="<?php bloginfo('name'); ?>" class="img-logo" /></a>
       </div>
       <p style="margin-top: 10px; font-weight: 500;">Nhận các thông báo mới của ORDERSHOE</p>
       <div class="field-email" style="margin-top: 15px; display: flex;
@@ -52,12 +51,9 @@
             <li>Địa chỉ: Linh Trung, Thủ Đức</li>
             <li>Email: ordershoescv@gmail.com</li>
             <li class="footer-icon__list">
-              <img src="<?php bloginfo('template_directory'); ?>/images/facebook.png" alt=""
-                class="footer-icon__social" />
-              <img src="<?php bloginfo('template_directory'); ?>/images/instagram.png" alt=""
-                class="footer-icon__social" />
-              <img src="<?php bloginfo('template_directory'); ?>/images/tik-tok.png" alt=""
-                class="footer-icon__social" />
+              <img src="<?php bloginfo('template_directory'); ?>/images/facebook.png" alt="" class="footer-icon__social" />
+              <img src="<?php bloginfo('template_directory'); ?>/images/instagram.png" alt="" class="footer-icon__social" />
+              <img src="<?php bloginfo('template_directory'); ?>/images/tik-tok.png" alt="" class="footer-icon__social" />
             </li>
           </ul>
         </li>
@@ -72,6 +68,8 @@
 
 </div>
 <?php wp_footer(); ?>
+<!-- Viết Jquery -->
+<script src="<?php bloginfo('template_directory'); ?>/js/index.js"></script>
 </body>
 
 </html>

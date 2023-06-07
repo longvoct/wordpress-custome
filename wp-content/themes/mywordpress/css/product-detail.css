@@ -619,7 +619,7 @@ i.ftinvwl.ftinvwl-shopping-cart {
   background-color: rgba(0, 0, 0, 0.9);
   z-index: 9999;
   display: block;
-  padding: 30px;
+  padding: 0px;
 }
 .popup-wrapper img {
   margin: 0 auto !important;
@@ -645,7 +645,7 @@ i.ftinvwl.ftinvwl-shopping-cart {
 #popup-close {
   position: fixed;
   cursor: pointer;
-  top: 30px;
+  top: 0px;
   right: 0px;
   padding: 10px 15px;
   background: none;

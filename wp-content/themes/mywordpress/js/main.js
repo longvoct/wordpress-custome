@@ -1,15 +1,6 @@
 // Thao tác với header
 window.addEventListener("load", function () {
   // Ẩn hiện các thẻ:
-  var filterTitles = document.querySelectorAll(".filter-title");
-  filterTitles.forEach((filterTitle) => {
-    filterTitle.addEventListener("click", function () {
-      console.log("Filter: " + filterTitle);
-      var filterContent = this.nextElementSibling;
-      filterContent.classList.toggle("active");
-    });
-  });
-
   //Size guide:
   const popupLink = document.getElementById("popup-link");
   popupLink.addEventListener("click", () => {
