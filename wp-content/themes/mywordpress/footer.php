@@ -70,6 +70,9 @@
 <?php wp_footer(); ?>
 <!-- Viết Jquery -->
 <script src="<?php bloginfo('template_directory'); ?>/js/index.js"></script>
+<script>
+  AOS.init();
+</script>
 </body>
 
 </html>

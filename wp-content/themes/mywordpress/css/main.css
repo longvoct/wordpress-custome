@@ -340,3 +340,54 @@ section.woocommerce-order-details {
   line-height: 30px;
   margin-top: 20px !important;
 }
+
+.banner-colors {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.banner-color {
+  position: relative;
+}
+
+.banner-color span {
+  position: absolute;
+  bottom: 15px;
+  font-weight: 500;
+  left: 15px;
+}
+
+.fashion-trending {
+  position: relative;
+}
+.fashion-trending__content {
+  position: absolute;
+  top: 125px;
+  left: 45px;
+}
+
+.fashion-trending__content span {
+  font-size: 22px;
+  font-weight: 700;
+}
+.fashion-trending__content p {
+  line-height: 150%;
+  margin-top: 10px;
+}
+
+.fashion-trending__content button {
+  margin-top: 30px;
+  padding: 10px 20px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 150%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: #000;
+  color: #fff;
+}
+
+.banner-color__image:hover {
+  opacity: 0.8;
+}
