@@ -6,8 +6,8 @@
 .slick-next:before {
   content: "";
   position: absolute;
-  border-top: 2px solid #555;
-  border-left: 2px solid #555;
+  border-top: 2px solid #000;
+  border-left: 2px solid #000;
   height: 8px;
   width: 8px;
   right: 19px;
