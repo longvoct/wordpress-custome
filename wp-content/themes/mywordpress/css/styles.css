@@ -616,6 +616,10 @@ span.wpcf7-not-valid-tip {
   margin-top: 20px;
 }
 
+.u-column2.col-2 {
+  margin-top: 46px !important;
+}
+
 .yith-wcan-filters
   .yith-wcan-filter
   .filter-items
@@ -896,7 +900,7 @@ div#wpadminbar {
   color: #000;
 }
 .woocommerce-privacy-policy-link {
-  color: #00d084;
+  color: #2bbaf2;
   font-weight: 600;
 }
 #payment_method_bacs.input-radio:checked::before {
