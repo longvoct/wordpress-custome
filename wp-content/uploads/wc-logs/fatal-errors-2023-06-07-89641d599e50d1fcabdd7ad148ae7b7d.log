@@ -1,0 +1,61 @@
+2023-06-07T15:01:20+00:00 CRITICAL Uncaught Error: Call to undefined function wp_pagenavi() in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\store.php:151
+Stack trace:
+#0 C:\xampp\htdocs\mywordpress\wp-includes\template-loader.php(106): include()
+#1 C:\xampp\htdocs\mywordpress\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\mywordpress\index.php(17): require('C:\\xampp\\htdocs...')
+#3 {main}
+  thrown in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\store.php on line 151
+
+2023-06-07T15:03:59+00:00 CRITICAL Uncaught Error: Call to a member function get() on null in C:\xampp\htdocs\mywordpress\wp-content\plugins\wp-pagenavi\core.php:261
+Stack trace:
+#0 C:\xampp\htdocs\mywordpress\wp-content\plugins\wp-pagenavi\core.php(40): PageNavi_Call->get_pagination_args()
+#1 C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\store.php(148): wp_pagenavi(Array)
+#2 C:\xampp\htdocs\mywordpress\wp-includes\template-loader.php(106): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\mywordpress\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\mywordpress\index.php(17): require('C:\\xampp\\htdocs...')
+#5 {main}
+  thrown in C:\xampp\htdocs\mywordpress\wp-content\plugins\wp-pagenavi\core.php on line 261
+
+2023-06-07T16:25:21+00:00 CRITICAL Uncaught Error: Call to a member function have_posts() on null in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\store.php:32
+Stack trace:
+#0 C:\xampp\htdocs\mywordpress\wp-includes\template-loader.php(106): include()
+#1 C:\xampp\htdocs\mywordpress\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\mywordpress\index.php(17): require('C:\\xampp\\htdocs...')
+#3 {main}
+  thrown in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\store.php on line 32
+
+2023-06-07T16:25:38+00:00 CRITICAL Uncaught Error: Call to a member function have_posts() on null in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\store.php:32
+Stack trace:
+#0 C:\xampp\htdocs\mywordpress\wp-includes\template-loader.php(106): include()
+#1 C:\xampp\htdocs\mywordpress\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\mywordpress\index.php(17): require('C:\\xampp\\htdocs...')
+#3 {main}
+  thrown in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\store.php on line 32
+
+2023-06-07T16:25:47+00:00 CRITICAL Uncaught Error: Call to a member function have_posts() on null in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\store.php:32
+Stack trace:
+#0 C:\xampp\htdocs\mywordpress\wp-includes\template-loader.php(106): include()
+#1 C:\xampp\htdocs\mywordpress\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\mywordpress\index.php(17): require('C:\\xampp\\htdocs...')
+#3 {main}
+  thrown in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\store.php on line 32
+
+2023-06-07T16:26:34+00:00 CRITICAL Uncaught Error: Call to a member function have_posts() on null in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\store.php:32
+Stack trace:
+#0 C:\xampp\htdocs\mywordpress\wp-includes\template-loader.php(106): include()
+#1 C:\xampp\htdocs\mywordpress\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\mywordpress\index.php(17): require('C:\\xampp\\htdocs...')
+#3 {main}
+  thrown in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\store.php on line 32
+
+2023-06-07T16:28:03+00:00 CRITICAL Cannot use isset() on the result of an expression (you can use "null !== expression" instead) in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\store.php on line 32
+
+2023-06-07T16:28:59+00:00 CRITICAL Uncaught TypeError: array_merge(): Argument #1 must be of type array, null given in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\store.php:21
+Stack trace:
+#0 C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\store.php(21): array_merge(NULL, NULL)
+#1 C:\xampp\htdocs\mywordpress\wp-includes\template-loader.php(106): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\mywordpress\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\mywordpress\index.php(17): require('C:\\xampp\\htdocs...')
+#4 {main}
+  thrown in C:\xampp\htdocs\mywordpress\wp-content\themes\mywordpress\store.php on line 21
+

@@ -308,8 +308,7 @@ img.loading-quetma.lazyloaded {
 }
 #frame-thanhtoan > h3 > img,
 img.mc-qrcode,
-img.loading-quetma,
-img.ls-is-cached {
+img.loading-quetma {
   margin: 0 auto;
 }
 

@@ -59,7 +59,7 @@ Template Name: kids
 
       $args = array(
         'post_type'      => 'product',
-        'posts_per_page' => 24,
+        'posts_per_page' => 48,
       );
       // Truy vấn sản phẩm và tính toán số trang dựa trên số lượng sản phẩm chia cho xx
       $products = new WP_Query(array_merge($query_args, $args));
@@ -109,7 +109,7 @@ Template Name: kids
 
       $args = array(
         'post_type'      => 'product',
-        'posts_per_page' => 24,
+        'posts_per_page' => 48,
       );
 
       if (isset($_GET['filter_color']) && isset($_GET['filter_size'])) {
@@ -160,7 +160,7 @@ Template Name: kids
 
       $args = array(
         'post_type'      => 'product',
-        'posts_per_page' => 24,
+        'posts_per_page' => 48,
       );
       // Sắp xếp sản phẩm
       if (isset($_GET['sort_by'])) {
@@ -196,7 +196,6 @@ Template Name: kids
       // Truy vấn sản phẩm
       // Truy vấn sản phẩm và tính toán số trang dựa trên số lượng sản phẩm chia cho 12
       $products = new WP_Query(array_merge($query_args, $args));
-      $total_pages = ceil($products->found_posts / 24);
       if ($products->have_posts()) {
         while ($products->have_posts()) {
           $products->the_post();
@@ -207,36 +206,8 @@ Template Name: kids
       wp_reset_postdata();
       ?>
     </div>
-    <!-- <div class="pagination">
-      <a href="#" class="prev">&laquo;</a>
-      <a href="#" class="page active">1</a>
-      <a href="#" class="page">2</a>
-      <a href="#" class="page">3</a>
-      <a href="#" class="page">4</a>
-      <a href="#" class="page">5</a>
-      <a href="#" class="next">&raquo;</a>
-    </div> -->
     <div class="pagination">
-      <?php
-      // Lấy giá trị của biến $current_page từ URL
-      $current_page = max(1, get_query_var('paged'));
-
-      // Cấu hình các tham số cho hàm paginate_links
-      $args = array(
-        'base'         => get_pagenum_link(1) . '%_%',
-        'format'       => 'page/%#%',
-        'current'      => $current_page,
-        'total'        => $total_pages,
-        'prev_text'    => '&laquo;',
-        'next_text'    => '&raquo;',
-        'type'         => 'list',
-        'end_size'     => 2,
-        'mid_size'     => 2,
-      );
-
-      // Hiển thị phân trang
-      echo paginate_links($args);
-      ?>
+      <?php wp_pagenavi(array('query' => $products)); ?>
     </div>
   </div>
 </div>

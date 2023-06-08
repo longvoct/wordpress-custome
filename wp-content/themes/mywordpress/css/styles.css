@@ -201,7 +201,8 @@ ul.filter-items.filter-checkbox.level-0 {
   margin-top: 80px;
 }
 
-.page-numbers {
+.page-numbers,
+.wp-pagenavi {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -209,20 +210,32 @@ ul.filter-items.filter-checkbox.level-0 {
 }
 
 .page-numbers a,
-.page-numbers span {
+.page-numbers span,
+.wp-pagenavi a,
+.wp-pagenavi span.extend,
+.wp-pagenavi span.current {
   color: black;
   float: left;
-  padding: 8px 16px;
+  padding: 8px 16px !important;
   text-decoration: none;
-  border: 1px solid #ddd;
+  border: 1px solid #ddd !important;
+}
+.wp-pagenavi span.current {
+  background-color: #000 !important;
+  color: white !important;
+}
+.wp-pagenavi span.pages {
+  padding: 8px 16px !important;
+  border: none !important;
 }
 .page-numbers span {
   color: #fff;
 }
 
-li:has(.page-numbers.current) {
-  background-color: #000;
-  color: white;
+li:has(.page-numbers.current),
+.wp-pagenavi > span:has(.current) {
+  background-color: #000 !important;
+  color: white !important;
 }
 .page-numbers.dots {
   color: #000 !important;
@@ -514,7 +527,7 @@ button.btn.btn-primary.yith-wcan-reset-filters.reset-filters.enhanced {
   border: none;
   outline: none;
   cursor: pointer;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   width: 100%;
   font-weight: 500;
   /* border-bottom: solid 1px #000; */
