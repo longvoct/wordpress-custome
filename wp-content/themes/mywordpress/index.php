@@ -29,8 +29,8 @@
     <?php global $wp_query;
     $wp_query->in_the_loop = true; ?>
     <?php while ($getposts->have_posts()) : $getposts->the_post(); ?>
-    <?php global $product; ?>
-    <?php get_template_part('./components/product'); ?>
+      <?php global $product; ?>
+      <?php get_template_part('./components/product'); ?>
     <?php endwhile;
     wp_reset_postdata(); ?>
     <!-- <div class="product-list__item">
@@ -54,8 +54,7 @@
       </div>
     </div>
     <div class="gallery__item gallery__item--women" data-aos="fade-down" data-aos-duration="1000">
-      <img class="gallery__item-image" src="<?php bloginfo('template_directory'); ?>/images/women.webp"
-        alt="men-product">
+      <img class="gallery__item-image" src="<?php bloginfo('template_directory'); ?>/images/women.webp" alt="men-product">
       <div class="gallery__opacity"></div>
       <div class="gallery__content">
         <h3 class="gallery__caption">Sneakers dành cho Nữ</h3>
@@ -65,8 +64,7 @@
       </div>
     </div>
     <div class="gallery__item gallery__item--kids" data-aos="fade-down" data-aos-duration="800">
-      <img class="gallery__item-image" src="<?php bloginfo('template_directory'); ?>/images/kids.webp"
-        alt="men-product">
+      <img class="gallery__item-image" src="<?php bloginfo('template_directory'); ?>/images/kids.webp" alt="men-product">
       <div class="gallery__opacity"></div>
       <div class="gallery__content">
         <h3 class="gallery__caption">Sneakers cho trẻ em</h3>
@@ -94,7 +92,7 @@
         $products->the_post();
         global $product;
     ?>
-    <?php get_template_part('/components/product'); ?>
+        <?php get_template_part('/components/product'); ?>
     <?php
       }
       wp_reset_postdata();
@@ -106,8 +104,7 @@
   </div>
 
   <!-- Fashion trendind -->
-  <div class="fashion-trending" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="800"
-    style="margin-top: 60px;">
+  <div class="fashion-trending" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="800" style="margin-top: 60px;">
     <img class="fashion-trending__image" src="<?php bloginfo('template_directory'); ?>/images/banner.webp" alt="">
     <div class="fashion-trending__content">
       <span>XU HƯỚNG THỜI TRANG</span>
@@ -119,15 +116,13 @@
   <div class="banner-colors" style="margin-top: 60px;">
     <a href="http://converse.azdigi.shop/cua-hang/?yith_wcan=1&filter_mau-chu-dao=white&query_type_mau-chu-dao=and">
       <div class="banner-color" data-aos="fade-right" data-aos-offset="500" data-aos-easing="ease-in-sine">
-        <img class="banner-color__image" src="<?php bloginfo('template_directory'); ?>/images/Converse-White.jpg"
-          alt="">
+        <img class="banner-color__image" src="<?php bloginfo('template_directory'); ?>/images/Converse-White.jpg" alt="">
         <span>Trắng</span>
       </div>
     </a>
     <a href="http://converse.azdigi.shop/cua-hang/?yith_wcan=1&filter_mau-chu-dao=black&query_type_mau-chu-dao=and">
       <div class="banner-color" data-aos="fade-right" data-aos-offset="500" data-aos-easing="ease-in-sine">
-        <img class="banner-color__image" src="<?php bloginfo('template_directory'); ?>/images/Converse-Black.jpg"
-          alt="">
+        <img class="banner-color__image" src="<?php bloginfo('template_directory'); ?>/images/Converse-Black.jpg" alt="">
         <span style="color:#fff">Đen</span>
       </div>
     </a>
@@ -147,8 +142,7 @@
   </div>
   <!-- Banner-product -->
   <div class="banner-product">
-    <img class="banner-product__image" src="<?php bloginfo('template_directory'); ?>/images/banner-product-title.webp"
-      alt="Product Image">
+    <img class="banner-product__image" src="<?php bloginfo('template_directory'); ?>/images/banner-product-title.webp" alt="Product Image">
     <div class="banner-gallery__opacity"></div>
     <div class="banner-product__content">
       <span>One Star Pro Sean Pablo </br>

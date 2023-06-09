@@ -438,46 +438,6 @@ input[type="search"]::-ms-clear {
   font-weight: bold;
 }
 
-.dashed-loading {
-  position: relative;
-  height: 30px;
-}
-
-.dashed-loading:after,
-.dashed-loading:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  border-radius: 50%;
-  width: 20px;
-  height: 20px;
-}
-
-.dashed-loading:before {
-  z-index: 5;
-  border: 2px dashed #4f4f4f;
-  border-left: 2px solid transparent;
-  border-bottom: 2px solid transparent;
-  -webkit-animation: dashed 1s linear infinite;
-  animation: dashed 1s linear infinite;
-}
-
-.dashed-loading:after {
-  z-index: 10;
-  border: 3px solid #000000;
-  border-left: 2px solid transparent;
-  border-bottom: 2px solid transparent;
-  -webkit-animation: dashed 1s ease infinite;
-  animation: dashed 1s ease infinite;
-}
-
-@keyframes dashed {
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 .woocommerce #content table.cart img,
 .woocommerce table.cart img,
 .woocommerce-page #content table.cart img,
@@ -969,6 +929,32 @@ li.thwvsf-wrapper-item-li.thwvsf-label-li.thwvsf-div.thwvsf-checkbox.attribute_p
   flex: 65%;
 }
 
+section.woocommerce-bacs-bank-details {
+  color: #077746;
+  border-radius: 16px;
+  background: #f7f8fa;
+  padding: 25px;
+  border: dashed 1px;
+  margin-bottom: -20px !important;
+}
+
+.woocommerce ul.order_details {
+  margin: 10px 0 -5px !important;
+  list-style: none;
+  display: flex;
+  column-gap: 50px;
+}
+
+h3.wc-bacs-bank-details-account-name {
+  margin-top: 10px;
+}
+
+.woocommerce ul.order_details::after,
+.woocommerce ul.order_details::before {
+  content: " ";
+  display: none;
+}
+
 p.woocommerce-notice.woocommerce-notice--success.woocommerce-thankyou-order-received {
   color: #000;
   font-weight: 600;
@@ -1062,4 +1048,17 @@ li.woocommerce-order-overview__total.total bdi {
 
 .woocommerce-cart-form__cart-item.cart_item .quantity_and_size-guide {
   margin-top: 0 !important;
+}
+
+.woocommerce-shipping-methods input[type="radio"] {
+  display: inline-block !important;
+}
+
+.woocommerce-shipping-methods
+  > li:first-child
+  > input#shipping_method_0_flat_rate2 {
+  display: none !important;
+}
+.woocommerce-shipping-methods > li:first-child > label {
+  pointer-events: none !important;
 }

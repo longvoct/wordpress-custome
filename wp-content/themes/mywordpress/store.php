@@ -23,28 +23,35 @@
 
       $args = array(
         'post_type'      => 'product',
-        'posts_per_page' => 48,
+        'posts_per_page' => 60,
+        'paged' => get_query_var('paged') ? get_query_var('paged') : 1
       );
       // Truy vấn sản phẩm và tính toán số trang dựa trên số lượng sản phẩm chia cho xx
       $products = new WP_Query(array_merge($query_args, $args));
       ?>
       <?php if ($products->have_posts()) : ?>
-        <span style="font-weight: 600;"><?php echo $products->found_posts; ?> kết quả tìm thấy</span>
+      <span style="font-weight: 600;"><?php echo $products->found_posts; ?> kết quả tìm thấy</span>
       <?php else : ?>
-        <span style="font-weight: 600;">Không có kết quả nào được tìm thấy.</span>
+      <span style="font-weight: 600;">Không có kết quả nào được tìm thấy.</span>
       <?php endif; ?>
       <!-- Loading -->
-      <div class="dashed-loading" style="display: none;"></div>
+      <div class="dashed-loading" style="display: none;">
+        <img class="loading_product" src="<?php bloginfo('template_directory'); ?>/images/loading.gif" alt="loading"
+          style="width:25px; height: 25px; object-fit: cover;">
+      </div>
       <!-- Filter -->
       <div class="product-filter">
         <label for="sort-by">Lọc theo:</label>
         <div class="dropdown">
-          <button class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <button class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
             <span>Nổi bật</span>
           </button>
           <span class="icon-filter">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-filter" viewBox="0 0 16 16">
-              <path d="M6 10.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5zm-2-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-2-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z" />
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-filter"
+              viewBox="0 0 16 16">
+              <path
+                d="M6 10.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5zm-2-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-2-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z" />
             </svg>
           </span>
           <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton" id="sort-by">
@@ -66,7 +73,7 @@
 
       $args = array(
         'post_type'      => 'product',
-        'posts_per_page' => 48,
+        'posts_per_page' => 60,
       );
 
       if (isset($_GET['filter_color']) && isset($_GET['filter_size'])) {
@@ -112,7 +119,7 @@
 
       $args = array(
         'post_type'      => 'product',
-        'posts_per_page' => 48,
+        'posts_per_page' => 60,
       );
       // Sắp xếp sản phẩm
       if (isset($_GET['sort_by'])) {
@@ -146,6 +153,11 @@
         $args['order'] = 'DESC';
       }
       // Truy vấn sản phẩm
+      $query_args = array(
+        'post_type' => 'product',
+        'posts_per_page' => -1,
+        'paged' => get_query_var('paged') ? get_query_var('paged') : 1
+      );
       // Truy vấn sản phẩm và tính toán số trang dựa trên số lượng sản phẩm chia cho 12
       $products = new WP_Query(array_merge($query_args, $args));
       if ($products->have_posts()) {
@@ -164,75 +176,75 @@
   </div>
 </div>
 <script>
-  jQuery(document).ready(function($) {
-    // Lấy giá trị ban đầu của dropdown
-    var sortBy = $('#sort-by li[data-value="' + $('#sort-by').data('value') + '"]').data('value');
+jQuery(document).ready(function($) {
+  // Lấy giá trị ban đầu của dropdown
+  var sortBy = $('#sort-by li[data-value="' + $('#sort-by').data('value') + '"]').data('value');
 
-    // Thêm sự kiện "mousedown" cho dropdown-toggle
-    $('.dropdown-toggle').on('mousedown', function(e) {
-      e.preventDefault();
-      var dropdownMenu = $(this).parent().find('.dropdown-menu');
-      if (dropdownMenu.is(':hidden')) {
-        dropdownMenu.show();
-      } else {
-        dropdownMenu.hide();
-      }
-    });
-
-    // Thêm sự kiện "click" cho các mục trong dropdown-menu
-    $('#sort-by').on('click', 'a', function(e) {
-      e.preventDefault();
-      var newSortBy = $(this).parent().data('value');
-      if (newSortBy !== sortBy) {
-        sortBy = newSortBy;
-        // Hiển thị icon loading
-        $('.dashed-loading').show();
-        // Gửi yêu cầu AJAX để lọc sản phẩm
-        $.ajax({
-          type: 'GET',
-          url: window.location.href,
-          data: {
-            sort_by: sortBy
-          },
-          success: function(data) {
-            // Cập nhật danh sách sản phẩm
-            var productList = $(data).find('.product-list');
-            $('.product-list').html(productList.html());
-            // Cập nhật URL với giá trị mới của dropdown
-            var newUrl = updateQueryStringParameter(window.location.href, 'sort_by', sortBy);
-            window.history.pushState({
-              path: newUrl
-            }, '', newUrl);
-          },
-          complete: function() {
-            // Ẩn icon loading khi yêu cầu AJAX hoàn thành
-            $('.dashed-loading').hide();
-          }
-        });
-      }
-      // Ẩn dropdown-menu khi người dùng chọn mục
-      $('.dropdown-menu').hide();
-      // Cập nhật nội dung của dropdown-toggle
-      $(this).closest('.dropdown').find('.dropdown-toggle').html($(this).html());
-    });
-
-    // Hàm cập nhật giá trị của tham số "sort_by" trong URL
-    function updateQueryStringParameter(uri, key, value) {
-      var re = new RegExp("([?&])" + key + "=.*?(&|$)", "i");
-      var separator = uri.indexOf('?') !== -1 ? "&" : "?";
-      if (uri.match(re)) {
-        return uri.replace(re, '$1' + key + "=" + value + '$2');
-      } else {
-        return uri + separator + key + "=" + value;
-      }
+  // Thêm sự kiện "mousedown" cho dropdown-toggle
+  $('.dropdown-toggle').on('mousedown', function(e) {
+    e.preventDefault();
+    var dropdownMenu = $(this).parent().find('.dropdown-menu');
+    if (dropdownMenu.is(':hidden')) {
+      dropdownMenu.show();
+    } else {
+      dropdownMenu.hide();
     }
-
-    // Ẩn dropdown-menu khi người dùng click bên ngoài dropdown
-    $(document).on('mousedown', function(e) {
-      if (!$(e.target).closest('.dropdown').length) {
-        $('.dropdown-menu').hide();
-      }
-    });
   });
+
+  // Thêm sự kiện "click" cho các mục trong dropdown-menu
+  $('#sort-by').on('click', 'a', function(e) {
+    e.preventDefault();
+    var newSortBy = $(this).parent().data('value');
+    if (newSortBy !== sortBy) {
+      sortBy = newSortBy;
+      // Hiển thị icon loading
+      $('.dashed-loading').show();
+      // Gửi yêu cầu AJAX để lọc sản phẩm
+      $.ajax({
+        type: 'GET',
+        url: window.location.href,
+        data: {
+          sort_by: sortBy
+        },
+        success: function(data) {
+          // Cập nhật danh sách sản phẩm
+          var productList = $(data).find('.product-list');
+          $('.product-list').html(productList.html());
+          // Cập nhật URL với giá trị mới của dropdown
+          var newUrl = updateQueryStringParameter(window.location.href, 'sort_by', sortBy);
+          window.history.pushState({
+            path: newUrl
+          }, '', newUrl);
+        },
+        complete: function() {
+          // Ẩn icon loading khi yêu cầu AJAX hoàn thành
+          $('.dashed-loading').hide();
+        }
+      });
+    }
+    // Ẩn dropdown-menu khi người dùng chọn mục
+    $('.dropdown-menu').hide();
+    // Cập nhật nội dung của dropdown-toggle
+    $(this).closest('.dropdown').find('.dropdown-toggle').html($(this).html());
+  });
+
+  // Hàm cập nhật giá trị của tham số "sort_by" trong URL
+  function updateQueryStringParameter(uri, key, value) {
+    var re = new RegExp("([?&])" + key + "=.*?(&|$)", "i");
+    var separator = uri.indexOf('?') !== -1 ? "&" : "?";
+    if (uri.match(re)) {
+      return uri.replace(re, '$1' + key + "=" + value + '$2');
+    } else {
+      return uri + separator + key + "=" + value;
+    }
+  }
+
+  // Ẩn dropdown-menu khi người dùng click bên ngoài dropdown
+  $(document).on('mousedown', function(e) {
+    if (!$(e.target).closest('.dropdown').length) {
+      $('.dropdown-menu').hide();
+    }
+  });
+});
 </script>
 <?php get_footer() ?>

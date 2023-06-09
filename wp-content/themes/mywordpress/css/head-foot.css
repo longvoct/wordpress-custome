@@ -332,7 +332,7 @@ ul.woocommerce-mini-cart.cart_list.product_list_widget {
 .woocommerce table.cart img,
 .woocommerce-page #content table.cart img,
 .woocommerce-page table.cart img {
-  width: 150px;
+  /* width: 150px; */
   height: 150px;
   object-fit: cover;
 }

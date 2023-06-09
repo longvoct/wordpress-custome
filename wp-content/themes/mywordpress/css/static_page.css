@@ -92,15 +92,6 @@ em {
   color: #2bbaf2;
 }
 
-.single-content.margin-head p {
-  line-height: 150%;
-}
-
 h2.wp-block-heading {
   margin-top: 15px;
-}
-
-.single-content.margin-head p {
-  margin-top: 20px;
-  line-height: 150% !important;
 }
